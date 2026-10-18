@@ -1344,3 +1344,131 @@ pre .javascript .function {
   margin-right: 5px;
   display: inline-block;
 }
+.knowledge-home {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+  color: #344054;
+}
+.knowledge-home .welcome {
+  padding: 42px 36px;
+  margin-bottom: 42px;
+  background: #f0f5ff;
+  border-radius: 18px;
+}
+.knowledge-home .welcome-label {
+  color: #5274a5;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.knowledge-home .welcome h1 {
+  margin: 14px 0;
+  font-size: 34px;
+  color: #253858;
+}
+.knowledge-home .welcome-description {
+  font-size: 16px;
+  color: #5d6b82;
+}
+.knowledge-home .profile {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #d7e2f1;
+}
+.knowledge-home .profile h2,
+.knowledge-home .knowledge-section h2 {
+  color: #253858;
+  font-size: 22px;
+}
+.knowledge-home .profile p {
+  margin: 8px 0;
+}
+.knowledge-home .section-description {
+  margin-bottom: 22px;
+  color: #7b8798;
+}
+.knowledge-home .knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.knowledge-home .knowledge-card {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 190px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  text-decoration: none;
+  -webkit-transition: -webkit-transform 0.2s, box-shadow 0.2s;
+  -moz-transition: -moz-transform 0.2s, box-shadow 0.2s;
+  -ms-transition: -ms-transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.knowledge-home .knowledge-card:hover {
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
+  -webkit-box-shadow: 0 8px 24px rgba(40,60,90,0.1);
+  box-shadow: 0 8px 24px rgba(40,60,90,0.1);
+}
+.knowledge-home .card-number {
+  color: #7893ba;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.knowledge-home .knowledge-card h3 {
+  margin: 14px 0 8px;
+  color: #253858;
+  font-size: 18px;
+}
+.knowledge-home .knowledge-card p {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0 0 18px;
+  color: #748094;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.knowledge-home .card-link {
+  color: #5274a5;
+  font-size: 13px;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .knowledge-home .knowledge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .knowledge-home .welcome {
+    padding: 28px 22px;
+  }
+  .knowledge-home .welcome h1 {
+    font-size: 28px;
+  }
+  .knowledge-home .knowledge-card {
+    min-height: 180px;
+    padding: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .knowledge-home .knowledge-grid {
+    grid-template-columns: 1fr;
+  }
+}
