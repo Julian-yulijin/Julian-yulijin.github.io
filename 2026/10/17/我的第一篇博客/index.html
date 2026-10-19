@@ -14,7 +14,7 @@
 <meta property="og:description" content="第一篇这是第一篇博客，同时也兼任为使用hoex的笔记。 Hexo 学习笔记（一）：博客创建与基础配置一、创建博客项目与认识目录1.1 初始化博客项目命令： 1hexo init myfirstblog  命令逐部分解析：    部分 含义    hexo 调用 Hexo 命令行程序。   init 初始化一个新的 Hexo 项目，也就是创建博客项目的基础结构。   myfirstblog 指定新项">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-10-17T07:06:52.000Z">
-<meta property="article:modified_time" content="2026-10-19T14:52:09.412Z">
+<meta property="article:modified_time" content="2026-10-19T15:16:01.404Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -309,7 +309,7 @@
 </tr>
 </tbody></table>
 <p>为什么需要清理？ 当旧的生成文件可能影响预览时，可以清理后重新生成。它不会替你删除文章源文件，也不等于删除整个项目。</p>
-<h3 id="4-2-重新生成网站"><a href="#4-2-重新生成网站" class="headerlink" title="4.2 重新生成网站"></a>4.2 重新生成网站</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="4-2-重新生成网站"><a href="#4-2-重新生成网站" class="headerlink" title="4.2 重新生成网站"></a>4.2 重新生成网站</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx hexo generate(可简写为 hexo g)</span><br></pre></td></tr></table></figure>
 
 <p>逐部分解析：</p>
 <table>
@@ -386,7 +386,31 @@
 </tr>
 </tbody></table>
 <p>注意： <code>hexo server</code> 运行期间，终端通常会持续显示服务器日志。这是正常现象。需要停止服务器时，可以在对应终端按 <code>Ctrl + C</code>。</p>
-<h3 id="4-4-为什么修改后网页有时没有变化？"><a href="#4-4-为什么修改后网页有时没有变化？" class="headerlink" title="4.4 为什么修改后网页有时没有变化？"></a>4.4 为什么修改后网页有时没有变化？</h3><p>常见原因包括：</p>
+<h3 id="4-4-重新生成网站"><a href="#4-4-重新生成网站" class="headerlink" title="4.4 重新生成网站"></a>4.4 重新生成网站</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx hexo deploy(可简写为 hexo d且在操作这一步时不要开梯子！)</span><br></pre></td></tr></table></figure>
+
+<p>逐部分解析：</p>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>npx</code></td>
+<td>运行相关命令行程序。</td>
+</tr>
+<tr>
+<td><code>hexo</code></td>
+<td>指定 Hexo 程序。</td>
+</tr>
+<tr>
+<td><code>deploy</code></td>
+<td>用于部署网站。</td>
+</tr>
+</tbody></table>
+<p>这一步会将生成的网站文件发布到配置好的线上托管位置，使其他人能够通过公开网址访问网站。</p>
+<h3 id="4-5-为什么修改后网页有时没有变化？"><a href="#4-5-为什么修改后网页有时没有变化？" class="headerlink" title="4.5 为什么修改后网页有时没有变化？"></a>4.5 为什么修改后网页有时没有变化？</h3><p>常见原因包括：</p>
 <ul>
 <li>修改后没有保存文件。</li>
 <li>网站还没有重新生成。</li>
@@ -399,7 +423,7 @@
 <li>在终端执行 <code>npx hexo clean</code>。</li>
 <li>执行 <code>npx hexo generate</code>。</li>
 <li>执行 <code>npx hexo server</code>。</li>
-<li>在浏览器打开终端显示的本地地址并刷新。</li>
+<li>在浏览器打开终端显示的本地地址并刷新，同时反复执行2-4步。</li>
 </ol>
 <p>不需要每次修改文章都机械地执行全部步骤；理解每条命令的作用后，可以按实际情况选择。</p>
 <h2 id="五、知识总结"><a href="#五、知识总结" class="headerlink" title="五、知识总结"></a>五、知识总结</h2><p>今天已经涉及的知识点如下：</p>
@@ -448,7 +472,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2026/10/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="cuidIyhAafx3iQANTQUofUUZk" data-title="我的第一篇博客" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2026/10/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="cuidrooiwVKi9zyCaQe7dsDbr" data-title="我的第一篇博客" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
