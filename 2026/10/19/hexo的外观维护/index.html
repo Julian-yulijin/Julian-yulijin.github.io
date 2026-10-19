@@ -14,7 +14,7 @@
 <meta property="og:description" content="Hexo 学习笔记：主题、首页改造与文章分类一、Hexo 主题的基本概念1. 什么是主题（Theme）？主题是一整套决定博客外观和页面布局的文件，可以控制：  首页如何排列内容 页面使用什么颜色和字体 导航栏如何展示 文章页面如何布局 页面样式与部分交互效果  主题可以理解为博客的“装修方案”。 2. 什么是 Landscape？Landscape 是 Hexo 的一个具体主题，也是 Hexo 默">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-10-19T14:26:27.000Z">
-<meta property="article:modified_time" content="2026-10-19T14:52:14.223Z">
+<meta property="article:modified_time" content="2026-10-19T14:58:09.213Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -214,7 +214,7 @@
 <h2 id="五、为文章添加分类"><a href="#五、为文章添加分类" class="headerlink" title="五、为文章添加分类"></a>五、为文章添加分类</h2><h3 id="1-文章源文件"><a href="#1-文章源文件" class="headerlink" title="1. 文章源文件"></a>1. 文章源文件</h3><p>我们修改的文章是：</p>
 <p><code>source/_posts/我的第一篇博客.md</code></p>
 <p>在文章开头的 Front Matter 配置区域中添加：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">categories:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Hexo笔记</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">categories:</span></span><br><span class="line">    <span class="string">Hexo笔记</span></span><br></pre></td></tr></table></figure>
 
 <p>Front Matter 是 Markdown 文章开头由两条 <code>---</code> 包围的前置信息区域，用于设置标题、日期、分类等信息。</p>
 <p>YAML 是一种常见的配置数据格式。上面的配置表示将当前文章归入 <code>Hexo笔记</code> 分类。</p>
@@ -229,7 +229,7 @@
 
 <p>只是创建一个通往分类页面的入口，并不会自动给文章设置分类。</p>
 <p>文章 Front Matter 中的：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">categories:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Hexo笔记</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">categories:</span></span><br><span class="line">    <span class="string">Hexo笔记</span></span><br></pre></td></tr></table></figure>
 
 <p>才是为文章指定分类的配置。</p>
 <p>因此：</p>
@@ -254,7 +254,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2026/10/19/hexo%E7%9A%84%E5%A4%96%E8%A7%82%E7%BB%B4%E6%8A%A4/" data-id="cuidf7aclDA1hiAMCWRcc4NTA" data-title="hexo的外观维护" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2026/10/19/hexo%E7%9A%84%E5%A4%96%E8%A7%82%E7%BB%B4%E6%8A%A4/" data-id="cuidd_96S8tjlWSS3tlEmXjBz" data-title="hexo的外观维护" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
