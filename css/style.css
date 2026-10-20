@@ -1472,3 +1472,9 @@ pre .javascript .function {
     grid-template-columns: 1fr;
   }
 }
+#banner {
+  background-image: url("/css/images/back.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
