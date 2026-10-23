@@ -6,12 +6,12 @@
   
   <title>hexo的外观维护 | Julian的个人空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Hexo 学习笔记：主题、首页改造与文章分类一、Hexo 主题的基本概念1. 什么是主题（Theme）？主题是一整套决定博客外观和页面布局的文件，可以控制：  首页如何排列内容 页面使用什么颜色和字体 导航栏如何展示 文章页面如何布局 页面样式与部分交互效果  主题可以理解为博客的“装修方案”。 2. 什么是 Landscape？Landscape 是 Hexo 的一个具体主题，也是 Hexo 默">
+  <meta name="description" content="Hexo 学习笔记：主题、首页改造与文章分类 一、Hexo 主题的基本概念 1. 什么是主题（Theme）？ 主题是一整套决定博客外观和页面布局的文件，可以控制：  首页如何排列内容 页面使用什么颜色和字体 导航栏如何展示 文章页面如何布局 页面样式与部分交互效果  主题可以理解为博客的“装修方案”。 2. 什么是 Landscape？ Landscape 是 Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo的外观维护">
 <meta property="og:url" content="https://julian-yulijin.github.io/2026/10/19/hexo%E7%9A%84%E5%A4%96%E8%A7%82%E7%BB%B4%E6%8A%A4/index.html">
 <meta property="og:site_name" content="Julian的个人空间">
-<meta property="og:description" content="Hexo 学习笔记：主题、首页改造与文章分类一、Hexo 主题的基本概念1. 什么是主题（Theme）？主题是一整套决定博客外观和页面布局的文件，可以控制：  首页如何排列内容 页面使用什么颜色和字体 导航栏如何展示 文章页面如何布局 页面样式与部分交互效果  主题可以理解为博客的“装修方案”。 2. 什么是 Landscape？Landscape 是 Hexo 的一个具体主题，也是 Hexo 默">
+<meta property="og:description" content="Hexo 学习笔记：主题、首页改造与文章分类 一、Hexo 主题的基本概念 1. 什么是主题（Theme）？ 主题是一整套决定博客外观和页面布局的文件，可以控制：  首页如何排列内容 页面使用什么颜色和字体 导航栏如何展示 文章页面如何布局 页面样式与部分交互效果  主题可以理解为博客的“装修方案”。 2. 什么是 Landscape？ Landscape 是 Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-10-19T14:26:27.000Z">
 <meta property="article:modified_time" content="2026-10-19T14:58:09.213Z">
@@ -35,119 +35,7 @@
   
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
 
-<meta name="generator" content="Hexo 8.1.2"><style>mjx-container[jax="SVG"] {
-  direction: ltr;
-}
-
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
-}
-
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
-}
-
-g[data-mml-node="mtable"] > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > .mjx-dashed {
-  stroke-dasharray: 140;
-}
-
-g[data-mml-node="mtable"] > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
-}
-
-g[data-mml-node="mtable"] > svg {
-  overflow: visible;
-}
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-}
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-.MathJax path {
-  stroke-width: 3;
-}
-
-mjx-container[display="true"] {
-  overflow: auto hidden;
-}
-
-mjx-container[display="true"] + br {
-  display: none;
-}
-</style></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
   <div id="container">
@@ -211,7 +99,11 @@ mjx-container[display="true"] + br {
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="Hexo-学习笔记：主题、首页改造与文章分类"><a href="#Hexo-学习笔记：主题、首页改造与文章分类" class="headerlink" title="Hexo 学习笔记：主题、首页改造与文章分类"></a>Hexo 学习笔记：主题、首页改造与文章分类</h1><h2 id="一、Hexo-主题的基本概念"><a href="#一、Hexo-主题的基本概念" class="headerlink" title="一、Hexo 主题的基本概念"></a>一、Hexo 主题的基本概念</h2><h3 id="1-什么是主题（Theme）？"><a href="#1-什么是主题（Theme）？" class="headerlink" title="1. 什么是主题（Theme）？"></a>1. 什么是主题（Theme）？</h3><p>主题是一整套决定博客外观和页面布局的文件，可以控制：</p>
+        <h1 id="hexo-学习笔记主题首页改造与文章分类">Hexo
+学习笔记：主题、首页改造与文章分类</h1>
+<h2 id="一hexo-主题的基本概念">一、Hexo 主题的基本概念</h2>
+<h3 id="什么是主题theme">1. 什么是主题（Theme）？</h3>
+<p>主题是一整套决定博客外观和页面布局的文件，可以控制：</p>
 <ul>
 <li>首页如何排列内容</li>
 <li>页面使用什么颜色和字体</li>
@@ -220,20 +112,29 @@ mjx-container[display="true"] + br {
 <li>页面样式与部分交互效果</li>
 </ul>
 <p>主题可以理解为博客的“装修方案”。</p>
-<h3 id="2-什么是-Landscape？"><a href="#2-什么是-Landscape？" class="headerlink" title="2. 什么是 Landscape？"></a>2. 什么是 Landscape？</h3><p>Landscape 是 Hexo 的一个具体主题，也是 Hexo 默认提供的主题之一。</p>
+<h3 id="什么是-landscape">2. 什么是 Landscape？</h3>
+<p>Landscape 是 Hexo 的一个具体主题，也是 Hexo 默认提供的主题之一。</p>
 <p>它属于简洁、传统的博客类主题，原本主要用于展示博客文章，具有文章列表、侧边栏、分类和归档等典型功能。</p>
 <p>“主题”是总概念，“Landscape”是具体的主题，就像“壁纸”是总概念，而“自然风景壁纸”是其中一种。</p>
-<h3 id="3-node-modules-与-themes-的区别"><a href="#3-node-modules-与-themes-的区别" class="headerlink" title="3. node_modules 与 themes 的区别"></a>3. <code>node_modules</code> 与 <code>themes</code> 的区别</h3><ul>
-<li><code>node_modules</code>：通常存放通过 npm 安装的软件包及其依赖。</li>
+<h3 id="node_modules-与-themes-的区别">3. <code>node_modules</code> 与
+<code>themes</code> 的区别</h3>
+<ul>
+<li><code>node_modules</code>：通常存放通过 npm
+安装的软件包及其依赖。</li>
 <li><code>themes</code>：Hexo 项目中用于存放主题文件夹的目录。</li>
-<li><code>themes/landscape</code>：项目中 Landscape 主题的文件目录。</li>
+<li><code>themes/landscape</code>：项目中 Landscape
+主题的文件目录。</li>
 </ul>
-<p>我们发现 <code>themes</code> 中没有 <code>landscape</code> 文件夹，但 <code>node_modules</code> 中已经存在 Landscape 主题软件包，于是将它复制到 <code>themes/landscape</code>，以便修改主题文件。</p>
+<p>我们发现 <code>themes</code> 中没有 <code>landscape</code> 文件夹，但
+<code>node_modules</code> 中已经存在 Landscape
+主题软件包，于是将它复制到
+<code>themes/landscape</code>，以便修改主题文件。</p>
 <p>Hexo 根目录的 <code>_config.yml</code> 中使用以下配置选择主题：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">landscape</span></span><br></pre></td></tr></table></figure>
-
 <p>这表示让 Hexo 使用名为 <code>landscape</code> 的主题。</p>
-<h2 id="二、修改首页模板"><a href="#二、修改首页模板" class="headerlink" title="二、修改首页模板"></a>二、修改首页模板</h2><h3 id="1-首页模板的位置"><a href="#1-首页模板的位置" class="headerlink" title="1. 首页模板的位置"></a>1. 首页模板的位置</h3><p>文件路径：</p>
+<h2 id="二修改首页模板">二、修改首页模板</h2>
+<h3 id="首页模板的位置">1. 首页模板的位置</h3>
+<p>文件路径：</p>
 <p><code>themes/landscape/layout/index.ejs</code></p>
 <p>各部分含义：</p>
 <ul>
@@ -241,12 +142,17 @@ mjx-container[display="true"] + br {
 <li><code>layout</code>：存放页面布局模板的文件夹。</li>
 <li><code>index.ejs</code>：负责首页的模板文件。</li>
 </ul>
-<p><code>layout</code> 的英文意思是“布局”。在 Hexo 主题中，它用于存放网页布局模板。</p>
-<p><code>.ejs</code> 是 EJS 模板文件的扩展名。EJS 允许在模板中嵌入特定语法，以便生成网页内容。</p>
-<h3 id="2-原来的首页代码"><a href="#2-原来的首页代码" class="headerlink" title="2. 原来的首页代码"></a>2. 原来的首页代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial(&#x27;_partial/archive&#x27;, &#123;expand: true, index: true&#125;) %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>这行代码调用 <code>_partial/archive</code> 局部模板，原本用于展示文章归档列表。</p>
-<h3 id="3-实际进行的修改"><a href="#3-实际进行的修改" class="headerlink" title="3. 实际进行的修改"></a>3. 实际进行的修改</h3><p>我们将 <code>index.ejs</code> 中的原有内容替换为自定义 HTML 首页结构，建立了“我的知识空间”首页。</p>
+<p><code>layout</code> 的英文意思是“布局”。在 Hexo
+主题中，它用于存放网页布局模板。</p>
+<p><code>.ejs</code> 是 EJS 模板文件的扩展名。EJS
+允许在模板中嵌入特定语法，以便生成网页内容。</p>
+<h3 id="原来的首页代码">2. 原来的首页代码</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial(&#x27;_partial/archive&#x27;, &#123;expand: true, index: true&#125;) %&gt;</span><br></pre></td></tr></table></figure>
+<p>这行代码调用 <code>_partial/archive</code>
+局部模板，原本用于展示文章归档列表。</p>
+<h3 id="实际进行的修改">3. 实际进行的修改</h3>
+<p>我们将 <code>index.ejs</code> 中的原有内容替换为自定义 HTML
+首页结构，建立了“我的知识空间”首页。</p>
 <p>首页包含以下分类入口：</p>
 <ul>
 <li>编程学习</li>
@@ -258,15 +164,19 @@ mjx-container[display="true"] + br {
 </ul>
 <p>这些入口是首页上的链接，用于让访客进入相应的分类页面。</p>
 <p>注意：实际操作中没有创建 <code>index-backup.ejs</code> 备份文件。</p>
-<h2 id="三、修改首页样式"><a href="#三、修改首页样式" class="headerlink" title="三、修改首页样式"></a>三、修改首页样式</h2><h3 id="1-样式文件的位置"><a href="#1-样式文件的位置" class="headerlink" title="1. 样式文件的位置"></a>1. 样式文件的位置</h3><p><code>themes/landscape/source/css/style.styl</code></p>
+<h2 id="三修改首页样式">三、修改首页样式</h2>
+<h3 id="样式文件的位置">1. 样式文件的位置</h3>
+<p><code>themes/landscape/source/css/style.styl</code></p>
 <p>各部分含义：</p>
 <ul>
 <li><code>source</code>：主题的源文件目录。</li>
 <li><code>css</code>：存放样式相关文件的目录。</li>
 <li><code>style.styl</code>：存放 Stylus 样式代码的文件。</li>
 </ul>
-<p>Stylus 是一种 CSS 预处理器。我们使用 Stylus 编写样式，再由 Hexo 生成浏览器可以使用的 CSS 文件。</p>
-<h3 id="2-实际进行的修改"><a href="#2-实际进行的修改" class="headerlink" title="2. 实际进行的修改"></a>2. 实际进行的修改</h3><p>我们在 <code>style.styl</code> 文件末尾添加首页相关样式，包括：</p>
+<p>Stylus 是一种 CSS 预处理器。我们使用 Stylus 编写样式，再由 Hexo
+生成浏览器可以使用的 CSS 文件。</p>
+<h3 id="实际进行的修改-1">2. 实际进行的修改</h3>
+<p>我们在 <code>style.styl</code> 文件末尾添加首页相关样式，包括：</p>
 <ul>
 <li><code>.knowledge-home</code>：控制知识空间区域的样式。</li>
 <li><code>.knowledge-grid</code>：控制知识分类卡片的网格布局。</li>
@@ -280,7 +190,8 @@ mjx-container[display="true"] + br {
 <th>卡片排列</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>较宽屏幕</td>
 <td>三列</td>
 </tr>
@@ -292,57 +203,70 @@ mjx-container[display="true"] + br {
 <td>较窄屏幕</td>
 <td>一列</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>这种根据屏幕宽度调整页面布局的设计叫作响应式设计。</p>
-<h3 id="3-HTML-与-CSS-的分工"><a href="#3-HTML-与-CSS-的分工" class="headerlink" title="3. HTML 与 CSS 的分工"></a>3. HTML 与 CSS 的分工</h3><ul>
+<h3 id="html-与-css-的分工">3. HTML 与 CSS 的分工</h3>
+<ul>
 <li>HTML：组织网页内容结构。</li>
 <li>CSS：控制网页的视觉呈现。</li>
 <li>Stylus：编写样式的工具，其代码会生成 CSS。</li>
 </ul>
 <p>因此，修改首页模板和样式文件是两个不同的工作。</p>
-<h2 id="四、源文件、生成文件与线上网站"><a href="#四、源文件、生成文件与线上网站" class="headerlink" title="四、源文件、生成文件与线上网站"></a>四、源文件、生成文件与线上网站</h2><h3 id="1-源文件"><a href="#1-源文件" class="headerlink" title="1. 源文件"></a>1. 源文件</h3><p>我们实际修改的文件包括：</p>
+<h2 id="四源文件生成文件与线上网站">四、源文件、生成文件与线上网站</h2>
+<h3 id="源文件">1. 源文件</h3>
+<p>我们实际修改的文件包括：</p>
 <ul>
 <li><code>themes/landscape/layout/index.ejs</code></li>
 <li><code>themes/landscape/source/css/style.styl</code></li>
 <li><code>source/_posts/我的第一篇博客.md</code></li>
 </ul>
 <p>这些文件用于保存模板、样式和文章内容。</p>
-<h3 id="2-public-文件夹"><a href="#2-public-文件夹" class="headerlink" title="2. public 文件夹"></a>2. <code>public</code> 文件夹</h3><p><code>public</code> 用于存放 Hexo 生成的网页文件。</p>
+<h3 id="public-文件夹">2. <code>public</code> 文件夹</h3>
+<p><code>public</code> 用于存放 Hexo 生成的网页文件。</p>
 <p>例如：</p>
 <ul>
 <li><code>public/index.html</code>：生成后的首页 HTML。</li>
 <li><code>public/css/style.css</code>：生成后的 CSS 样式文件。</li>
 <li><code>public/categories/Hexo笔记/index.html</code>：生成后的分类页面。</li>
 </ul>
-<p>可以把源文件理解为制作网页的材料，把 <code>public</code> 中的文件理解为加工后的成品。</p>
-<p>通常应该修改源文件，而不是直接修改 <code>public</code> 中的生成文件，因为重新生成时，<code>public</code> 中的内容会被重新生成，直接修改的内容可能丢失。</p>
-<h3 id="3-检查生成结果"><a href="#3-检查生成结果" class="headerlink" title="3. 检查生成结果"></a>3. 检查生成结果</h3><p>我们曾经检查：</p>
+<p>可以把源文件理解为制作网页的材料，把 <code>public</code>
+中的文件理解为加工后的成品。</p>
+<p>通常应该修改源文件，而不是直接修改 <code>public</code>
+中的生成文件，因为重新生成时，<code>public</code>
+中的内容会被重新生成，直接修改的内容可能丢失。</p>
+<h3 id="检查生成结果">3. 检查生成结果</h3>
+<p>我们曾经检查：</p>
 <ul>
-<li><code>public/index.html</code> 是否包含“我的知识空间”和知识分类入口。</li>
-<li><code>public/css/style.css</code> 是否包含 <code>.knowledge-home</code>、<code>.knowledge-grid</code> 等样式。</li>
+<li><code>public/index.html</code>
+是否包含“我的知识空间”和知识分类入口。</li>
+<li><code>public/css/style.css</code> 是否包含
+<code>.knowledge-home</code>、<code>.knowledge-grid</code> 等样式。</li>
 </ul>
 <p>这样可以确认源文件的修改是否已经反映到生成结果中。</p>
 <p>如果生成文件已经更新但线上网站仍显示旧内容，还需要进一步检查发布过程或浏览器缓存等因素，不能直接认定是某一个原因。</p>
-<h2 id="五、为文章添加分类"><a href="#五、为文章添加分类" class="headerlink" title="五、为文章添加分类"></a>五、为文章添加分类</h2><h3 id="1-文章源文件"><a href="#1-文章源文件" class="headerlink" title="1. 文章源文件"></a>1. 文章源文件</h3><p>我们修改的文章是：</p>
+<h2 id="五为文章添加分类">五、为文章添加分类</h2>
+<h3 id="文章源文件">1. 文章源文件</h3>
+<p>我们修改的文章是：</p>
 <p><code>source/_posts/我的第一篇博客.md</code></p>
 <p>在文章开头的 Front Matter 配置区域中添加：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">categories:</span></span><br><span class="line">    <span class="string">Hexo笔记</span></span><br></pre></td></tr></table></figure>
-
-<p>Front Matter 是 Markdown 文章开头由两条 <code>---</code> 包围的前置信息区域，用于设置标题、日期、分类等信息。</p>
-<p>YAML 是一种常见的配置数据格式。上面的配置表示将当前文章归入 <code>Hexo笔记</code> 分类。</p>
+<p>Front Matter 是 Markdown 文章开头由两条 <code>---</code>
+包围的前置信息区域，用于设置标题、日期、分类等信息。</p>
+<p>YAML 是一种常见的配置数据格式。上面的配置表示将当前文章归入
+<code>Hexo笔记</code> 分类。</p>
 <p>其中：</p>
 <ul>
 <li><code>categories</code>：文章分类配置项。</li>
 <li><code>Hexo笔记</code>：指定的分类名称。</li>
 <li><code>-</code>：表示列表中的一个项目。</li>
 </ul>
-<h3 id="2-首页链接与文章分类的区别"><a href="#2-首页链接与文章分类的区别" class="headerlink" title="2. 首页链接与文章分类的区别"></a>2. 首页链接与文章分类的区别</h3><p>首页中的分类链接，例如：</p>
+<h3 id="首页链接与文章分类的区别">2. 首页链接与文章分类的区别</h3>
+<p>首页中的分类链接，例如：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/categories/Hexo笔记/&quot;</span>&gt;</span>Hexo笔记<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>只是创建一个通往分类页面的入口，并不会自动给文章设置分类。</p>
 <p>文章 Front Matter 中的：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">categories:</span></span><br><span class="line">    <span class="string">Hexo笔记</span></span><br></pre></td></tr></table></figure>
-
 <p>才是为文章指定分类的配置。</p>
 <p>因此：</p>
 <ul>
@@ -351,22 +275,33 @@ mjx-container[display="true"] + br {
 <li>分类生成器负责根据分类信息生成分类页面。</li>
 </ul>
 <p>这三个部分的作用不同。</p>
-<h2 id="六、生成并检查分类页面"><a href="#六、生成并检查分类页面" class="headerlink" title="六、生成并检查分类页面"></a>六、生成并检查分类页面</h2><p>我们确认项目安装了 <code>hexo-generator-category</code>，然后重新生成网页。</p>
+<h2 id="六生成并检查分类页面">六、生成并检查分类页面</h2>
+<p>我们确认项目安装了
+<code>hexo-generator-category</code>，然后重新生成网页。</p>
 <p>生成后的分类页面位于：</p>
 <p><code>public/categories/Hexo笔记/index.html</code></p>
-<p>我们使用 <code>Test-Path</code> 检查该文件是否存在，返回 <code>True</code> 后，又启动 Hexo 本地服务器，在浏览器中打开分类页面，确认文章正常显示。</p>
+<p>我们使用 <code>Test-Path</code> 检查该文件是否存在，返回
+<code>True</code> 后，又启动 Hexo
+本地服务器，在浏览器中打开分类页面，确认文章正常显示。</p>
 <p>访问地址为：</p>
 <p><code>http://localhost:4000/categories/Hexo%E7%AC%94%E8%AE%B0/</code></p>
-<p>这里的 <code>localhost:4000</code> 是本地预览地址，只能用于访问正在运行的本地服务器，不是公开网站地址。</p>
-<h2 id="七、本地预览、生成与部署的区别"><a href="#七、本地预览、生成与部署的区别" class="headerlink" title="七、本地预览、生成与部署的区别"></a>七、本地预览、生成与部署的区别</h2><h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><p>使用 Hexo 本地服务器查看网页效果。我们检查过分类页面，并确认文章能够显示。</p>
-<h3 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h3><p>Hexo 根据源文件生成网页文件，并将生成结果放入 <code>public</code>。</p>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>将生成后的网站文件发布到配置好的线上托管位置。</p>
+<p>这里的 <code>localhost:4000</code>
+是本地预览地址，只能用于访问正在运行的本地服务器，不是公开网站地址。</p>
+<h2 id="七本地预览生成与部署的区别">七、本地预览、生成与部署的区别</h2>
+<h3 id="本地预览">本地预览</h3>
+<p>使用 Hexo
+本地服务器查看网页效果。我们检查过分类页面，并确认文章能够显示。</p>
+<h3 id="生成">生成</h3>
+<p>Hexo 根据源文件生成网页文件，并将生成结果放入
+<code>public</code>。</p>
+<h3 id="部署">部署</h3>
+<p>将生成后的网站文件发布到配置好的线上托管位置。</p>
 <p>这三个环节不能混为一谈：本地能够访问，不代表线上网站已经更新。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://julian-yulijin.github.io/2026/10/19/hexo%E7%9A%84%E5%A4%96%E8%A7%82%E7%BB%B4%E6%8A%A4/" data-id="cuidl7hFpoLz9qo35wzmDaouj" data-title="hexo的外观维护" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://julian-yulijin.github.io/2026/10/19/hexo%E7%9A%84%E5%A4%96%E8%A7%82%E7%BB%B4%E6%8A%A4/" data-id="cuidzi-AoMPCJVcgv3PS6ctIK" data-title="hexo的外观维护" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
