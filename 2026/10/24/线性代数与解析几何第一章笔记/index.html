@@ -6,15 +6,15 @@
   
   <title>线性代数与解析几何第一章笔记 | Julian的个人空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="📘 线性代数笔记：矩阵及其运算 1. 矩阵的基础概念  矩阵的表示：矩阵 AA 记为 Am×nA_{m \times n}，表示 mm 行 nn 列。元素记为 aija_{ij}，表示位于第 ii 行第 jj 列的元素。 特殊形状：  只有一行的矩阵称为行矩阵；只有一列的矩阵称为列矩阵。 行数等于列数（m&#x3D;nm&#x3D;n）的矩阵称为方阵。 方阵中存在主对角线，主">
+  <meta name="description" content="📘 线性代数笔记：1.1矩阵及其运算 1. 矩阵的基础概念  矩阵的表示：矩阵 AA 记为 Am×nA_{m \times n}，表示 mm 行 nn 列。元素记为 aija_{ij}，表示位于第 ii 行第 jj 列的元素。 特殊形状：  只有一行的矩阵称为行矩阵；只有一列的矩阵称为列矩阵。 行数等于列数（m&#x3D;nm&#x3D;n）的矩阵称为方阵。 方阵中存在主对">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性代数与解析几何第一章笔记">
 <meta property="og:url" content="https://julian-yulijin.github.io/2026/10/24/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E4%B8%8E%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Julian的个人空间">
-<meta property="og:description" content="📘 线性代数笔记：矩阵及其运算 1. 矩阵的基础概念  矩阵的表示：矩阵 AA 记为 Am×nA_{m \times n}，表示 mm 行 nn 列。元素记为 aija_{ij}，表示位于第 ii 行第 jj 列的元素。 特殊形状：  只有一行的矩阵称为行矩阵；只有一列的矩阵称为列矩阵。 行数等于列数（m&#x3D;nm&#x3D;n）的矩阵称为方阵。 方阵中存在主对角线，主">
+<meta property="og:description" content="📘 线性代数笔记：1.1矩阵及其运算 1. 矩阵的基础概念  矩阵的表示：矩阵 AA 记为 Am×nA_{m \times n}，表示 mm 行 nn 列。元素记为 aija_{ij}，表示位于第 ii 行第 jj 列的元素。 特殊形状：  只有一行的矩阵称为行矩阵；只有一列的矩阵称为列矩阵。 行数等于列数（m&#x3D;nm&#x3D;n）的矩阵称为方阵。 方阵中存在主对">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-10-24T09:40:27.000Z">
-<meta property="article:modified_time" content="2026-10-24T12:26:25.335Z">
+<meta property="article:modified_time" content="2026-10-24T14:22:49.656Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -99,7 +99,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="线性代数笔记矩阵及其运算">📘 线性代数笔记：矩阵及其运算</h1>
+        <h1 id="线性代数笔记1.1矩阵及其运算">📘
+线性代数笔记：1.1矩阵及其运算</h1>
 <h2 id="矩阵的基础概念">1. 矩阵的基础概念</h2>
 <ul>
 <li><strong>矩阵的表示</strong>：矩阵
@@ -347,13 +348,15 @@ a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇔</mo><mi>A</mi><mi>B</mi><mo>=</mo><mi>B</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">\iff AB = BA</annotation></semantics></math>。</li>
 </ol></li>
 </ul>
-<h2 id="高级运算与性质互换补充进阶">8.
-高级运算与性质互换（补充进阶）</h2>
+<h2 id="高级运算与性质互换">8. 高级运算与性质互换</h2>
 <ul>
 <li><strong>特殊矩阵方程的陷阱</strong>：
 <ul>
 <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mi>O</mi><mo>⇏</mo><mi>A</mi><mo>=</mo><mi>O</mi></mrow><annotation encoding="application/x-tex">A^2 = O \nRightarrow A = O</annotation></semantics></math>
-（可能为幂零矩阵）。</li>
+（可能为幂零矩阵），若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+为对称矩阵则
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>O</mi></mrow><annotation encoding="application/x-tex">A=O</annotation></semantics></math>。</li>
 <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mi>E</mi><mo>⇏</mo><mi>A</mi><mo>=</mo><mi>±</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">A^2 = E \nRightarrow A = \pm E</annotation></semantics></math>
 （可能特征值为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>±</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">\pm 1</annotation></semantics></math>）。</li>
@@ -399,11 +402,339 @@ a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mi>k</mi></msup><mo>=</mo><msup><mi>c</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msup><mi>A</mi></mrow><annotation encoding="application/x-tex">A^k = c^{k-1}A</annotation></semantics></math>。</li>
 </ul></li>
 </ul>
+<hr />
+<h1 id="线性代数笔记1.2-向量与分块矩阵">📘 线性代数笔记：1.2
+向量与分块矩阵</h1>
+<h2 id="向量基础">1.2.1 向量基础</h2>
+<ul>
+<li><strong>定义</strong>：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+个有次序的数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">a_1, a_2, \dots, a_n</annotation></semantics></math>
+组成的数组称为
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+元向量</strong>。这
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+个数分别称为该向量的
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+个<strong>分量</strong>。</li>
+<li><strong>分类</strong>：分为<strong>列向量</strong>（默认形式）和<strong>行向量</strong>。</li>
+<li><strong>基本单位向量
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mi>i</mi></msub><annotation encoding="application/x-tex">e_i</annotation></semantics></math></strong>：表示第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+个分量为 1，其余分量均为 0 的
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+元列向量。</li>
+<li><strong>单位矩阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>n</mi></msub><annotation encoding="application/x-tex">E_n</annotation></semantics></math></strong>：可以用标准单位向量组表示为
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">[</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><msub><mi>e</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">E_n = [e_1, e_2, \dots, e_n]</annotation></semantics></math></li>
+</ul>
+<h2 id="分块矩阵及其运算">1.2.2 分块矩阵及其运算</h2>
+<h3 id="分块矩阵的转置">1. 分块矩阵的转置</h3>
+<ul>
+<li><strong>核心易错点</strong>：分块矩阵转置时，<strong>不仅子块的位置要像普通矩阵一样转置，每一个子块内部也要进行转置</strong>。</li>
+<li>例如：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>A</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>B</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>C</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>D</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>T</mi></msup><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><msup><mi>A</mi><mi>T</mi></msup></mtd><mtd columnalign="center" style="text-align: center"><msup><mi>C</mi><mi>T</mi></msup></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msup><mi>B</mi><mi>T</mi></msup></mtd><mtd columnalign="center" style="text-align: center"><msup><mi>D</mi><mi>T</mi></msup></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">\begin{bmatrix} A &amp; B \\ C &amp; D \end{bmatrix}^T = \begin{bmatrix} A^T &amp; C^T \\ B^T &amp; D^T \end{bmatrix}</annotation></semantics></math></li>
+</ul>
+<h3 id="分块矩阵的加法">2. 分块矩阵的加法</h3>
+<ul>
+<li><strong>要求</strong>：两个矩阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+必须<strong>同型</strong>，且<strong>分块方法必须完全相同</strong>（横竖切口必须对齐）。</li>
+<li><strong>规则</strong>：对应位置的子块相加。</li>
+</ul>
+<h3 id="分块矩阵的乘法">3. 分块矩阵的乘法</h3>
+<ul>
+<li><strong>要求</strong>：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+乘
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+时，<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+的列划分方式必须与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+的行划分方式相同</strong>（即对
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+画的竖线，必须和对
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+画的横线对齐）。这样对应的子块才能相乘。</li>
+</ul>
+<h3 id="特殊的矩阵乘法按行列分块">4. 特殊的矩阵乘法（按行/列分块）</h3>
+<p>这是矩阵乘法最高效的运用场景（前面的“内边对齐，外边随意”原则）： *
+<strong>矩阵乘列向量组</strong>： 设
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+没有竖线（不分列），<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+只有横线（按列分块为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><msub><mi>b</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>b</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">b_1, b_2, \dots, b_n</annotation></semantics></math>）。
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo stretchy="false" form="prefix">[</mo><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><msub><mi>b</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mo stretchy="false" form="prefix">[</mo><mi>A</mi><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mi>A</mi><msub><mi>b</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><mi>A</mi><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">A [b_1, b_2, \dots, b_n] = [Ab_1, Ab_2, \dots, Ab_n]</annotation></semantics></math>
+<em>(把
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+当成数去乘，结果就是把
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+分别乘进每一列)</em> * <strong>列向量组乘矩阵</strong>： 设
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+只有竖线（按列分块为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">a_1, a_2, \dots, a_n</annotation></semantics></math>），<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+没有横线。
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>⋮</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>n</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mn>1</mn></msub><mi>B</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mn>2</mn></msub><mi>B</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>⋮</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>n</mi></msub><mi>B</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">\begin{bmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{bmatrix} B = \begin{bmatrix} a_1B \\ a_2B \\ \vdots \\ a_nB \end{bmatrix}</annotation></semantics></math>
+<em>(把
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+当成数去乘，结果就是把
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+分别乘进每一行)</em></p>
+<h3 id="矩阵分块的降维打击表达法">5. 矩阵分块的“降维打击”表达法</h3>
+<p>将矩阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+按列划分：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">[</mo><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><msub><mi>A</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>A</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">A = [A_1, A_2, \dots, A_n]</annotation></semantics></math>
+（这里的
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>i</mi></msub><annotation encoding="application/x-tex">A_i</annotation></semantics></math>
+是列向量）。
+将单位阵按列划分：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">[</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><msub><mi>e</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">E_n = [e_1, e_2, \dots, e_n]</annotation></semantics></math>。</p>
+<p>由此可得出三个极其重要的结论：</p>
+<ol type="1">
+<li><strong>取列操作</strong>：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>e</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">A e_j</annotation></semantics></math>
+=
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+的第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+列</strong>。（因为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+的第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+列只有第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+个位置是 1，直接提取
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+的对应列）</li>
+<li><strong>取行操作</strong>：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>e</mi><mi>i</mi><mi>T</mi></msubsup><mi>A</mi></mrow><annotation encoding="application/x-tex">e_i^T A</annotation></semantics></math>
+=
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+的第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+行</strong>。（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>e</mi><mi>i</mi><mi>T</mi></msubsup><annotation encoding="application/x-tex">e_i^T</annotation></semantics></math>
+是行向量，左乘提取对应行）</li>
+<li><strong>取元素操作</strong>：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>e</mi><mi>i</mi><mi>T</mi></msubsup><mi>A</mi><msub><mi>e</mi><mi>j</mi></msub><mo>=</mo><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">e_i^T A e_j = a_{ij}</annotation></semantics></math>
+=
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+的第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+行第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+列的元素</strong>。（左乘取行，右乘取列，最后相交就是一个具体的数）</li>
+</ol>
+<hr />
+<h1 id="第-1.3-章初等变换与初等矩阵">📘 第 1.3
+章：初等变换与初等矩阵</h1>
+<h2 id="初等变换">1.3.1 初等变换</h2>
+<p><strong>核心逻辑链</strong>：线性方程组
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>↔</mo><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math>
+增广矩阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>→</mo><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math>
+初等变换。</p>
+<h3 id="初等行列变换">1. 初等行(列)变换</h3>
+<ul>
+<li><strong>① 对调变换</strong>：对调
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+行与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+行的位置，记作
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>↔</mo><msub><mi>r</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">r_i \leftrightarrow r_j</annotation></semantics></math>。</li>
+<li><strong>② 倍乘变换</strong>：用非零常数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+乘第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+行的所有元素，记作
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>×</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">r_i \times k</annotation></semantics></math>。</li>
+<li><strong>③ 倍加变换</strong>：将第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+行的
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+倍加到第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+行上（仅第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+行发生改变），记作
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>j</mi></msub><mo>+</mo><mi>k</mi><msub><mi>r</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">r_j + k r_i</annotation></semantics></math>。（口诀：后加前）</li>
+<li><em>注：若是列变换，将
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+换成
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>
+即可。</em></li>
+</ul>
+<h3 id="初等变换的性质">2. 初等变换的性质</h3>
+<ol type="1">
+<li><strong>形状与保留</strong>：行/列数不变，且未变的行列照抄。</li>
+<li><strong>可逆性</strong>：初等变换是可逆的。</li>
+<li><strong>等价性</strong>：若矩阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+经有限次初等变换变成
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>，记作
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \rightarrow B</annotation></semantics></math>，则称
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+等价。</li>
+</ol>
+<h3 id="利用初等变换解方程组">3. 利用初等变换解方程组</h3>
+<p>设
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n \times n</annotation></semantics></math>
+型方程组为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>x</mi><mo>=</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">Ax=b</annotation></semantics></math>。</p>
+<ol type="1">
+<li><strong>唯一解条件</strong>：将增广矩阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[A, b]</annotation></semantics></math>
+转化为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>E</mi><mo>,</mo><mi>c</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[E, c]</annotation></semantics></math>，则方程组的解为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">x=c</annotation></semantics></math>，结果通常写为向量形式。
+<ul>
+<li><em>注意：解方程组的过程中，只允许使用<strong>行变换</strong>。</em></li>
+</ul></li>
+<li><strong>化简步骤与实操（以行变换为例）</strong>：
+<ul>
+<li><strong>① 化简第一列</strong>：先将
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>11</mn></msub><annotation encoding="application/x-tex">a_{11}</annotation></semantics></math>
+对调为非 0。通过倍加变换将
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>21</mn></msub><mo>,</mo><msub><mi>a</mi><mn>31</mn></msub></mrow><annotation encoding="application/x-tex">a_{21}, a_{31}</annotation></semantics></math>
+变为 0。（<em>技巧：尽量使
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>11</mn></msub><mo>,</mo><msub><mi>a</mi><mn>21</mn></msub><mo>,</mo><msub><mi>a</mi><mn>31</mn></msub></mrow><annotation encoding="application/x-tex">a_{11}, a_{21}, a_{31}</annotation></semantics></math>
+有倍数关系，方便计算</em>）。</li>
+<li><strong>② 化简第二列</strong>：重点将
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>22</mn></msub><annotation encoding="application/x-tex">a_{22}</annotation></semantics></math>
+化为非 0（且只能用第二、第三行进行调换）。然后利用
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>22</mn></msub><annotation encoding="application/x-tex">a_{22}</annotation></semantics></math>
+将
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>12</mn></msub><annotation encoding="application/x-tex">a_{12}</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>32</mn></msub><annotation encoding="application/x-tex">a_{32}</annotation></semantics></math>
+化为 0。</li>
+<li><strong>③
+解的判定（化简后）</strong>：当且仅当最后一列全为零，或者上面几个数为最后一个数的倍数时，有解。</li>
+<li><em>最终可通过上述步骤，将矩阵化为上三角形或下三角形，进而化为单位阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>。</em></li>
+</ul></li>
+</ol>
+<h2 id="初等矩阵">1.3.2 初等矩阵</h2>
+<p><strong>定义</strong>：由单位矩阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+经过<strong>一次</strong>初等变换得到的矩阵，称为初等矩阵。</p>
+<ul>
+<li><strong>① 对调矩阵</strong>：对调
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+的
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i, j</annotation></semantics></math>
+行(或列)，记为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">E_{ij}</annotation></semantics></math>。</li>
+<li><strong>② 倍乘矩阵</strong>：将
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+的
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+行(或列)乘上非零常数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>，记为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E_i(k)</annotation></semantics></math>。</li>
+<li><strong>③ 倍加矩阵</strong>：将
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+的第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+行乘
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+加到第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+行，或将第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+列乘
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+加到第
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+列，记为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E_{ij}(k)</annotation></semantics></math>。
+<ul>
+<li><em>(注：行为后加到前，列为前加到后)</em>。</li>
+</ul></li>
+</ul>
+<h3 id="初等矩阵的性质">2. 初等矩阵的性质</h3>
+<ol type="1">
+<li><strong>对称性</strong>：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>E</mi><mrow><mi>i</mi><mi>j</mi></mrow><mi>T</mi></msubsup><mo>=</mo><msub><mi>E</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">E_{ij}^T = E_{ij}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>E</mi><mi>i</mi><mi>T</mi></msubsup><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>E</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E_i^T(k) = E_i(k)</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E_{ij}(k)</annotation></semantics></math>
+亦为对称矩阵。</li>
+<li><strong>与初等变换的对应关系</strong>（核心考点）：
+<ul>
+<li>① 若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mover><mo>→</mo><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>↔</mo><msub><mi>r</mi><mi>j</mi></msub></mrow></mover><mi>B</mi></mrow><annotation encoding="application/x-tex">A \xrightarrow{r_i \leftrightarrow r_j} B</annotation></semantics></math>，等价于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>A</mi><mo>=</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">E_{ij} A = B</annotation></semantics></math></li>
+<li>② 若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mover><mo>→</mo><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>×</mo><mi>k</mi></mrow></mover><mi>B</mi></mrow><annotation encoding="application/x-tex">A \xrightarrow{r_i \times k} B</annotation></semantics></math>，等价于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mi>A</mi><mo>=</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">E_i(k) A = B</annotation></semantics></math></li>
+<li>③ 若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mover><mo>→</mo><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>+</mo><mi>k</mi><msub><mi>r</mi><mi>j</mi></msub></mrow></mover><mi>B</mi></mrow><annotation encoding="application/x-tex">A \xrightarrow{r_i + k r_j} B</annotation></semantics></math>，等价于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mi>A</mi><mo>=</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">E_{ij}(k) A = B</annotation></semantics></math></li>
+<li><strong>法则</strong>：<strong>左乘</strong>初等矩阵代表进行对应的<strong>行变换</strong>，<strong>右乘</strong>代表对应的<strong>列变换</strong>。靠近
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+的先运算。</li>
+</ul></li>
+<li><strong>可逆性</strong>：初等矩阵的逆矩阵仍是同类型的初等矩阵。经相反变换后变回
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>：
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>E</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><mo>=</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">E_{ij} E_{ji} = E</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><msub><mi>E</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mfrac><mn>1</mn><mi>k</mi></mfrac><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">E_i(k) E_i(\frac{1}{k}) = E</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><msub><mi>E</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">E_{ij}(k) E_{ji}(k) = E</annotation></semantics></math>
+<em>(注：按你的笔记此处为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E_{ji}(k)</annotation></semantics></math>，具体视教材对倍加矩阵方向的符号定义而定)</em></li>
+</ul></li>
+</ol>
+<h3 id="附行变换与列变换的独立性">💡 附：行变换与列变换的独立性</h3>
+<p>初等行变换与初等列变换之间<strong>互不影响</strong>。所以只要初等行/列变换之间的<strong>相对位置一致</strong>，即可保证结果相同。</p>
+<blockquote>
+<p><strong>例如</strong>：数字 1, 2 代表行变换；3, 4 代表列变换。 对
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+依次进行 1, 2, 3, 4 变换，等同于进行 1, 3, 4, 2 变换，也等同于 3, 4, 1,
+2 变换。即：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>A</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>A</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">A \cdot (1, 2, 3, 4) = A \cdot (1, 3, 4, 2) = A \cdot (3, 4, 1, 2)</annotation></semantics></math></p>
+</blockquote>
+<h2 id="矩阵的等价标准形">1.3.3 矩阵的等价标准形</h2>
+<h3 id="方阵化为三角阵">1. 方阵化为三角阵</h3>
+<p>对于方阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>，用有限次倍加行/列变换可将
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+化为<strong>上三角矩阵</strong>。 则一定存在初等矩阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mi>k</mi></msub><annotation encoding="application/x-tex">P_k</annotation></semantics></math>（左乘，代表行变换）和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Q</mi><mi>k</mi></msub><annotation encoding="application/x-tex">Q_k</annotation></semantics></math>（右乘，代表列变换），使得：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>k</mi></msub><mi>…</mi><msub><mi>P</mi><mn>2</mn></msub><msub><mi>P</mi><mn>1</mn></msub><mi>A</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>Q</mi><mn>1</mn></msub><msub><mi>Q</mi><mn>2</mn></msub><mi>…</mi><msub><mi>Q</mi><mi>k</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P_k \dots P_2 P_1 A (Q_1 Q_2 \dots Q_k)</annotation></semantics></math>
+的结果为上三角矩阵。</p>
+<h3 id="任意矩阵化为等价标准形">2. 任意矩阵化为等价标准形</h3>
+<p>对于任意
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m \times n</annotation></semantics></math>
+<strong>非零矩阵</strong>，必可用初等变换将其化为如下形式：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>E</mi><mi>s</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">F = \begin{bmatrix} E_s &amp; 0 \\ 0 &amp; 0 \end{bmatrix}</annotation></semantics></math>
+<em>(注：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+可以等于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+或
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>，一般
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+就是该矩阵的秩)</em></p>
+<p>即必定存在
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+阶初等矩阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mi>k</mi></msub><annotation encoding="application/x-tex">P_k</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+阶初等矩阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Q</mi><mi>k</mi></msub><annotation encoding="application/x-tex">Q_k</annotation></semantics></math>，使得：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>k</mi></msub><mi>…</mi><msub><mi>P</mi><mn>2</mn></msub><msub><mi>P</mi><mn>1</mn></msub><mi>A</mi><msub><mi>Q</mi><mn>1</mn></msub><msub><mi>Q</mi><mn>2</mn></msub><mi>…</mi><msub><mi>Q</mi><mi>k</mi></msub><mo>=</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">P_k \dots P_2 P_1 A Q_1 Q_2 \dots Q_k = F</annotation></semantics></math></p>
+<ul>
+<li><strong>具体操作步骤</strong>：将
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">a_{ij}</annotation></semantics></math>
+变换至主对角元位置（从
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mn>11</mn></msub><annotation encoding="application/x-tex">a_{11}</annotation></semantics></math>
+位置开始顺延），然后将变换后对角元同行同列的其他元素全部化为 0。</li>
+<li>矩阵
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>
+即为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+的<strong>等价标准形</strong>。</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://julian-yulijin.github.io/2026/10/24/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E4%B8%8E%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/" data-id="cuidZKvUHiCcoPwoLC8GafdEl" data-title="线性代数与解析几何第一章笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://julian-yulijin.github.io/2026/10/24/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E4%B8%8E%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/" data-id="cuidvdOxaurN8S4-QUWFoSBvL" data-title="线性代数与解析几何第一章笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
