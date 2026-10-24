@@ -14,7 +14,7 @@
 <meta property="og:description" content="微积分第一章：极限与连续 一、易考辨析类知识点 1. 极限的本质与基础定义  极限前提： 极限存在的前提必为极限为常数（适用于所有定理，推广至拆分时的需求）。 独立性： 函数极限 lim&#8289;x→x0f(x)\lim_{x\to x_0} f(x) 的值与 f(x0)f(x_0) 无关，且 f(x)f(x) 可在 x&#x3D;x0x&#x3D;x_0 上无定义（x≠x0x\neq">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-10-21T14:58:19.000Z">
-<meta property="article:modified_time" content="2026-10-23T14:39:10.681Z">
+<meta property="article:modified_time" content="2026-10-23T15:17:25.855Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -377,26 +377,22 @@ Dirichlet（狄利克雷）函数无最小正周期。取整函数满足：</li>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>J</mi><annotation encoding="application/x-tex">J</annotation></semantics></math>
 上单调且连续。</p>
 <hr />
-<h2 id="三极限的求解类型方法大全">三、极限的求解类型（方法大全）</h2>
-<h3 id="抓大头">1. 抓大头</h3>
+<h2 id="三极限的求解类型">三、极限的求解类型</h2>
+<h3 id="一判断题目结构">（一）判断题目结构</h3>
+<h4 id="抓大头">1. 抓大头</h4>
 <ul>
-<li><p>对于项目多并且类型不同的，可以进行抓大头。</p></li>
-<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
-趋近于无穷时，增长速度通常满足：</p></li>
-</ul>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mi>x</mi></msup><mo>&gt;</mo><msup><mi>x</mi><mi>α</mi></msup><mo>&gt;</mo><msub><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mi>a</mi></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">A^x&gt;x^\alpha&gt;\log_a x</annotation></semantics></math></p>
-<p>（在相应参数满足条件时，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
-远小于
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mi>α</mi></msup><annotation encoding="application/x-tex">x^\alpha</annotation></semantics></math>）。</p>
-<ul>
-<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+<li><p>前提：对于项目多并且类型不同的，可以进行抓大头。
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
 趋近于 0
 时，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
 远大于
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mn>2</mn></msup><annotation encoding="application/x-tex">x^2</annotation></semantics></math>。</p></li>
-<li><p>若分母相同、分子繁杂，可不动分子、动分母；对分母化简时不能改变任一量级（指数）。大相同
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math>
-此时可以抓大头。</p></li>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mi>α</mi></msup><annotation encoding="application/x-tex">x^\alpha</annotation></semantics></math>(α&lt;0)。
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+趋近于无穷时，增长速度通常满足：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>α</mi><mi>x</mi></msup><mo>&gt;</mo><msup><mi>x</mi><mi>α</mi></msup><mo>&gt;</mo><msub><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mi>a</mi></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">\alpha^x&gt;x^\alpha&gt;\log_a x</annotation></semantics></math></p></li>
+<li><p>方法：第一种为<span
+style="color: red;">直接忽略</span>载对应趋近数值时<span
+style="color: red;">较小的部分</span>；第二种则直接分子分母同除最高次项。</p></li>
 </ul>
 <p><strong>经典例题：</strong></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mi>+</mi><mi>∞</mi></mrow></munder><mfrac><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msqrt><mi>x</mi></mfrac></mrow><annotation encoding="application/x-tex">\lim_{x\to+\infty}\frac{\sqrt{x^2+1}}{x}</annotation></semantics></math></p>
@@ -651,7 +647,7 @@ Dirichlet（狄利克雷）函数无最小正周期。取整函数满足：</li>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://julian-yulijin.github.io/2026/10/21/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/" data-id="cuidGTbKfMnjzOzUDJ6SDp2zE" data-title="微积分第一章笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://julian-yulijin.github.io/2026/10/21/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/" data-id="cuidrVBCV_irAwMIVAqYRqkN_" data-title="微积分第一章笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
