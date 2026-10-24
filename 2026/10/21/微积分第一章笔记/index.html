@@ -14,7 +14,7 @@
 <meta property="og:description" content="微积分第一章：极限与连续 一、易考辨析类知识点 1. 极限的本质与基础定义  极限前提： 极限存在的前提必为极限为常数（适用于所有定理，推广至拆分时的需求）。 独立性： 函数极限 lim&#8289;x→x0f(x)\lim_{x\to x_0} f(x) 的值与 f(x0)f(x_0) 无关，且 f(x)f(x) 可在 x&#x3D;x0x&#x3D;x_0 上无定义（x≠x0x\neq">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-10-21T14:58:19.000Z">
-<meta property="article:modified_time" content="2026-10-23T15:17:25.855Z">
+<meta property="article:modified_time" content="2026-10-24T02:46:38.555Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -378,21 +378,78 @@ Dirichlet（狄利克雷）函数无最小正周期。取整函数满足：</li>
 上单调且连续。</p>
 <hr />
 <h2 id="三极限的求解类型">三、极限的求解类型</h2>
-<h3 id="一判断题目结构">（一）判断题目结构</h3>
-<h4 id="抓大头">1. 抓大头</h4>
+<h3 id="一判断结构">（一）判断结构</h3>
+<h4 id="可以直接代入极限处的值">1.可以直接代入极限处的值</h4>
 <ul>
-<li><p>前提：对于项目多并且类型不同的，可以进行抓大头。
+<li>方法：极限处的值可以直接代入求整体极限。</li>
+<li><strong>直接代入：</strong> 只要不是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">x\to\infty</annotation></semantics></math>
+或不在定义域内的情况，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">x\to c</annotation></semantics></math>
+时要大胆代入常数。</li>
+</ul>
+<h4 id="未定式">2.未定式</h4>
+<ul>
+<li><span
+style="color: red;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>0</mn><mn>0</mn></mfrac><annotation encoding="application/x-tex">\frac00</annotation></semantics></math></span>
+或 <span
+style="color: red;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>∞</mi><mi>∞</mi></mfrac><annotation encoding="application/x-tex">\frac{\infty}{\infty}</annotation></semantics></math></span>的<span
+style="color: red;">分数型</span>大胆用<span
+style="color: red;">洛必达法则</span>（只要<span
+style="color: red;">求导不复杂</span>）。</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∞</mi><mo>−</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">\infty-\infty</annotation></semantics></math>
+型，第一步必须是<span style="color: red;">通分</span>。</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>⋅</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">0\cdot\infty</annotation></semantics></math>：改写为
+<span
+style="color: red;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>0</mn><mn>0</mn></mfrac><annotation encoding="application/x-tex">\frac00</annotation></semantics></math></span>
+或 <span
+style="color: red;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>∞</mi><mi>∞</mi></mfrac><annotation encoding="application/x-tex">\frac{\infty}{\infty}</annotation></semantics></math></span>
+型。</li>
+<li>无穷的零次方、0 的零次方、1 的无穷次方：<span
+style="color: red;">幂指代换</span>。</li>
+</ul>
+<h4 id="多项求和">3.多项求和</h4>
+<ul>
+<li>多项求和能合并则合并。</li>
+<li>多项求和不能合并则夹逼法则。</li>
+</ul>
+<h3 id="二计算方案">（二）计算方案</h3>
+<h4 id="等价无穷小替换">等价无穷小替换：</h4>
+<ul>
+<li><strong>对数函数：</strong>
+一定要加一减一，构造等价无穷小替换。</li>
+<li><strong>换元：</strong> 通过换元实现等价无穷小替换。</li>
+<li><strong>防坑点：</strong>
+尽量不要分数套分数，容易有不可进行等价无穷小替换的情况（表面是乘除，实际是加减）。</li>
+</ul>
+<h4 id="洛必达法则">1. 洛必达法则</h4>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>0</mn><mn>0</mn></mfrac><annotation encoding="application/x-tex">\frac00</annotation></semantics></math>
+或
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>∞</mi><mi>∞</mi></mfrac><annotation encoding="application/x-tex">\frac{\infty}{\infty}</annotation></semantics></math>
+型可用洛必达法则。分数形式别忘了大胆用。</li>
+<li>对于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">\sin x</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">\cos x</annotation></semantics></math>，在
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+趋近于无穷时（振荡）不能直接用洛必达法则，但是可以抓大头；同时求导太麻烦的别用洛必达法则。</li>
+</ul>
+<h4 id="抓大头">2. 抓大头</h4>
+<ul>
+<li>前提：对于项目多并且类型不同的，可以进行抓大头。
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
 趋近于 0
 时，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
 远大于
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mi>α</mi></msup><annotation encoding="application/x-tex">x^\alpha</annotation></semantics></math>(α&lt;0)。
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
-趋近于无穷时，增长速度通常满足：
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>α</mi><mi>x</mi></msup><mo>&gt;</mo><msup><mi>x</mi><mi>α</mi></msup><mo>&gt;</mo><msub><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mi>a</mi></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">\alpha^x&gt;x^\alpha&gt;\log_a x</annotation></semantics></math></p></li>
-<li><p>方法：第一种为<span
-style="color: red;">直接忽略</span>载对应趋近数值时<span
-style="color: red;">较小的部分</span>；第二种则直接分子分母同除最高次项。</p></li>
+趋近于无穷时，增长速度通常满足：</li>
+</ul>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>α</mi><mi>x</mi></msup><mo>&gt;</mo><msup><mi>x</mi><mi>α</mi></msup><mo>&gt;</mo><msub><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mi>a</mi></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">\alpha^x&gt;x^\alpha&gt;\log_a x</annotation></semantics></math></p>
+<ul>
+<li>方法：（1）.<span
+style="color: red;">直接忽略</span>在对应趋近数值时<span
+style="color: red;">较小的部分</span>；（2）.直接分子分母同除最高次项（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">x\to\infty</annotation></semantics></math>
+时成立） ；（3）.
+对于非幂函数：利用等价无穷小替换，将函数的阶数视作幂函数的指数。</li>
 </ul>
 <p><strong>经典例题：</strong></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mi>+</mi><mi>∞</mi></mrow></munder><mfrac><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msqrt><mi>x</mi></mfrac></mrow><annotation encoding="application/x-tex">\lim_{x\to+\infty}\frac{\sqrt{x^2+1}}{x}</annotation></semantics></math></p>
@@ -402,51 +459,9 @@ style="color: red;">较小的部分</span>；第二种则直接分子分母同�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>，分母为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>，故极限为：</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math></p>
-<h3 id="洛必达法则">2. 洛必达法则</h3>
+<h4 id="分子有理化">3. 分子有理化</h4>
 <ul>
-<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>0</mn><mn>0</mn></mfrac><annotation encoding="application/x-tex">\frac00</annotation></semantics></math>
-或
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>∞</mi><mi>∞</mi></mfrac><annotation encoding="application/x-tex">\frac{\infty}{\infty}</annotation></semantics></math>
-型可用洛必达法则。分数形式别忘了大胆用。</p></li>
-<li><p>对于
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">\sin X</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">\cos X</annotation></semantics></math>，在
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
-趋近于无穷时不能直接用洛必达法则，但是可以抓大头。</p></li>
-</ul>
-<h3 id="夹逼法则-1">3. 夹逼法则</h3>
-<ul>
-<li><p>多项求法的情况，类似有规律求和类，方法是通过做所有项相变最大或变最小来找到上下边缘。取等与否均可。</p></li>
-<li><p>放缩时，不论对分子和分母变化，都不应该改变任意一部分的量级（即指数）。大相同
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math>
-可以抓大头。</p></li>
-<li><p><strong>特殊类型：</strong> 求极限
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">N\to\infty</annotation></semantics></math>
-时：</p></li>
-</ul>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mi>A</mi><mn>1</mn><mi>N</mi></msubsup><mo>+</mo><msubsup><mi>A</mi><mn>2</mn><mi>N</mi></msubsup><mo>+</mo><mi>…</mi><mo>+</mo><msubsup><mi>A</mi><mi>M</mi><mi>N</mi></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>/</mi><mi>N</mi></mrow></msup><annotation encoding="application/x-tex">\left(A_1^N+A_2^N+\dots+A_M^N\right)^{1/N}</annotation></semantics></math></p>
-<p>这个结果的极限是
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>1</mn></msub><annotation encoding="application/x-tex">A_1</annotation></semantics></math>
-到
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>M</mi></msub><annotation encoding="application/x-tex">A_M</annotation></semantics></math>
-中最大的项（在各项为非负数等适用条件下）。</p>
-<p><strong>经典例题：</strong></p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>n</mi><mo>→</mo><mi>∞</mi></mrow></munder><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac><mo>+</mo><mfrac><mi>n</mi><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn></mrow></mfrac><mo>+</mo><mi>…</mi><mo>+</mo><mfrac><mi>n</mi><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>n</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\lim_{n\to\infty}
-\left(
-\frac{n}{n^2+1}
-+\frac{n}{n^2+2}
-+\dots+
-\frac{n}{n^2+n}
-\right)</annotation></semantics></math></p>
-<p><strong>解析：</strong></p>
-<p>放缩分母：</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>n</mi><mo>⋅</mo><mi>n</mi></mrow><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>n</mi></mrow></mfrac><mo>≤</mo><msub><mi>S</mi><mi>n</mi></msub><mo>≤</mo><mfrac><mrow><mi>n</mi><mo>⋅</mo><mi>n</mi></mrow><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{n\cdot n}{n^2+n}
-\le S_n\le
-\frac{n\cdot n}{n^2+1}</annotation></semantics></math></p>
-<p>两端极限均为 1，故：</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>→</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">S_n\to1</annotation></semantics></math></p>
-<h3 id="分子有理化">4. 分子有理化</h3>
-<ul>
-<li>根号与根号相减，必分子有理化。</li>
+<li>有根号存在根号与根号相减，必分子有理化。</li>
 </ul>
 <p><strong>经典例题：</strong></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mi>+</mi><mi>∞</mi></mrow></munder><mrow><mo stretchy="true" form="prefix">(</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi></mrow></msqrt><mo>−</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\lim_{x\to+\infty}\left(\sqrt{x^2+x}-x\right)</annotation></semantics></math></p>
@@ -459,35 +474,8 @@ style="color: red;">较小的部分</span>；第二种则直接分子分母同�
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mi>+</mi><mi>∞</mi></mrow></munder><mfrac><mn>1</mn><mrow><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow></msqrt><mo>+</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\lim_{x\to+\infty}
 \frac{1}{\sqrt{1+\frac1x}+1}
 =\frac12</annotation></semantics></math></p>
-<h3 id="通分">5. 通分</h3>
-<ul>
-<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>×</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">0\times\infty</annotation></semantics></math>
-型化简为
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>0</mn><mn>0</mn></mfrac><annotation encoding="application/x-tex">\frac00</annotation></semantics></math>
-或
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>∞</mi><mi>∞</mi></mfrac><annotation encoding="application/x-tex">\frac{\infty}{\infty}</annotation></semantics></math>
-型。</p></li>
-<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∞</mi><mo>−</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">\infty-\infty</annotation></semantics></math>
-型变通分，提早通分。</p></li>
-</ul>
-<h3 id="有界量">6. 有界量</h3>
-<ul>
-<li><p>碰到反三角函数时，要思考利用其有界性。</p></li>
-<li><p>有界量乘无穷小量 = 无穷小量，即极限为 0。</p></li>
-</ul>
-<p><strong>经典例题：</strong></p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><msup><mi>x</mi><mn>2</mn></msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><annotation encoding="application/x-tex">\lim_{x\to0}x^2\sin\frac1x</annotation></semantics></math></p>
-<p><strong>解析：</strong></p>
-<p>因为：</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi mathvariant="normal">sin</mi><mfrac><mn>1</mn><mi>x</mi></mfrac><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\left|\sin\frac1x\right|\le1</annotation></semantics></math></p>
-<p>所以
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><annotation encoding="application/x-tex">\sin\frac1x</annotation></semantics></math>
-为有界量，而
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x^2\to0</annotation></semantics></math>
-为无穷小量，因此：</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><msup><mi>x</mi><mn>2</mn></msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lim_{x\to0}x^2\sin\frac1x=0</annotation></semantics></math></p>
-<h3 id="求未知数双圆梯形已知极限求未知数">7.
-求未知数（双圆梯形已知极限求未知数）</h3>
+<h4 id="求未知数双元题型已知极限求未知数">4.
+求未知数（双元题型已知极限求未知数）</h4>
 <p>已知极限的情况下，求函数中的两个常量的值。</p>
 <p>方法：</p>
 <p>1. 分子有理化或通分。</p>
@@ -507,10 +495,18 @@ style="color: red;">较小的部分</span>；第二种则直接分子分母同�
 =\frac a2=b</annotation></semantics></math></p>
 <p>故：</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mi>b</mi></mrow><annotation encoding="application/x-tex">a=2b</annotation></semantics></math></p>
-<h3 id="幂指代换">8. 幂指代换</h3>
+<ul>
+<li>对于课上讲的题型：先提出
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>（注意正负号），再求出带系数的
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+，然后没有系数的
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+等于等下所有部分的极限。</li>
+</ul>
+<h4 id="幂指代换">5. 幂指代换</h4>
 <ul>
 <li>无穷的零次方、0 的零次方、1 的无穷次方，都转化为
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>1</mn><mrow><mi>Y</mi><mi>N</mi></mrow></msup><annotation encoding="application/x-tex">1^{YN}</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>l</mi><mi>n</mi></mrow></msup><annotation encoding="application/x-tex">e^{ln}</annotation></semantics></math>
 型，即：</li>
 </ul>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">lim</mi><mo>&#8289;</mo></mrow><mi>u</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><mo>=</mo><msup><mi>e</mi><mrow><mrow><mi mathvariant="normal">lim</mi><mo>&#8289;</mo></mrow><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mrow><mi mathvariant="normal">ln</mi><mo>&#8289;</mo></mrow><mi>u</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">\lim u(x)^{v(x)}
@@ -541,11 +537,16 @@ style="color: red;">较小的部分</span>；第二种则直接分子分母同�
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">-\frac16</annotation></semantics></math></p>
 <p>最终结果：</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>1</mn><mi>/</mi><mn>6</mn></mrow></msup><annotation encoding="application/x-tex">e^{-1/6}</annotation></semantics></math></p>
-<h3 id="两指数相减">9. 两指数相减</h3>
-<p>遇到两指数相减的情况，提取公因式或进行转化。</p>
-<h3 id="提出后一项">10. 提出后一项</h3>
-<p>遇到多项相加减，提取后一项或最高次项进行化简。</p>
-<h3 id="拆分">11. 拆分</h3>
+<h4 id="两指数相减">6. 两指数相减</h4>
+<p>遇到两指数相减的情况，提取后一项进行化简。 -
+<strong>等价无穷小选择：</strong> 对于</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mi>x</mi></msup><mo>−</mo><mn>1</mn><mo>∼</mo><mi>x</mi><mrow><mi mathvariant="normal">ln</mi><mo>&#8289;</mo></mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a^x-1\sim x\ln a</annotation></semantics></math></p>
+<p>与</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>α</mi></msup><mo>−</mo><mn>1</mn><mo>∼</mo><mi>α</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">(1+x)^\alpha-1\sim\alpha x</annotation></semantics></math></p>
+<p>实际要仔细判断用哪一种，有些题中
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">ln</mi><annotation encoding="application/x-tex">\ln</annotation></semantics></math>
+形式不好化解。</p>
+<h4 id="拆分">7. 拆分</h4>
 <ul>
 <li><p>对于分数类型，拆分分子及拆分时需不需要加
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1-1</annotation></semantics></math>
@@ -557,21 +558,56 @@ style="color: red;">较小的部分</span>；第二种则直接分子分母同�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>−</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">X-X</annotation></semantics></math>。</p></li>
 <li><p>对于某一小部分的乘法和除法，要积极使用等价无穷小替换。</p></li>
 </ul>
-<h3 id="其他关键操作与防坑点">12. 其他关键操作与防坑点</h3>
+<h4 id="有界">8. 有界</h4>
 <ul>
-<li><p><strong>多项式同除最高项：</strong>
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mi>±</mi><mi>∞</mi></mrow><annotation encoding="application/x-tex">x\to\pm\infty</annotation></semantics></math>
-时相加减，将所有项同时除以最高次项。</p></li>
-<li><p><strong>对数函数：</strong>
-一定要加一减一，构造等价无穷小替换。</p></li>
-<li><p><strong>换元：</strong> 通过换元实现等价无穷小替换。</p></li>
-<li><p><strong>直接代入：</strong> 只要不是
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">x\to\infty</annotation></semantics></math>
-且不在定义域内，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">x\to c</annotation></semantics></math>
-时要大胆代入常数。</p></li>
-<li><p><strong>防坑点：</strong>
-尽量不要分数套分数，容易有不可进行等价无穷小替换的情况。用定义域找反例。</p></li>
-<li><p><strong>递推数列：</strong></p>
+<li><p>碰到
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>r</mi><mi>c</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">arctanx</annotation></semantics></math>
+时，要思考利用其有界性或者直接求导。</p></li>
+<li><p>有界量×无穷小量 = 无穷小量，即极限为 0。
+<strong>经典例题：</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><msup><mi>x</mi><mn>2</mn></msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><annotation encoding="application/x-tex">\lim_{x\to0}x^2\sin\frac1x</annotation></semantics></math>
+<strong>解析：</strong> 因为：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi mathvariant="normal">sin</mi><mfrac><mn>1</mn><mi>x</mi></mfrac><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\left|\sin\frac1x\right|\le1</annotation></semantics></math>
+所以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><annotation encoding="application/x-tex">\sin\frac1x</annotation></semantics></math>
+为有界量，而
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x^2\to0</annotation></semantics></math>
+为无穷小量，因此：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><msup><mi>x</mi><mn>2</mn></msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lim_{x\to0}x^2\sin\frac1x=0</annotation></semantics></math></p></li>
+<li><p>判断函数在某区间内的是否有界：求函数在区间边界上的极限是否存在。</p></li>
+</ul>
+<h4 id="夹逼法则-1">9. 夹逼法则</h4>
+<ul>
+<li><p>多项求法的情况，类似有规律求和类，方法是通过做所有项相变最大或变最小来找到上下边缘。取等与否均可。</p></li>
+<li><p>放缩时，不论对分子和分母变化，都不应该改变任意一部分的量级（即指数）。大相同
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math>
+可以抓大头。</p></li>
+<li><p><strong>特殊类型：</strong> 求极限
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">N\to\infty</annotation></semantics></math>
+时：</p></li>
+</ul>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="true" form="prefix">(</mo><msubsup><mi>A</mi><mn>1</mn><mi>N</mi></msubsup><mo>+</mo><msubsup><mi>A</mi><mn>2</mn><mi>N</mi></msubsup><mo>+</mo><mi>…</mi><mo>+</mo><msubsup><mi>A</mi><mi>M</mi><mi>N</mi></msubsup><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>/</mi><mi>N</mi></mrow></msup><annotation encoding="application/x-tex">\left(A_1^N+A_2^N+\dots+A_M^N\right)^{1/N}</annotation></semantics></math></p>
+<p>这个结果的极限是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>1</mn></msub><annotation encoding="application/x-tex">A_1</annotation></semantics></math>
+到
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>M</mi></msub><annotation encoding="application/x-tex">A_M</annotation></semantics></math>
+中最大的项（在各项为非负数等适用条件下）。</p>
+<p><strong>经典例题：</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>n</mi><mo>→</mo><mi>∞</mi></mrow></munder><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac><mo>+</mo><mfrac><mi>n</mi><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn></mrow></mfrac><mo>+</mo><mi>…</mi><mo>+</mo><mfrac><mi>n</mi><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>n</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\lim_{n\to\infty}
+\left(
+\frac{n}{n^2+1}
++\frac{n}{n^2+2}
++\dots+
+\frac{n}{n^2+n}
+\right)</annotation></semantics></math></p>
+<p><strong>解析：</strong></p>
+<p>放缩分母：</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>n</mi><mo>⋅</mo><mi>n</mi></mrow><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>n</mi></mrow></mfrac><mo>≤</mo><msub><mi>S</mi><mi>n</mi></msub><mo>≤</mo><mfrac><mrow><mi>n</mi><mo>⋅</mo><mi>n</mi></mrow><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{n\cdot n}{n^2+n}
+\le S_n\le
+\frac{n\cdot n}{n^2+1}</annotation></semantics></math></p>
+<p>两端极限均为 1，故：</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>→</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">S_n\to1</annotation></semantics></math></p>
+<h4 id="证明数列收敛并求极限">10.证明数列收敛并求极限：</h4>
 <ul>
 <li><p>证明收敛时，同时证明单调且同侧有界（常用数学归纳法）。</p></li>
 <li><p>计算极限时，将
@@ -581,11 +617,10 @@ style="color: red;">较小的部分</span>；第二种则直接分子分母同�
 的极限都用
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
 表达，解方程。</p></li>
-</ul></li>
 </ul>
 <p><strong>经典例题：</strong></p>
 <p>已知：</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>,</mo><mspace width="2.0em"></mspace><mi>x</mi><mi>_</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo>=</mo><msqrt><mrow><mn>2</mn><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></msqrt></mrow><annotation encoding="application/x-tex">x_1=\sqrt2,\qquad x\_{n+1}=\sqrt{2+x_n}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msqrt><mrow><mn>2</mn><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></msqrt></mrow><annotation encoding="application/x-tex">x_1=\sqrt2,\qquad x_{n+1}=\sqrt{2+x_n}</annotation></semantics></math></p>
 <p>求极限。</p>
 <p><strong>解析：</strong></p>
 <p>用数学归纳法证明
@@ -599,18 +634,21 @@ style="color: red;">较小的部分</span>；第二种则直接分子分母同�
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>2</mn><mspace width="1.0em"></mspace><mtext mathvariant="normal">或</mtext><mspace width="1.0em"></mspace><mi>A</mi><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">A=2\quad\text{或}\quad A=-1</annotation></semantics></math></p>
 <p>由于数列各项为正，故：</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">A=2</annotation></semantics></math></p>
+<h4 id="求同阶无穷小的阶数">11. 求同阶无穷小的阶数</h4>
 <ul>
-<li><strong>等价无穷小选择：</strong> 对于</li>
+<li>直接判断与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mi>k</mi></msup><annotation encoding="application/x-tex">x^k</annotation></semantics></math>
+形成同阶无穷小，通过等价无穷小替换与抓大头的方式来判断
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+的值。</li>
 </ul>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mi>x</mi></msup><mo>−</mo><mn>1</mn><mo>∼</mo><mi>x</mi><mrow><mi mathvariant="normal">ln</mi><mo>&#8289;</mo></mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a^x-1\sim x\ln a</annotation></semantics></math></p>
-<p>与</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>α</mi></msup><mo>−</mo><mn>1</mn><mo>∼</mo><mi>α</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">(1+x)^\alpha-1\sim\alpha x</annotation></semantics></math></p>
-<p>实际要仔细判断用哪一种，有些题中
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">ln</mi><annotation encoding="application/x-tex">\ln</annotation></semantics></math>
-形式不好化解。</p>
-<h3 id="必背工具库">13. 必背工具库</h3>
-<h4 id="等价无穷小均为-xto0">（1）等价无穷小（均为
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x\to0</annotation></semantics></math>）</h4>
+<h4 id="定义辨析题">12. 定义辨析题</h4>
+<ul>
+<li>找反例。</li>
+</ul>
+<h4 id="必背工具库">13. 必背工具库</h4>
+<h5 id="等价无穷小均为-xto0">（1）等价无穷小（均为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x\to0</annotation></semantics></math>）</h5>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>x</mi><mo>∼</mo><mi>x</mi><mo>,</mo><mspace width="2.0em"></mspace><mrow><mi mathvariant="normal">tan</mi><mo>&#8289;</mo></mrow><mi>x</mi><mo>∼</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">\sin x\sim x,\qquad \tan x\sim x</annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">arcsin</mi><mo>&#8289;</mo></mrow><mi>x</mi><mo>∼</mo><mi>x</mi><mo>,</mo><mspace width="2.0em"></mspace><mrow><mi mathvariant="normal">arctan</mi><mo>&#8289;</mo></mrow><mi>x</mi><mo>∼</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">\arcsin x\sim x,\qquad \arctan x\sim x</annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>−</mo><mn>1</mn><mo>∼</mo><mi>x</mi><mo>,</mo><mspace width="2.0em"></mspace><mrow><mi mathvariant="normal">ln</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>∼</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">e^x-1\sim x,\qquad \ln(1+x)\sim x</annotation></semantics></math></p>
@@ -621,13 +659,13 @@ style="color: red;">较小的部分</span>；第二种则直接分子分母同�
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">tan</mi><mo>&#8289;</mo></mrow><mi>x</mi><mo>−</mo><mi>x</mi><mo>∼</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><msup><mi>x</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\tan x-x\sim\frac13x^3</annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">tan</mi><mo>&#8289;</mo></mrow><mi>x</mi><mo>−</mo><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>x</mi><mo>∼</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\tan x-\sin x\sim\frac12x^3</annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>x</mi><mo>∼</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><msup><mi>x</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">x-\sin x\sim\frac16x^3</annotation></semantics></math></p>
-<h4 id="重要极限与结论">（2）重要极限与结论</h4>
+<h5 id="重要极限与结论">（2）重要极限与结论</h5>
 <p>当
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">N\to\infty</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">n\to\infty</annotation></semantics></math>
 时：</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>N</mi><mrow><mn>1</mn><mi>/</mi><mi>N</mi></mrow></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">N^{1/N}=1</annotation></semantics></math></p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mrow><mn>1</mn><mi>/</mi><mi>N</mi></mrow></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">A^{1/N}=1</annotation></semantics></math></p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>N</mi></msup><mo>=</mo><mi>e</mi></mrow><annotation encoding="application/x-tex">\left(1+\frac1N\right)^N=e</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mrow><mn>1</mn><mi>/</mi><mi>n</mi></mrow></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n^{1/n}=1</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mrow><mn>1</mn><mi>/</mi><mi>n</mi></mrow></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a^{1/n}=1</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>n</mi></msup><mo>=</mo><mi>e</mi></mrow><annotation encoding="application/x-tex">\left(1+\frac1n\right)^n=e</annotation></semantics></math></p>
 <p>极限值：</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mi>+</mi><mi>∞</mi></mrow></munder><mfrac><mi>x</mi><msup><mi>a</mi><mi>x</mi></msup></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lim_{x\to+\infty}\frac{x}{a^x}=0</annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mi>+</mi><mi>∞</mi></mrow></munder><mfrac><mrow><msub><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mi>a</mi></msub><mi>x</mi></mrow><mi>x</mi></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lim_{x\to+\infty}\frac{\log_a x}{x}=0</annotation></semantics></math></p>
@@ -635,7 +673,7 @@ style="color: red;">较小的部分</span>；第二种则直接分子分母同�
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><msup><mn>1</mn><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><mn>1</mn><msup><mn>2</mn><mn>2</mn></msup></mfrac><mo>+</mo><mi>…</mi><mo>=</mo><mfrac><msup><mi>π</mi><mn>2</mn></msup><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac1{1^2}+\frac1{2^2}+\dots=\frac{\pi^2}{6}</annotation></semantics></math></p>
 <p>裂项相消：</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mrow><mn>1</mn><mo>⋅</mo><mn>2</mn></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn></mrow></mfrac><mo>+</mo><mi>…</mi><mo>+</mo><mfrac><mn>1</mn><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\frac1{1\cdot2}+\frac1{2\cdot3}+\dots+\frac1{n(n+1)}=1</annotation></semantics></math></p>
-<h4 id="求导公式">（3）求导公式</h4>
+<h5 id="求导公式">（3）求导公式</h5>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">arctan</mi><mo>&#8289;</mo></mrow><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">(\arctan x)&#39;=\frac1{1+x^2}</annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">tan</mi><mo>&#8289;</mo></mrow><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><mn>1</mn><mo>+</mo><msup><mrow><mi mathvariant="normal">tan</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>x</mi><mo>=</mo><msup><mrow><mi mathvariant="normal">sec</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>x</mi><mo>=</mo><mfrac><mn>1</mn><mrow><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">(\tan x)&#39;=1+\tan^2x=\sec^2x=\frac1{\cos^2x}</annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cot</mi><mo>&#8289;</mo></mrow><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mo>′</mo></msup><mo>=</mo><mi>−</mi><msup><mrow><mi mathvariant="normal">csc</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>x</mi></mrow><annotation encoding="application/x-tex">(\cot x)&#39;=-\csc^2x</annotation></semantics></math></p>
@@ -647,7 +685,7 @@ style="color: red;">较小的部分</span>；第二种则直接分子分母同�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://julian-yulijin.github.io/2026/10/21/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/" data-id="cuidrVBCV_irAwMIVAqYRqkN_" data-title="微积分第一章笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://julian-yulijin.github.io/2026/10/21/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/" data-id="cuidHdyGS2XJqdUxIWO3hw7n7" data-title="微积分第一章笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
