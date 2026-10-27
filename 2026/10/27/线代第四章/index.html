@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>线代第四章 | Julian的个人空间</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="📘 线代笔记：4.1向量与空间直角坐标系 基础知识 1.向量的线性运算性质   a→+b→&#x3D;b→+a→\vec{a} + \vec{b} &#x3D; \vec{b} + \vec{a}  (2) (a→+b→)+c→&#x3D;a→+(b→+c→)(\vec{a} + \vec{b}) + \vec{c} &#x3D; \vec{a} + (\vec{b} + \vec{c}) (3) a→+0→&#x3D;a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线代第四章">
+<meta property="og:url" content="https://julian-yulijin.github.io/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E5%9B%9B%E7%AB%A0/index.html">
+<meta property="og:site_name" content="Julian的个人空间">
+<meta property="og:description" content="📘 线代笔记：4.1向量与空间直角坐标系 基础知识 1.向量的线性运算性质   a→+b→&#x3D;b→+a→\vec{a} + \vec{b} &#x3D; \vec{b} + \vec{a}  (2) (a→+b→)+c→&#x3D;a→+(b→+c→)(\vec{a} + \vec{b}) + \vec{c} &#x3D; \vec{a} + (\vec{b} + \vec{c}) (3) a→+0→&#x3D;a">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-10-27T03:14:52.000Z">
+<meta property="article:modified_time" content="2026-10-27T04:20:10.102Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Julian的个人空间" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Julian的个人空间</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://julian-yulijin.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-线代第四章" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E5%9B%9B%E7%AB%A0/" class="article-date">
+  <time class="dt-published" datetime="2026-10-27T03:14:52.000Z" itemprop="datePublished">2026-10-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/">其他笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      线代第四章
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="线代笔记4.1向量与空间直角坐标系">📘
+线代笔记：4.1向量与空间直角坐标系</h1>
+<h2 id="基础知识">基础知识</h2>
+<h3 id="向量的线性运算性质">1.向量的线性运算性质</h3>
+<ul>
+<li><ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>+</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo>+</mo><mover><mi>a</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a} + \vec{b} = \vec{b} + \vec{a}</annotation></semantics></math></li>
+</ol></li>
+<li>(2)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>+</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mover><mi>c</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo>+</mo><mover><mi>c</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\vec{a} + \vec{b}) + \vec{c} = \vec{a} + (\vec{b} + \vec{c})</annotation></semantics></math></li>
+<li>(3)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>+</mo><mover><mn>0</mn><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>a</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a} + \vec{0} = \vec{a}</annotation></semantics></math></li>
+<li>(4)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mover><mi>a</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mover><mn>0</mn><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a} + (-\vec{a}) = \vec{0}</annotation></semantics></math></li>
+<li>(5)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo stretchy="false" form="prefix">(</mo><mi>μ</mi><mover><mi>a</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>λ</mi><mi>μ</mi><mo stretchy="false" form="postfix">)</mo><mover><mi>a</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\lambda(\mu\vec{a}) = (\lambda\mu)\vec{a}</annotation></semantics></math></li>
+<li>(6)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>a</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">1\vec{a} = \vec{a}</annotation></semantics></math>
+且
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>−</mi><mover><mi>a</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">(-1)\vec{a} = -\vec{a}</annotation></semantics></math></li>
+<li>(7)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo stretchy="false" form="prefix">(</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>+</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>λ</mi><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>+</mo><mi>λ</mi><mover><mi>b</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\lambda(\vec{a} + \vec{b}) = \lambda\vec{a} + \lambda\vec{b}</annotation></semantics></math></li>
+<li>(8)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>λ</mi><mo>+</mo><mi>μ</mi><mo stretchy="false" form="postfix">)</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>λ</mi><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>+</mo><mi>μ</mi><mover><mi>a</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">(\lambda + \mu)\vec{a} = \lambda\vec{a} + \mu\vec{a}</annotation></semantics></math></li>
+</ul>
+<h3 id="向量投影的定义与公式">2. 向量投影的定义与公式</h3>
+<ul>
+<li><strong>单位向量</strong>：与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>b</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math>
+同方向的单位向量为
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mover><mi>b</mi><mo accent="true">→</mo></mover><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><annotation encoding="application/x-tex">\frac{\vec{b}}{|\vec{b}|}</annotation></semantics></math></strong>
+。</li>
+<li><strong>投影向量定义</strong>：把
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">|\vec{a}|\cos\theta</annotation></semantics></math>
+叫做向量
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>a</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{a}</annotation></semantics></math>
+在
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>b</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math>
+上的投影，把
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mfrac><mover><mi>b</mi><mo accent="true">→</mo></mover><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">|\vec{a}|\cos\theta\frac{\vec{b}}{|\vec{b}|}</annotation></semantics></math>叫做向量
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>a</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{a}</annotation></semantics></math>
+在
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>b</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math>
+上的投影向量 。</li>
+<li><strong>投影记号</strong>：记作
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><msub><mo stretchy="false" form="postfix">)</mo><mover><mi>τ</mi><mo accent="true">→</mo></mover></msub></mrow><annotation encoding="application/x-tex">(\vec{a})_{\vec{\tau}}</annotation></semantics></math></strong>
+或
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext mathvariant="normal">Prj</mtext><mover><mi>τ</mi><mo accent="true">→</mo></mover></msub><mover><mi>a</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\text{Prj}_{\vec{\tau}}\vec{a}</annotation></semantics></math></strong>
+。</li>
+<li><strong>投影计算公式</strong>：<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><msub><mo stretchy="false" form="postfix">)</mo><mover><mi>τ</mi><mo accent="true">→</mo></mover></msub><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">(\vec{a})_{\vec{\tau}} = |\vec{a}|\cos\theta</annotation></semantics></math></strong>
+。</li>
+</ul>
+<h3 id="投影的性质">3. 投影的性质</h3>
+<ul>
+<li><ol type="1">
+<li>若
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>b</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a} = \vec{b}</annotation></semantics></math>，则
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><msub><mo stretchy="false" form="postfix">)</mo><mover><mi>τ</mi><mo accent="true">→</mo></mover></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><msub><mo stretchy="false" form="postfix">)</mo><mover><mi>τ</mi><mo accent="true">→</mo></mover></msub></mrow><annotation encoding="application/x-tex">(\vec{a})_{\vec{\tau}} = (\vec{b})_{\vec{\tau}}</annotation></semantics></math></strong>
+；</li>
+</ol></li>
+<li>(2)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>λ</mi><mo>∈</mo><mi mathvariant="bold-italic">𝑹</mi></mrow><annotation encoding="application/x-tex">\forall \lambda \in \mathbf{R}</annotation></semantics></math>，都有
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>λ</mi><mover><mi>a</mi><mo accent="true">→</mo></mover><msub><mo stretchy="false" form="postfix">)</mo><mover><mi>τ</mi><mo accent="true">→</mo></mover></msub><mo>=</mo><mi>λ</mi><mo stretchy="false" form="prefix">(</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><msub><mo stretchy="false" form="postfix">)</mo><mover><mi>τ</mi><mo accent="true">→</mo></mover></msub></mrow><annotation encoding="application/x-tex">(\lambda \vec{a})_{\vec{\tau}} = \lambda (\vec{a})_{\vec{\tau}}</annotation></semantics></math></strong>
+；</li>
+<li>(3)
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>+</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><msub><mo stretchy="false" form="postfix">)</mo><mover><mi>τ</mi><mo accent="true">→</mo></mover></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><msub><mo stretchy="false" form="postfix">)</mo><mover><mi>τ</mi><mo accent="true">→</mo></mover></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><msub><mo stretchy="false" form="postfix">)</mo><mover><mi>τ</mi><mo accent="true">→</mo></mover></msub></mrow><annotation encoding="application/x-tex">(\vec{a} + \vec{b})_{\vec{\tau}} = (\vec{a})_{\vec{\tau}} + (\vec{b})_{\vec{\tau}}</annotation></semantics></math></strong>
+。</li>
+</ul>
+<h3 id="空间直角坐标系的基本向量">4、 空间直角坐标系的基本向量</h3>
+<ul>
+<li>在
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>x</mi><mi>y</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">Oxyz</annotation></semantics></math>
+坐标系中，分别与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+轴、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+轴和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+轴同向的单位向量叫做这个坐标系的<strong>基本向量</strong>，并用
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>i</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>j</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{i}, \vec{j}</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>k</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{k}</annotation></semantics></math>
+表示。</li>
+</ul>
+<h3 id="向量的坐标与长度">5、 向量的坐标与长度</h3>
+<ul>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mo stretchy="false" form="prefix">[</mo><msub><mi>p</mi><mi>x</mi></msub><mo>,</mo><msub><mi>p</mi><mi>y</mi></msub><mo>,</mo><msub><mi>p</mi><mi>z</mi></msub><msup><mo stretchy="false" form="postfix">]</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">p=[p_x, p_y, p_z]^T</annotation></semantics></math>
+叫做
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>
+的坐标向量，也称为代数向量。
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>p</mi><mo accent="true">→</mo></mover><mo>=</mo><msub><mi>p</mi><mi>x</mi></msub><mover><mi>i</mi><mo accent="true">→</mo></mover><mo>+</mo><msub><mi>p</mi><mi>y</mi></msub><mover><mi>j</mi><mo accent="true">→</mo></mover><mo>+</mo><msub><mi>p</mi><mi>z</mi></msub><mover><mi>k</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{p} = {p_x} \vec{i} + {p_y} \vec{j} + {p_z} \vec{k}</annotation></semantics></math>
+叫做几何向量。两者是不同的定义</strong></li>
+<li><strong>长度公式</strong>：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo><mo>=</mo><msqrt><mrow><msubsup><mi>p</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>p</mi><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>p</mi><mi>z</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">|\vec{p}| = \sqrt{p_x^2 + p_y^2 + p_z^2}</annotation></semantics></math></li>
+</ul>
+<h3 id="单位向量与方向余弦">6. 单位向量与方向余弦</h3>
+<ul>
+<li><strong>与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>
+同向的单位向量公式</strong>：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mover><mi>p</mi><mo accent="true">→</mo></mover><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mo>=</mo><mfrac><msub><mi>p</mi><mi>x</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mover><mi>i</mi><mo accent="true">→</mo></mover><mo>+</mo><mfrac><msub><mi>p</mi><mi>y</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mover><mi>j</mi><mo accent="true">→</mo></mover><mo>+</mo><mfrac><msub><mi>p</mi><mi>z</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mover><mi>k</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\frac{\vec{p}}{|\vec{p}|} = \frac{p_x}{|\vec{p}|}\vec{i} + \frac{p_y}{|\vec{p}|}\vec{j} + \frac{p_z}{|\vec{p}|}\vec{k}</annotation></semantics></math></li>
+<li><strong>基于投影定义的公式</strong>：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mover><mi>p</mi><mo accent="true">→</mo></mover><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mo>=</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>α</mi><mover><mi>i</mi><mo accent="true">→</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>β</mi><mover><mi>j</mi><mo accent="true">→</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>γ</mi><mover><mi>k</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\frac{\vec{p}}{|\vec{p}|} = \cos\alpha \vec{i} + \cos\beta \vec{j} + \cos\gamma \vec{k}</annotation></semantics></math></li>
+<li>其中
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi></mrow><annotation encoding="application/x-tex">\alpha, \beta, \gamma</annotation></semantics></math>
+分别是向量
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+轴、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+轴和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+轴正向的夹角。</strong></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi></mrow><annotation encoding="application/x-tex">\alpha, \beta, \gamma</annotation></semantics></math>
+叫做向量
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>
+的<strong>方向角，它们的余弦
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>α</mi><mo>,</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>β</mi><mo>,</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\cos\alpha, \cos\beta, \cos\gamma</annotation></semantics></math>
+叫做向量
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>
+的方向余弦</strong>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\cos\alpha</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\cos\beta</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\cos\gamma</annotation></semantics></math>
+分别是单位向量中
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>i</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{i}</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>j</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{j}</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>k</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{k}</annotation></semantics></math>的系数。</li>
+<li><em>公式</em>：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>α</mi><mo>=</mo><mfrac><msub><mi>p</mi><mi>x</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\cos\alpha = \frac{p_x}{|\vec{p}|}</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>β</mi><mo>=</mo><mfrac><msub><mi>p</mi><mi>y</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\cos\beta = \frac{p_y}{|\vec{p}|}</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>γ</mi><mo>=</mo><mfrac><msub><mi>p</mi><mi>z</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\cos\gamma = \frac{p_z}{|\vec{p}|}</annotation></semantics></math></li>
+<li><strong>补充公式</strong>：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>α</mi><mo>+</mo><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>β</mi><mo>+</mo><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>γ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1</annotation></semantics></math></li>
+</ul>
+<h3 id="空间点的坐标与两点间距离">7、 空间点的坐标与两点间距离</h3>
+<ul>
+<li><strong>点的坐标</strong>：对于空间中任一给定点
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>，由于点
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+与向量
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mrow><mi>O</mi><mi>P</mi></mrow><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{OP}</annotation></semantics></math>
+一一对应，我们把向量
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mrow><mi>O</mi><mi>P</mi></mrow><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{OP}</annotation></semantics></math>
+的坐标
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>x</mi></msub><mo>,</mo><msub><mi>p</mi><mi>y</mi></msub><mo>,</mo><msub><mi>p</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">p_x, p_y, p_z</annotation></semantics></math>
+依次称为<strong>点
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+的横坐标、纵坐标和竖坐标</strong>。</li>
+<li><strong>向量坐标与点坐标的关系</strong>：空间中的任一向量的坐标就是其终点的坐标与始点的坐标之差。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://julian-yulijin.github.io/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E5%9B%9B%E7%AB%A0/" data-id="cuidAUy-qmT93DYbzai_J3Iz9" data-title="线代第四章" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2026/10/26/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">微积分第二章笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git%E4%B8%8EGitHub/">Git与GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo%E7%AC%94%E8%AE%B0/">Hexo笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/">个人项目</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/">其他笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/10/">October 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E5%9B%9B%E7%AB%A0/">线代第四章</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/26/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%94%E8%AE%B0/">微积分第二章笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/24/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E4%B8%8E%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/">线性代数与解析几何第一章笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/21/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/">微积分第一章笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/20/lotia%E9%A1%B9%E7%9B%AE/">lotia项目</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
