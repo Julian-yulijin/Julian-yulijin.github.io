@@ -14,7 +14,7 @@
 <meta property="og:description" content="📘 线代笔记：4.1向量与空间直角坐标系 基础知识 1.向量的线性运算性质   a→+b→&#x3D;b→+a→\vec{a} + \vec{b} &#x3D; \vec{b} + \vec{a}  (2) (a→+b→)+c→&#x3D;a→+(b→+c→)(\vec{a} + \vec{b}) + \vec{c} &#x3D; \vec{a} + (\vec{b} + \vec{c}) (3) a→+0→&#x3D;a">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-10-27T03:14:52.000Z">
-<meta property="article:modified_time" content="2026-10-27T04:20:10.102Z">
+<meta property="article:modified_time" content="2026-10-27T05:00:19.528Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -182,27 +182,9 @@
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>k</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{k}</annotation></semantics></math>
 表示。</li>
 </ul>
-<h3 id="向量的坐标与长度">5、 向量的坐标与长度</h3>
+<h3 id="向量的坐标长度与角度">5、 向量的坐标、长度与角度</h3>
 <ul>
-<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mo stretchy="false" form="prefix">[</mo><msub><mi>p</mi><mi>x</mi></msub><mo>,</mo><msub><mi>p</mi><mi>y</mi></msub><mo>,</mo><msub><mi>p</mi><mi>z</mi></msub><msup><mo stretchy="false" form="postfix">]</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">p=[p_x, p_y, p_z]^T</annotation></semantics></math>
-叫做
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>
-的坐标向量，也称为代数向量。
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>p</mi><mo accent="true">→</mo></mover><mo>=</mo><msub><mi>p</mi><mi>x</mi></msub><mover><mi>i</mi><mo accent="true">→</mo></mover><mo>+</mo><msub><mi>p</mi><mi>y</mi></msub><mover><mi>j</mi><mo accent="true">→</mo></mover><mo>+</mo><msub><mi>p</mi><mi>z</mi></msub><mover><mi>k</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{p} = {p_x} \vec{i} + {p_y} \vec{j} + {p_z} \vec{k}</annotation></semantics></math>
-叫做几何向量。两者是不同的定义</strong></li>
-<li><strong>长度公式</strong>：
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo><mo>=</mo><msqrt><mrow><msubsup><mi>p</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>p</mi><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>p</mi><mi>z</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">|\vec{p}| = \sqrt{p_x^2 + p_y^2 + p_z^2}</annotation></semantics></math></li>
-</ul>
-<h3 id="单位向量与方向余弦">6. 单位向量与方向余弦</h3>
-<ul>
-<li><strong>与
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>
-同向的单位向量公式</strong>：
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mover><mi>p</mi><mo accent="true">→</mo></mover><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mo>=</mo><mfrac><msub><mi>p</mi><mi>x</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mover><mi>i</mi><mo accent="true">→</mo></mover><mo>+</mo><mfrac><msub><mi>p</mi><mi>y</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mover><mi>j</mi><mo accent="true">→</mo></mover><mo>+</mo><mfrac><msub><mi>p</mi><mi>z</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mover><mi>k</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\frac{\vec{p}}{|\vec{p}|} = \frac{p_x}{|\vec{p}|}\vec{i} + \frac{p_y}{|\vec{p}|}\vec{j} + \frac{p_z}{|\vec{p}|}\vec{k}</annotation></semantics></math></li>
-<li><strong>基于投影定义的公式</strong>：
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mover><mi>p</mi><mo accent="true">→</mo></mover><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mo>=</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>α</mi><mover><mi>i</mi><mo accent="true">→</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>β</mi><mover><mi>j</mi><mo accent="true">→</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>γ</mi><mover><mi>k</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\frac{\vec{p}}{|\vec{p}|} = \cos\alpha \vec{i} + \cos\beta \vec{j} + \cos\gamma \vec{k}</annotation></semantics></math></li>
-<li>其中
-<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi></mrow><annotation encoding="application/x-tex">\alpha, \beta, \gamma</annotation></semantics></math>
+<li><p><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi></mrow><annotation encoding="application/x-tex">\alpha, \beta, \gamma</annotation></semantics></math>
 分别是向量
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>
 与
@@ -210,29 +192,42 @@
 轴、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
 轴和
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
-轴正向的夹角。</strong></li>
-<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi></mrow><annotation encoding="application/x-tex">\alpha, \beta, \gamma</annotation></semantics></math>
+轴正向的夹角。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi></mrow><annotation encoding="application/x-tex">\alpha, \beta, \gamma</annotation></semantics></math>
 叫做向量
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>
-的<strong>方向角，它们的余弦
+的方向角，它们的余弦
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>α</mi><mo>,</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>β</mi><mo>,</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\cos\alpha, \cos\beta, \cos\gamma</annotation></semantics></math>
 叫做向量
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>
-的方向余弦</strong>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\cos\alpha</annotation></semantics></math>
+的方向余弦</strong>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\cos\alpha</annotation></semantics></math>、
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\cos\beta</annotation></semantics></math>
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\cos\gamma</annotation></semantics></math>
+、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\cos\gamma</annotation></semantics></math>
 分别是单位向量中
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>i</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{i}</annotation></semantics></math>
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>j</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{j}</annotation></semantics></math>
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>k</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{k}</annotation></semantics></math>的系数。</li>
-<li><em>公式</em>：
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>α</mi><mo>=</mo><mfrac><msub><mi>p</mi><mi>x</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\cos\alpha = \frac{p_x}{|\vec{p}|}</annotation></semantics></math>
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>β</mi><mo>=</mo><mfrac><msub><mi>p</mi><mi>y</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\cos\beta = \frac{p_y}{|\vec{p}|}</annotation></semantics></math>
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>γ</mi><mo>=</mo><mfrac><msub><mi>p</mi><mi>z</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\cos\gamma = \frac{p_z}{|\vec{p}|}</annotation></semantics></math></li>
-<li><strong>补充公式</strong>：
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>α</mi><mo>+</mo><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>β</mi><mo>+</mo><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>γ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1</annotation></semantics></math></li>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>i</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{i}</annotation></semantics></math>、
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>j</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{j}</annotation></semantics></math>、
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>k</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{k}</annotation></semantics></math>的系数。</p></li>
+<li><p><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mo stretchy="false" form="prefix">[</mo><msub><mi>p</mi><mi>x</mi></msub><mo>,</mo><msub><mi>p</mi><mi>y</mi></msub><mo>,</mo><msub><mi>p</mi><mi>z</mi></msub><msup><mo stretchy="false" form="postfix">]</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">p=[p_x, p_y, p_z]^T</annotation></semantics></math>
+叫做
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>
+的坐标向量，也称为代数向量。
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>叫做几何向量，两者是不同的定义。</strong></p></li>
+<li><p><strong>长度公式</strong>：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo><mo>=</mo><msqrt><mrow><msubsup><mi>p</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>p</mi><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>p</mi><mi>z</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">|\vec{p}| = \sqrt{p_x^2 + p_y^2 + p_z^2}</annotation></semantics></math></p></li>
+<li><p><strong>几何向量</strong>：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>p</mi><mo accent="true">→</mo></mover><mo>=</mo><msub><mi>p</mi><mi>x</mi></msub><mover><mi>i</mi><mo accent="true">→</mo></mover><mo>+</mo><msub><mi>p</mi><mi>y</mi></msub><mover><mi>j</mi><mo accent="true">→</mo></mover><mo>+</mo><msub><mi>p</mi><mi>z</mi></msub><mover><mi>k</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{p} = {p_x} \vec{i} + {p_y} \vec{j} + {p_z} \vec{k}</annotation></semantics></math></p></li>
+<li><p><strong>与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>p</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{p}</annotation></semantics></math>
+同向的单位向量公式</strong>：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mover><mi>p</mi><mo accent="true">→</mo></mover><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mo>=</mo><mfrac><msub><mi>p</mi><mi>x</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mover><mi>i</mi><mo accent="true">→</mo></mover><mo>+</mo><mfrac><msub><mi>p</mi><mi>y</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mover><mi>j</mi><mo accent="true">→</mo></mover><mo>+</mo><mfrac><msub><mi>p</mi><mi>z</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mover><mi>k</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\frac{\vec{p}}{|\vec{p}|} = \frac{p_x}{|\vec{p}|}\vec{i} + \frac{p_y}{|\vec{p}|}\vec{j} + \frac{p_z}{|\vec{p}|}\vec{k}</annotation></semantics></math></p></li>
+<li><p><strong>基于投影定义的公式</strong>：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mover><mi>p</mi><mo accent="true">→</mo></mover><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mo>=</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>α</mi><mover><mi>i</mi><mo accent="true">→</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>β</mi><mover><mi>j</mi><mo accent="true">→</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>γ</mi><mover><mi>k</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\frac{\vec{p}}{|\vec{p}|} = \cos\alpha \vec{i} + \cos\beta \vec{j} + \cos\gamma \vec{k}</annotation></semantics></math></p></li>
+<li><p><strong>定义公式</strong>：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>α</mi><mo>=</mo><mfrac><msub><mi>p</mi><mi>x</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>β</mi><mo>=</mo><mfrac><msub><mi>p</mi><mi>y</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>γ</mi><mo>=</mo><mfrac><msub><mi>p</mi><mi>z</mi></msub><mrow><mo stretchy="false" form="prefix">|</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="prefix">|</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\cos\alpha = \frac{p_x}{|\vec{p}|}    \cos\beta = \frac{p_y}{|\vec{p}|}    \cos\gamma = \frac{p_z}{|\vec{p}|}</annotation></semantics></math></p></li>
+<li><p><strong>补充公式</strong>：
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>α</mi><mo>+</mo><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>β</mi><mo>+</mo><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>γ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1</annotation></semantics></math></p></li>
 </ul>
-<h3 id="空间点的坐标与两点间距离">7、 空间点的坐标与两点间距离</h3>
+<h3 id="空间点的坐标与两点间距离">6、 空间点的坐标与两点间距离</h3>
 <ul>
 <li><strong>点的坐标</strong>：对于空间中任一给定点
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>，由于点
@@ -252,7 +247,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://julian-yulijin.github.io/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E5%9B%9B%E7%AB%A0/" data-id="cuidAUy-qmT93DYbzai_J3Iz9" data-title="线代第四章" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://julian-yulijin.github.io/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E5%9B%9B%E7%AB%A0/" data-id="cuidzcOkYBHK5Hpoin4GTYBN4" data-title="线代第四章" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
