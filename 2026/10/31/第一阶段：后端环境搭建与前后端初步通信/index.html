@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>第一阶段：后端环境搭建与前后端初步通信 | Julian的个人空间</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="洛蒂亚项目：后端开发第一阶段——环境搭建与前后端通信 一、创建后端项目目录 1. 创建 backend 文件夹 在 PowerShell 中进入洛蒂亚项目根目录： 1cd C:\Users\yulij\OneDrive\Desktop\history-map 然后执行： 1New-Item -ItemType Directory -Name backend 也可以使用简写： 1mk">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一阶段：后端环境搭建与前后端初步通信">
+<meta property="og:url" content="https://julian-yulijin.github.io/2026/10/31/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%90%8E%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%9D%E6%AD%A5%E9%80%9A%E4%BF%A1/index.html">
+<meta property="og:site_name" content="Julian的个人空间">
+<meta property="og:description" content="洛蒂亚项目：后端开发第一阶段——环境搭建与前后端通信 一、创建后端项目目录 1. 创建 backend 文件夹 在 PowerShell 中进入洛蒂亚项目根目录： 1cd C:\Users\yulij\OneDrive\Desktop\history-map 然后执行： 1New-Item -ItemType Directory -Name backend 也可以使用简写： 1mk">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-10-31T14:26:00.000Z">
+<meta property="article:modified_time" content="2026-10-31T14:27:19.850Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Julian的个人空间" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Julian的个人空间</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://julian-yulijin.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-第一阶段：后端环境搭建与前后端初步通信" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/10/31/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%90%8E%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%9D%E6%AD%A5%E9%80%9A%E4%BF%A1/" class="article-date">
+  <time class="dt-published" datetime="2026-10-31T14:26:00.000Z" itemprop="datePublished">2026-10-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/">个人项目</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      第一阶段：后端环境搭建与前后端初步通信
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1
+id="洛蒂亚项目后端开发第一阶段环境搭建与前后端通信">洛蒂亚项目：后端开发第一阶段——环境搭建与前后端通信</h1>
+<h2 id="一创建后端项目目录">一、创建后端项目目录</h2>
+<h3 id="创建-backend-文件夹">1. 创建 backend 文件夹</h3>
+<p>在 PowerShell 中进入洛蒂亚项目根目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Users\yulij\OneDrive\Desktop\history-map</span><br></pre></td></tr></table></figure>
+<p>然后执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">New-Item -ItemType Directory -Name backend</span><br></pre></td></tr></table></figure>
+<p>也可以使用简写：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir backend</span><br></pre></td></tr></table></figure>
+<p>命令解释：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>New-Item</code></td>
+<td>创建新项目</td>
+</tr>
+<tr>
+<td><code>-ItemType Directory</code></td>
+<td>指定创建的项目类型为文件夹</td>
+</tr>
+<tr>
+<td><code>-Name backend</code></td>
+<td>将文件夹命名为 backend</td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td>创建文件夹的简写命令</td>
+</tr>
+</tbody>
+</table>
+<h3 id="创建-main.py-文件">2. 创建 main.py 文件</h3>
+<p>进入刚刚创建的文件夹：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd backend</span><br></pre></td></tr></table></figure>
+<p>其中，<code>cd</code> 是 Change Directory
+的缩写，用于切换当前工作目录。</p>
+<p>创建 Python 文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">New-Item main.py</span><br></pre></td></tr></table></figure>
+<p><code>main.py</code> 是后端程序的入口文件，后续编写的 FastAPI
+应用代码将保存在这里。</p>
+<h3 id="项目目录结构">3. 项目目录结构</h3>
+<p>完成后，洛蒂亚项目的结构如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">history-map/</span><br><span class="line">├── .git/</span><br><span class="line">├── images/</span><br><span class="line">├── index.html</span><br><span class="line">└── backend/</span><br><span class="line">    └── main.py</span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<ul>
+<li><code>history-map</code>：整个洛蒂亚项目的根目录。</li>
+<li><code>.git</code>：Git 仓库目录，用于记录和管理项目版本。</li>
+<li><code>images</code>：存放项目图片。</li>
+<li><code>index.html</code>：原有前端网页的入口文件。</li>
+<li><code>backend</code>：后端代码目录。</li>
+<li><code>main.py</code>：后端 Python 程序文件。</li>
+</ul>
+<p>创建 backend 的目的：
+将后端代码与原有前端代码分开管理，使项目结构更加清晰。</p>
+<h2 id="二检查-python-环境">二、检查 Python 环境</h2>
+<h3 id="检查-python-版本">1. 检查 Python 版本</h3>
+<p>执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py --version</span><br></pre></td></tr></table></figure>
+<p>当时得到的结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python 3.14.7</span><br></pre></td></tr></table></figure>
+<p>说明 Python 已经可以正常通过 <code>py</code> 启动。</p>
+<h3 id="python-和-py-的区别">2. python 和 py 的区别</h3>
+<p>在 Windows 中，<code>python</code> 和 <code>py</code>
+并不是完全相同的命令。</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>python</code></td>
+<td>通常用于直接启动 Python 解释器</td>
+</tr>
+<tr>
+<td><code>py</code></td>
+<td>Windows Python Launcher，用于启动已安装的 Python 版本</td>
+</tr>
+</tbody>
+</table>
+<p>两者效果可能不同，是因为它们对应的启动入口和系统查找方式不同。</p>
+<p>例如：</p>
+<ul>
+<li><code>python</code> 命令可能受到 PATH 环境变量或 Windows
+应用执行别名的影响。</li>
+<li><code>py</code> 通过 Python Launcher 寻找并启动已安装的
+Python。</li>
+</ul>
+<p>本次环境中，<code>python</code> 命令没有正常工作，但 <code>py</code>
+可以正常启动 Python 3.14.7。</p>
+<p>因此，后续统一使用 <code>py</code> 命令。</p>
+<h2 id="三安装-fastapi">三、安装 FastAPI</h2>
+<h3 id="安装命令">1. 安装命令</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py -m pip install fastapi</span><br></pre></td></tr></table></figure>
+<p>安装成功后，终端显示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Successfully installed fastapi-0.162.0</span><br></pre></td></tr></table></figure>
+<h3 id="命令解释">2. 命令解释</h3>
+<table>
+<thead>
+<tr>
+<th>命令部分</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>py</code></td>
+<td>使用 Python 启动器</td>
+</tr>
+<tr>
+<td><code>-m</code></td>
+<td>让 Python 以模块方式运行指定程序</td>
+</tr>
+<tr>
+<td><code>pip</code></td>
+<td>Python 软件包管理工具</td>
+</tr>
+<tr>
+<td><code>install</code></td>
+<td>安装软件包</td>
+</tr>
+<tr>
+<td><code>fastapi</code></td>
+<td>要安装的 Python 软件包</td>
+</tr>
+</tbody>
+</table>
+<p><code>py -m pip</code> 的意思是：使用 <code>py</code> 当前启动的
+Python 环境来运行 pip。</p>
+<p>这样可以减少不同 Python 环境之间的软件包安装混乱。</p>
+<h3 id="什么是-web">3. 什么是 Web？</h3>
+<p>Web 是 World Wide Web 的缩写，中文通常称为万维网。</p>
+<p>可以将 Web 理解为一个通过网络访问网站和相关服务的体系。</p>
+<p>例如，用户通过浏览器打开洛蒂亚网站：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://julian-yulijin.github.io/Lotia/</span><br></pre></td></tr></table></figure>
+<p>浏览器显示的地图、文字、图片和按钮，都是 Web 应用的一部分。</p>
+<h3 id="什么是后端开发">4. 什么是后端开发？</h3>
+<p>后端开发是负责程序后台处理工作的开发领域。</p>
+<p>例如：</p>
+<ul>
+<li>处理用户注册和登录；</li>
+<li>保存和读取用户数据；</li>
+<li>处理用户提交的故事；</li>
+<li>执行业务逻辑；</li>
+<li>管理用户权限。</li>
+</ul>
+<p>后端开发并不只有 Web 后端开发。</p>
+<p>Web 后端开发是后端开发的一种，主要为网站和 Web 应用提供后台服务。</p>
+<p>例如洛蒂亚未来的注册、投稿和审核功能，都需要 Web 后端提供支持。</p>
+<h3 id="什么是-web-框架">5. 什么是 Web 框架？</h3>
+<p>Web 框架（Web
+Framework）是一套预先准备好的开发工具、基础结构和规则，用于帮助开发者构建
+Web 应用。</p>
+<p>如果不使用 Web 框架，开发者需要自己处理许多基础工作，例如：</p>
+<ul>
+<li>接收浏览器发送的请求；</li>
+<li>判断请求访问的地址；</li>
+<li>读取请求中的数据；</li>
+<li>执行对应的处理逻辑；</li>
+<li>将处理结果返回给请求方；</li>
+<li>处理各种错误。</li>
+</ul>
+<p>Web 框架提供了现成的功能，使开发者不必从零开始完成这些工作。</p>
+<p>可以理解为：</p>
+<ul>
+<li>Python 提供编程语言本身的基础能力。</li>
+<li>Web 框架提供开发 Web 应用所需要的工具和结构。</li>
+<li>开发者在框架的基础上编写具体业务功能。</li>
+</ul>
+<h3 id="什么是-api">6. 什么是 API？</h3>
+<p>API 全称是 Application Programming
+Interface，中文为应用程序编程接口。</p>
+<p>API
+不是某种软件拓展，也不是某一个具体的开发框架，而是一种接口概念。</p>
+<p>API 的核心作用是规定不同程序之间如何进行沟通。</p>
+<p>以洛蒂亚用户注册功能为例：</p>
+<p>用户在网页中填写用户名、密码和邮箱，然后点击注册。</p>
+<p>前端需要将这些数据发送给后端，而前后端必须事先约定沟通方式。</p>
+<p>例如：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>约定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>接口地址</td>
+<td><code>/register</code></td>
+</tr>
+<tr>
+<td>请求方法</td>
+<td><code>POST</code></td>
+</tr>
+<tr>
+<td>提交的数据</td>
+<td>用户名、密码、邮箱</td>
+</tr>
+<tr>
+<td>后端处理</td>
+<td>创建用户账户</td>
+</tr>
+<tr>
+<td>返回结果</td>
+<td>注册成功或失败</td>
+</tr>
+</tbody>
+</table>
+<p>这套约定就是一个 API 接口。</p>
+<p>API 的价值在于：</p>
+<ul>
+<li>前端只需要按照约定发送请求，不需要了解后端内部如何创建账户。</li>
+<li>后端只需要按照约定接收数据和返回结果，不需要了解前端的页面设计。</li>
+<li>两个程序可以在不了解对方内部实现细节的情况下进行交互。</li>
+</ul>
+<h3 id="fastapi-是什么">7. FastAPI 是什么？</h3>
+<p>FastAPI 是一个使用 Python 开发的 Web 框架。</p>
+<p>它主要帮助开发者：</p>
+<ul>
+<li>创建 API 接口；</li>
+<li>接收前端发送的数据；</li>
+<li>执行后端处理逻辑；</li>
+<li>将处理结果返回给前端。</li>
+</ul>
+<p>需要区分：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>本质</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web</td>
+<td>网站及其网络服务所处的领域</td>
+<td>提供整体运行环境</td>
+</tr>
+<tr>
+<td>后端开发</td>
+<td>一个开发领域</td>
+<td>处理程序后台业务</td>
+</tr>
+<tr>
+<td>Web 后端开发</td>
+<td>后端开发的一种</td>
+<td>为网站提供后台服务</td>
+</tr>
+<tr>
+<td>API</td>
+<td>一种接口概念</td>
+<td>规定程序之间如何沟通</td>
+</tr>
+<tr>
+<td>Web 框架</td>
+<td>一类开发工具</td>
+<td>提供 Web 应用的基础结构</td>
+</tr>
+<tr>
+<td>FastAPI</td>
+<td>具体的 Python Web 框架</td>
+<td>帮助开发者编写后端、创建 API</td>
+</tr>
+</tbody>
+</table>
+<p>洛蒂亚使用 FastAPI，是为了编写网站后端，并通过 API
+实现前后端之间的数据交换。</p>
+<h2 id="四安装-uvicorn">四、安装 Uvicorn</h2>
+<h3 id="安装命令-1">1. 安装命令</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py -m pip install &quot;uvicorn[standard]&quot;</span><br></pre></td></tr></table></figure>
+<p>安装成功后，终端显示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Successfully installed uvicorn-0.54.0</span><br></pre></td></tr></table></figure>
+<h3 id="命令解释-1">2. 命令解释</h3>
+<table>
+<thead>
+<tr>
+<th>命令部分</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>py</code></td>
+<td>使用 Python 启动器</td>
+</tr>
+<tr>
+<td><code>-m</code></td>
+<td>以模块方式运行指定程序</td>
+</tr>
+<tr>
+<td><code>pip</code></td>
+<td>Python 软件包管理工具</td>
+</tr>
+<tr>
+<td><code>install</code></td>
+<td>安装软件包</td>
+</tr>
+<tr>
+<td><code>uvicorn</code></td>
+<td>要安装的服务器软件</td>
+</tr>
+<tr>
+<td><code>[standard]</code></td>
+<td>安装 Uvicorn 的一组推荐附加依赖</td>
+</tr>
+</tbody>
+</table>
+<p>这里的引号是为了让 PowerShell 将 <code>uvicorn[standard]</code>
+完整地作为参数传给 pip。</p>
+<h3 id="什么是-uvicorn">3. 什么是 Uvicorn？</h3>
+<p>Uvicorn 是一种 ASGI 服务器软件。</p>
+<p>它的核心作用是运行 FastAPI 应用，并负责接收、传递和返回网络请求。</p>
+<p>这里需要区分服务器的两种含义：</p>
+<ul>
+<li>服务器硬件：提供计算、存储和网络能力的计算机。</li>
+<li>服务器软件：运行在计算机上的程序，负责接收请求并提供服务。</li>
+</ul>
+<p>Uvicorn 属于服务器软件，而不是一台服务器计算机。</p>
+<h3 id="uvicorn-与-fastapi-的关系">4. Uvicorn 与 FastAPI 的关系</h3>
+<p>两者承担不同的工作：</p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FastAPI</td>
+<td>编写后端应用、定义 API、处理请求</td>
+</tr>
+<tr>
+<td>Uvicorn</td>
+<td>启动并运行 FastAPI 应用，接收和传递网络请求</td>
+</tr>
+</tbody>
+</table>
+<p>例如：</p>
+<p>我们在 FastAPI 中定义了一个接口：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@app.get(&quot;/&quot;)def home():    return &#123;&quot;message&quot;: &quot;欢迎来到洛蒂亚！&quot;&#125;</span><br></pre></td></tr></table></figure>
+<p>但仅仅将代码保存在 <code>main.py</code>
+中，并不意味着后端已经作为网络服务运行。</p>
+<p>需要通过 Uvicorn 启动应用，让它真正开始监听网络请求。</p>
+<h2 id="五编写-fastapi-应用">五、编写 FastAPI 应用</h2>
+<h3 id="main.py-中的代码">1. main.py 中的代码</h3>
+<p>我们将之前用于测试 Python 文件的代码替换为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from fastapi import FastAPIapp = FastAPI()@app.get(&quot;/&quot;)def home():    return &#123;&quot;message&quot;: &quot;欢迎来到洛蒂亚！&quot;&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码创建了一个简单的 FastAPI 应用，并定义了一个 API 接口。</p>
+<h3 id="导入-fastapi">2. 导入 FastAPI</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from fastapi import FastAPI</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>from</code>：从某个模块中。</li>
+<li><code>fastapi</code>：FastAPI 软件包。</li>
+<li><code>import</code>：导入。</li>
+<li><code>FastAPI</code>：需要使用的类。</li>
+</ul>
+<p>作用：将 FastAPI 提供的功能导入当前 Python 文件，使我们能够创建
+FastAPI 应用。</p>
+<h3 id="创建-fastapi-应用实例">3. 创建 FastAPI 应用实例</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app = FastAPI()</span><br></pre></td></tr></table></figure>
+<p>这里包含两个部分：</p>
+<p><code>FastAPI()</code></p>
+<p>调用 FastAPI 类，创建一个 FastAPI 应用实例。</p>
+<p>可以暂时理解为：创建一个后端应用主体。</p>
+<p><code>app =</code></p>
+<p>将创建出来的应用实例保存到变量 <code>app</code> 中。</p>
+<p>这样后续就可以通过 <code>app</code> 来定义接口、添加中间件等。</p>
+<p><code>app</code>
+并不是强制规定的变量名称，而是开发者自己取的名字。</p>
+<p>例如，也可以写成：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">application = FastAPI()</span><br></pre></td></tr></table></figure>
+<p>但如果这样命名，启动 Uvicorn 时就需要写成：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py -m uvicorn main:application --reload</span><br></pre></td></tr></table></figure>
+<h3 id="定义-api-路由">4. 定义 API 路由</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@app.get(&quot;/&quot;)</span><br></pre></td></tr></table></figure>
+<p>这里使用了 FastAPI 提供的装饰器来注册一个接口。</p>
+<p>其中：</p>
+<ul>
+<li><code>@</code>：Python 装饰器语法。</li>
+<li><code>app</code>：前面创建的 FastAPI 应用实例。</li>
+<li><code>.get()</code>：注册一个处理 GET 请求的路由。</li>
+<li><code>"/"</code>：接口路径，也就是根路径。</li>
+</ul>
+<p>这里涉及两个重要概念。</p>
+<p>HTTP 请求方法</p>
+<p>HTTP 是浏览器和服务器之间进行通信的协议。</p>
+<p>GET 是 HTTP 请求方法的一种，通常用于获取数据。</p>
+<p>路由（Route）</p>
+<p>路由用于将请求的路径和请求方法对应到具体的处理函数。</p>
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@app.get(&quot;/&quot;)</span><br></pre></td></tr></table></figure>
+<p>表示当 FastAPI 收到 GET 方法访问 <code>/</code>
+路径的请求时，调用下面对应的处理函数。</p>
+<h3 id="定义处理函数">5. 定义处理函数</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">def home():</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>def</code>：Python 中用于定义函数的关键字。</li>
+<li><code>home</code>：函数名称。</li>
+<li><code>()</code>：函数参数位置。</li>
+<li><code>:</code>：表示函数定义开始。</li>
+</ul>
+<p>这个函数负责处理访问 <code>/</code> 路径的请求。</p>
+<p>函数名 <code>home</code> 是开发者自己取的，FastAPI
+通过前面的装饰器注册对应关系，而不是根据函数名称决定是否执行。</p>
+<h3 id="返回数据">6. 返回数据</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">return &#123;&quot;message&quot;: &quot;欢迎来到洛蒂亚！&quot;&#125;</span><br></pre></td></tr></table></figure>
+<p>这里返回的是一个 Python 字典。</p>
+<p>其中：</p>
+<ul>
+<li><code>message</code>：键（Key）。</li>
+<li><code>"欢迎来到洛蒂亚！"</code>：值（Value）。</li>
+</ul>
+<p>Python 字典用于保存键值对。</p>
+<h3 id="什么是-json">7. 什么是 JSON？</h3>
+<p>JSON 全称是 JavaScript Object Notation，中文通常称为 JavaScript
+对象表示法。</p>
+<p>它是一种常见的数据交换格式，方便不同程序之间传递数据。</p>
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;message&quot;: &quot;欢迎来到洛蒂亚！&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>JSON 与 Python 字典看起来很相似，但它们不是同一种东西。</p>
+<p>在本项目中：</p>
+<ol type="1">
+<li><code>home()</code> 返回 Python 字典。</li>
+<li>FastAPI 自动将字典转换为 JSON 格式。</li>
+<li>JSON 作为 HTTP 响应发送给请求方。</li>
+</ol>
+<p>因此，我们不需要自己编写字典转 JSON 的代码。</p>
+<h3 id="本次创建的-api">8. 本次创建的 API</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>接口路径</td>
+<td><code>/</code></td>
+</tr>
+<tr>
+<td>请求方法</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>处理函数</td>
+<td><code>home()</code></td>
+</tr>
+<tr>
+<td>返回内容</td>
+<td><code>{"message": "欢迎来到洛蒂亚！"}</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="六启动-fastapi-后端">六、启动 FastAPI 后端</h2>
+<h3 id="启动命令">1. 启动命令</h3>
+<p>在 PowerShell 中进入 <code>backend</code> 目录，然后执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py -m uvicorn main:app --reload</span><br></pre></td></tr></table></figure>
+<h3 id="命令解释-2">2. 命令解释</h3>
+<table>
+<thead>
+<tr>
+<th>命令部分</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>py</code></td>
+<td>使用 Python 启动器</td>
+</tr>
+<tr>
+<td><code>-m</code></td>
+<td>以模块方式运行程序</td>
+</tr>
+<tr>
+<td><code>uvicorn</code></td>
+<td>启动 Uvicorn 服务器</td>
+</tr>
+<tr>
+<td><code>main</code></td>
+<td><code>main.py</code> 文件</td>
+</tr>
+<tr>
+<td><code>:</code></td>
+<td>分隔模块名称和应用实例名称</td>
+</tr>
+<tr>
+<td><code>app</code></td>
+<td><code>main.py</code> 中的 FastAPI 应用实例</td>
+</tr>
+<tr>
+<td><code>--reload</code></td>
+<td>修改代码后自动重新加载应用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="理解-mainapp">3. 理解 main:app</h3>
+<p><code>main:app</code> 是 Uvicorn 用来定位应用的写法。</p>
+<ul>
+<li><code>main</code>：指向 <code>main.py</code> 文件，省略了
+<code>.py</code>。</li>
+<li><code>app</code>：指向该文件中创建的 FastAPI 应用实例。</li>
+</ul>
+<p>因此，<code>main:app</code> 的意思是：</p>
+<p>运行 main.py 文件中的 app 应用。</p>
+<h3 id="reload-的作用">4. –reload 的作用</h3>
+<p><code>--reload</code> 表示启用自动重新加载。</p>
+<p>当我们修改并保存后端代码时，Uvicorn
+会自动重新加载应用，不需要每次都手动停止和重新启动。</p>
+<h3 id="启动成功的标志">5. 启动成功的标志</h3>
+<p>启动成功后，PowerShell 会显示类似信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INFO: Uvicorn running on http://127.0.0.1:8000</span><br><span class="line">INFO: Started reloader process</span><br><span class="line">INFO: Started server process</span><br><span class="line">INFO: Waiting for application startup.</span><br><span class="line">INFO: Application startup complete.</span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Uvicorn running on http://127.0.0.1:8000</span><br></pre></td></tr></table></figure>
+<p>表示 Uvicorn 已经开始在本机的 <code>8000</code> 端口运行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Application startup complete.</span><br></pre></td></tr></table></figure>
+<p>表示 FastAPI 应用已经完成启动。</p>
+<h3 id="本地地址与端口">6. 本地地址与端口</h3>
+<p><code>http://127.0.0.1:8000</code> 由几个部分组成：</p>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>http://</code></td>
+<td>HTTP 通信协议</td>
+</tr>
+<tr>
+<td><code>127.0.0.1</code></td>
+<td>本机地址，即当前电脑</td>
+</tr>
+<tr>
+<td><code>8000</code></td>
+<td>Uvicorn 监听的端口</td>
+</tr>
+</tbody>
+</table>
+<p>端口用于区分同一台计算机上不同的网络服务。</p>
+<h2 id="七在浏览器中验证-api">七、在浏览器中验证 API</h2>
+<h3 id="访问后端地址">1. 访问后端地址</h3>
+<p>Uvicorn 启动成功后，在浏览器地址栏输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1:8000</span><br></pre></td></tr></table></figure>
+<h3 id="查看返回结果">2. 查看返回结果</h3>
+<p>浏览器显示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;message&quot;: &quot;欢迎来到洛蒂亚！&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这说明我们创建的 API 已经能够正常工作。</p>
+<h3 id="完整请求过程">3. 完整请求过程</h3>
+<ol type="1">
+<li>浏览器访问 <code>127.0.0.1:8000</code>。</li>
+<li>浏览器向后端发送 HTTP 请求。</li>
+<li>Uvicorn 接收请求，并将其交给 FastAPI。</li>
+<li>FastAPI 根据请求方法和路径匹配接口。</li>
+<li>FastAPI 调用 <code>home()</code> 函数。</li>
+<li><code>home()</code> 返回 Python 字典。</li>
+<li>FastAPI 将字典转换为 JSON。</li>
+<li>后端将 JSON 响应发送给浏览器。</li>
+<li>浏览器显示返回的数据。</li>
+</ol>
+<h3 id="http-请求与响应">4. HTTP 请求与响应</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP</td>
+<td>浏览器与服务器之间进行通信的协议</td>
+</tr>
+<tr>
+<td>Request（请求）</td>
+<td>客户端向服务器发送的信息</td>
+</tr>
+<tr>
+<td>Response（响应）</td>
+<td>服务器处理请求后返回的信息</td>
+</tr>
+</tbody>
+</table>
+<p>在洛蒂亚项目中，浏览器是客户端，Uvicorn 和 FastAPI
+共同提供后端服务。</p>
+<h2 id="八理解-uvicorn-的请求日志">八、理解 Uvicorn 的请求日志</h2>
+<p>浏览器访问后端地址后，PowerShell 会自动显示请求日志。</p>
+<p>当时出现过类似内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:57945 - &quot;GET / HTTP/1.1&quot; 200 OK</span><br><span class="line">127.0.0.1:57945 - &quot;GET /favicon.ico HTTP/1.1&quot; 404 Not Found</span><br></pre></td></tr></table></figure>
+<h3 id="本机地址与客户端端口">1. 本机地址与客户端端口</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:57945</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>127.0.0.1</code>：请求来自本机。</li>
+<li><code>57945</code>：浏览器发起连接时使用的临时客户端端口。</li>
+</ul>
+<p>注意：这里的 <code>57945</code> 不是 Uvicorn 监听的 <code>8000</code>
+端口。</p>
+<h3 id="get-http1.1">2. GET / HTTP/1.1</h3>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td>HTTP 请求方法，通常用于获取数据</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>请求访问的路径</td>
+</tr>
+<tr>
+<td><code>HTTP/1.1</code></td>
+<td>使用的 HTTP 协议版本</td>
+</tr>
+</tbody>
+</table>
+<p>这与我们定义的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@app.get(&quot;/&quot;)</span><br></pre></td></tr></table></figure>
+<p>相对应。</p>
+<h3 id="http-状态码">3. HTTP 状态码</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">200 OK</span><br></pre></td></tr></table></figure>
+<p>表示请求成功。</p>
+<p>常见状态码：</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200 OK</code></td>
+<td>请求成功</td>
+</tr>
+<tr>
+<td><code>404 Not Found</code></td>
+<td>请求的资源不存在</td>
+</tr>
+<tr>
+<td><code>500 Internal Server Error</code></td>
+<td>服务器内部发生错误</td>
+</tr>
+</tbody>
+</table>
+<h3 id="favicon.ico-的-404">4. favicon.ico 的 404</h3>
+<p><code>favicon.ico</code>
+是网站图标文件，通常显示在浏览器标签页的网站名称旁边。</p>
+<p>浏览器访问网站时，可能会自动请求：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/favicon.ico</span><br></pre></td></tr></table></figure>
+<p>但是我们目前没有配置这个图标，因此服务器找不到对应资源，返回：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">404 Not Found</span><br></pre></td></tr></table></figure>
+<p>这不代表 FastAPI 后端出现故障，也不影响当前 API
+的正常使用，可以暂时忽略。</p>
+<h2 id="九使用-live-server-运行前端网页">九、使用 Live Server
+运行前端网页</h2>
+<h3 id="什么是-live-server">1. 什么是 Live Server？</h3>
+<p>Live Server 是 VS Code 的一个扩展（Extension）。</p>
+<p>它可以在本地启动一个 Web 服务器，让我们通过浏览器访问正在编辑的 HTML
+网页。</p>
+<p>本次使用的扩展：</p>
+<ul>
+<li>名称：Live Server</li>
+<li>发布者：Ritwick Dey</li>
+<li>版本：5.7.10</li>
+</ul>
+<h3 id="安装-live-server">2. 安装 Live Server</h3>
+<p>在 VS Code 扩展市场搜索：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Live Server</span><br></pre></td></tr></table></figure>
+<p>找到发布者为 Ritwick Dey 的扩展，确认后安装。</p>
+<h3 id="启动洛蒂亚网页">3. 启动洛蒂亚网页</h3>
+<p>在 VS Code 左侧文件列表中：</p>
+<ol type="1">
+<li>找到项目根目录下的 <code>index.html</code>。</li>
+<li>右键点击。</li>
+<li>选择 <code>Open with Live Server</code>。</li>
+<li>浏览器自动打开本地网页。</li>
+</ol>
+<p>启动后会得到类似地址：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1:5500/</span><br></pre></td></tr></table></figure>
+<h3 id="理解两个服务器的区别">4. 理解两个服务器的区别</h3>
+<p>现在洛蒂亚项目中有两个服务器：</p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>作用</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Live Server</td>
+<td>运行前端网页</td>
+<td><code>127.0.0.1:5500</code></td>
+</tr>
+<tr>
+<td>Uvicorn</td>
+<td>运行 FastAPI 后端</td>
+<td><code>127.0.0.1:8000</code></td>
+</tr>
+</tbody>
+</table>
+<p>它们虽然都运行在同一台电脑上，但承担的工作不同：</p>
+<ul>
+<li>Live Server 提供 HTML、CSS、JavaScript 等前端文件。</li>
+<li>Uvicorn 运行后端应用，接收前端发送的请求。</li>
+</ul>
+<h3 id="本地开发与-github-pages-的区别">5. 本地开发与 GitHub Pages
+的区别</h3>
+<p>原本的洛蒂亚网站通过 GitHub Pages 公开访问。</p>
+<p>但是，GitHub Pages 提供的是静态网站托管服务，不能直接运行我们电脑上的
+Python 后端程序。</p>
+<p>例如：</p>
+<ul>
+<li>GitHub Pages 上的洛蒂亚网页不能直接访问你电脑上的
+<code>127.0.0.1:8000</code>。</li>
+<li><code>127.0.0.1</code>
+指向的是访问者自己的电脑，而不是你的电脑。</li>
+</ul>
+<p>因此，本次我们使用 Live Server 在本地运行前端副本，使用 Uvicorn
+在本地运行后端，以便测试两者之间的通信。</p>
+<h2 id="十配置-cors-跨域资源共享">十、配置 CORS 跨域资源共享</h2>
+<h3 id="为什么需要配置-cors">1. 为什么需要配置 CORS？</h3>
+<p>目前洛蒂亚的前端和后端分别运行在：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前端 Live Server</td>
+<td><code>http://127.0.0.1:5500</code></td>
+</tr>
+<tr>
+<td>后端 Uvicorn</td>
+<td><code>http://127.0.0.1:8000</code></td>
+</tr>
+</tbody>
+</table>
+<p>虽然它们运行在同一台电脑上，但端口不同，因此属于不同的源。</p>
+<h3 id="什么是源origin">2. 什么是源（Origin）？</h3>
+<p>一个源由三个部分组成：</p>
+<ol type="1">
+<li>协议，例如 <code>http</code>。</li>
+<li>主机名，例如 <code>127.0.0.1</code>。</li>
+<li>端口号，例如 <code>5500</code>。</li>
+</ol>
+<p>只要其中任意一项不同，就属于不同的源。</p>
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1:5500</span><br><span class="line">http://127.0.0.1:8000</span><br></pre></td></tr></table></figure>
+<p>两者的端口号不同，因此属于不同的源。</p>
+<h3 id="什么是-cors">3. 什么是 CORS？</h3>
+<p>CORS 全称是 Cross-Origin Resource Sharing，中文叫作跨域资源共享。</p>
+<p>它是一种浏览器与服务器协作的机制，用来控制网页是否可以访问不同源的资源。</p>
+<p>浏览器存在同源策略，因此前端网页跨域访问后端时，需要后端通过 CORS
+响应头表明是否允许这种访问。</p>
+<h3 id="在-fastapi-中配置-cors">4. 在 FastAPI 中配置 CORS</h3>
+<p>我们使用 FastAPI 提供的 <code>CORSMiddleware</code> 中间件。</p>
+<p>原来的 <code>main.py</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from fastapi import FastAPIapp = FastAPI()@app.get(&quot;/&quot;)def home():    return &#123;&quot;message&quot;: &quot;欢迎来到洛蒂亚！&quot;&#125;</span><br></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from fastapi import FastAPIfrom fastapi.middleware.cors import CORSMiddlewareapp = FastAPI()app.add_middleware(    CORSMiddleware,    allow_origins=[&quot;*&quot;],    allow_methods=[&quot;*&quot;],    allow_headers=[&quot;*&quot;],)@app.get(&quot;/&quot;)def home():    return &#123;&quot;message&quot;: &quot;欢迎来到洛蒂亚！&quot;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="理解新增代码">5. 理解新增代码</h3>
+<p>导入 CORS 中间件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from fastapi.middleware.cors import CORSMiddleware</span><br></pre></td></tr></table></figure>
+<p>从 FastAPI 提供的跨域处理中间件模块中导入
+<code>CORSMiddleware</code>。</p>
+<p>添加中间件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.add_middleware(    CORSMiddleware,    allow_origins=[&quot;*&quot;],    allow_methods=[&quot;*&quot;],    allow_headers=[&quot;*&quot;],)</span><br></pre></td></tr></table></figure>
+<p><code>app.add_middleware()</code> 是 FastAPI
+提供的方法，用于给应用添加中间件。</p>
+<p>中间件可以理解为：在请求到达具体接口函数之前，以及响应返回客户端之前，执行统一处理工作的组件。</p>
+<p>三个参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>allow_origins=["*"]</code></td>
+<td>允许所有来源</td>
+</tr>
+<tr>
+<td><code>allow_methods=["*"]</code></td>
+<td>允许所有 HTTP 请求方法</td>
+</tr>
+<tr>
+<td><code>allow_headers=["*"]</code></td>
+<td>允许所有请求头</td>
+</tr>
+</tbody>
+</table>
+<p>这里的 <code>*</code> 是通配符，表示不限定具体项目。</p>
+<p>注意： 当前使用 <code>*</code>
+是为了本地学习和测试方便。正式部署时应该限制为可信任的前端来源，不能简单地允许所有来源。</p>
+<h3 id="本步骤的目的">6. 本步骤的目的</h3>
+<p>让运行在 <code>5500</code> 端口的洛蒂亚前端网页能够访问运行在
+<code>8000</code> 端口的 FastAPI 后端，为前后端通信做好准备。</p>
+<h2
+id="十一在前端添加后端信息显示区域">十一、在前端添加后端信息显示区域</h2>
+<h3 id="找到-index.html">1. 找到 index.html</h3>
+<p>打开项目根目录下的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index.html</span><br></pre></td></tr></table></figure>
+<p>找到原有代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Welcome to my world.&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="添加显示区域">2. 添加显示区域</h3>
+<p>在它下面添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=&quot;backendMessage&quot;&gt;正在连接洛蒂亚后端……&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="理解代码">3. 理解代码</h3>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;p&gt;</code></td>
+<td>HTML 段落标签，用于显示文字</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>HTML 元素的标识属性</td>
+</tr>
+<tr>
+<td><code>backendMessage</code></td>
+<td>设置的元素标识名称</td>
+</tr>
+<tr>
+<td><code>正在连接洛蒂亚后端……</code></td>
+<td>页面初始显示的文字</td>
+</tr>
+<tr>
+<td><code>&lt;/p&gt;</code></td>
+<td>段落结束标签</td>
+</tr>
+</tbody>
+</table>
+<h3 id="id-的作用">4. id 的作用</h3>
+<p><code>id</code> 可以给 HTML 元素设置唯一标识。</p>
+<p>后续 JavaScript
+可以通过这个标识找到对应元素，并修改它显示的内容。</p>
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;backendMessage&quot;)</span><br></pre></td></tr></table></figure>
+<p>就可以找到这个显示区域。</p>
+<h3 id="本步骤的目的-1">5. 本步骤的目的</h3>
+<p>在网页中提前准备一个显示区域，用于展示后端返回的数据。</p>
+<h2
+id="十二在前端添加连接后端的按钮">十二、在前端添加连接后端的按钮</h2>
+<h3 id="添加按钮">1. 添加按钮</h3>
+<p>在刚刚添加的显示区域下面，加入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button id=&quot;connectBackend&quot;&gt;连接洛蒂亚后端&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="理解代码-1">2. 理解代码</h3>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;button&gt;</code></td>
+<td>HTML 按钮标签</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>为按钮设置唯一标识</td>
+</tr>
+<tr>
+<td><code>connectBackend</code></td>
+<td>按钮的标识名称</td>
+</tr>
+<tr>
+<td><code>连接洛蒂亚后端</code></td>
+<td>按钮显示的文字</td>
+</tr>
+<tr>
+<td><code>&lt;/button&gt;</code></td>
+<td>按钮结束标签</td>
+</tr>
+</tbody>
+</table>
+<h3 id="与显示区域结合">3. 与显示区域结合</h3>
+<p>目前 <code>index.html</code> 中新增的两段代码是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=&quot;backendMessage&quot;&gt;正在连接洛蒂亚后端……&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;button id=&quot;connectBackend&quot;&gt;连接洛蒂亚后端&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<p>两者的作用不同：</p>
+<ul>
+<li><code>backendMessage</code>：显示后端返回的信息。</li>
+<li><code>connectBackend</code>：让用户点击并主动发起请求。</li>
+</ul>
+<p>本步骤的目的：为前端增加一个交互入口，使用户能够通过点击按钮主动请求后端。</p>
+<h2 id="十三使用-javascript-实现前后端通信">十三、使用 JavaScript
+实现前后端通信</h2>
+<h3 id="javascript-代码">1. JavaScript 代码</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const connectBackend = document.getElementById(&quot;connectBackend&quot;);</span><br><span class="line"></span><br><span class="line">connectBackend.addEventListener(&quot;click&quot;, function() &#123;</span><br><span class="line">    fetch(&quot;http://127.0.0.1:8000/&quot;)</span><br><span class="line">        .then(response =&gt; response.json())</span><br><span class="line">        .then(data =&gt; &#123;</span><br><span class="line">            document.getElementById(&quot;backendMessage&quot;).textContent = data.message;</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(error =&gt; &#123;</span><br><span class="line">            document.getElementById(&quot;backendMessage&quot;).textContent = &quot;连接后端失败&quot;;</span><br><span class="line">            console.error(error);</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="找到-html-按钮">2. 找到 HTML 按钮</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const connectBackend = document.getElementById(&quot;connectBackend&quot;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>const</code>：声明一个常量。</li>
+<li><code>connectBackend</code>：常量名称。</li>
+<li><code>document</code>：代表当前网页文档。</li>
+<li><code>getElementById()</code>：根据 HTML 元素的 <code>id</code>
+查找元素。</li>
+</ul>
+<p>作用：找到之前创建的「连接洛蒂亚后端」按钮，并将它保存到
+<code>connectBackend</code> 中。</p>
+<h3 id="监听按钮点击事件">3. 监听按钮点击事件</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connectBackend.addEventListener(&quot;click&quot;, function() &#123;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>addEventListener()</code>：为元素添加事件监听器。</li>
+<li><code>"click"</code>：指定监听点击事件。</li>
+<li><code>function()</code>：定义一个函数。</li>
+<li><code>{}</code>：函数执行的代码范围。</li>
+</ul>
+<p>作用：当用户点击按钮时，执行大括号里面的代码。</p>
+<h3 id="使用-fetch-发送请求">4. 使用 fetch() 发送请求</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fetch(&quot;http://127.0.0.1:8000/&quot;)</span><br></pre></td></tr></table></figure>
+<p><code>fetch()</code> 是 JavaScript 提供的网络请求功能。</p>
+<p>这里使用它向洛蒂亚后端发送请求。</p>
+<p>默认情况下，<code>fetch()</code> 使用 GET 方法，因此与 FastAPI
+中定义的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@app.get(&quot;/&quot;)</span><br></pre></td></tr></table></figure>
+<p>相匹配。</p>
+<h3 id="解析服务器返回的数据">5. 解析服务器返回的数据</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.then(response =&gt; response.json())</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>response</code>：服务器返回的 HTTP 响应对象。</li>
+<li><code>response.json()</code>：读取响应内容，并将 JSON 数据解析为
+JavaScript 数据。</li>
+</ul>
+<p>这里的 <code>.then()</code> 用于处理异步操作成功后的结果。</p>
+<h3 id="获取数据并修改网页">6. 获取数据并修改网页</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.then(data =&gt; &#123;</span><br><span class="line">    document.getElementById(&quot;backendMessage&quot;).textContent = data.message;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>data</code>：解析后的 JavaScript 对象。</li>
+<li><code>data.message</code>：读取对象中 <code>message</code>
+对应的内容。</li>
+<li><code>textContent</code>：修改 HTML 元素中显示的文字。</li>
+</ul>
+<p>作用：将后端返回的欢迎信息显示在网页上。</p>
+<h3 id="使用-catch-处理错误">7. 使用 catch() 处理错误</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.catch(error =&gt; &#123;</span><br><span class="line">    document.getElementById(&quot;backendMessage&quot;).textContent = &quot;连接后端失败&quot;;</span><br><span class="line">    console.error(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>.catch()</code>：处理请求过程中出现的错误。</li>
+<li><code>error</code>：保存错误信息。</li>
+<li><code>console.error(error)</code>：在浏览器开发者工具的控制台中输出错误信息。</li>
+</ul>
+<p>作用：如果请求过程中发生错误，就在网页上显示「连接后端失败」，并在控制台输出错误信息，方便排查问题。</p>
+<h3 id="完整通信流程">8. 完整通信流程</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">用户点击按钮</span><br><span class="line">      ↓</span><br><span class="line">JavaScript 监听 click 事件</span><br><span class="line">      ↓</span><br><span class="line">fetch() 向后端发送 GET 请求</span><br><span class="line">      ↓</span><br><span class="line">Uvicorn 接收请求</span><br><span class="line">      ↓</span><br><span class="line">FastAPI 匹配 GET / 接口</span><br><span class="line">      ↓</span><br><span class="line">执行 home() 函数</span><br><span class="line">      ↓</span><br><span class="line">返回 Python 字典</span><br><span class="line">      ↓</span><br><span class="line">FastAPI 转换为 JSON</span><br><span class="line">      ↓</span><br><span class="line">JavaScript 解析 JSON 数据</span><br><span class="line">      ↓</span><br><span class="line">读取 data.message</span><br><span class="line">      ↓</span><br><span class="line">修改 HTML 元素的 textContent</span><br><span class="line">      ↓</span><br><span class="line">网页显示「欢迎来到洛蒂亚！」</span><br></pre></td></tr></table></figure>
+<h3 id="本步骤的目的-2">9. 本步骤的目的</h3>
+<p>让原本独立运行的前端网页能够主动向后端发送请求，并接收、解析和展示后端返回的数据。</p>
+<p>这是洛蒂亚实现前后端通信的核心代码。</p>
+<h2
+id="十四前后端通信测试与第一阶段验收">十四、前后端通信测试与第一阶段验收</h2>
+<h3 id="实际测试过程">1. 实际测试过程</h3>
+<p>我们完成了以下操作：</p>
+<ol type="1">
+<li>启动 Uvicorn，让 FastAPI 后端运行。</li>
+<li>使用 Live Server 打开洛蒂亚本地网页。</li>
+<li>点击「连接洛蒂亚后端」按钮。</li>
+<li>前端通过 <code>fetch()</code> 向后端发送 GET 请求。</li>
+<li>后端执行 <code>home()</code> 函数并返回 JSON。</li>
+<li>前端成功接收数据，并显示在网页上。</li>
+</ol>
+<h3 id="实际测试结果">2. 实际测试结果</h3>
+<p>测试成功</p>
+<p>网页最终显示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">欢迎来到洛蒂亚！</span><br></pre></td></tr></table></figure>
+<p>这证明：</p>
+<ul>
+<li>前端 JavaScript 能够响应按钮点击事件。</li>
+<li><code>fetch()</code> 能够向后端发送请求。</li>
+<li>Uvicorn 能够接收并传递请求。</li>
+<li>FastAPI 能够执行对应函数并返回 JSON。</li>
+<li>JavaScript 能够读取返回的数据。</li>
+<li>前端能够根据后端返回的数据修改网页内容。</li>
+</ul>
+<h3 id="第一阶段完成内容">3. 第一阶段完成内容</h3>
+<h2
+id="第一阶段后端环境搭建与前后端初步通信">第一阶段：后端环境搭建与前后端初步通信</h2>
+<p>已完成</p>
+<ul>
+<li>创建后端目录和 Python 文件</li>
+<li>检查 Python 环境</li>
+<li>安装 FastAPI</li>
+<li>安装 Uvicorn</li>
+<li>编写 FastAPI 应用和 API 接口</li>
+<li>启动后端服务器</li>
+<li>浏览器访问 API 并验证返回数据</li>
+<li>理解 Uvicorn 请求日志和 HTTP 状态码</li>
+<li>使用 Live Server 运行本地前端</li>
+<li>配置 CORS 跨域资源共享</li>
+<li>前端添加信息显示区域和连接按钮</li>
+<li>使用 JavaScript fetch() 实现前后端通信</li>
+<li>成功测试按钮触发请求并显示后端数据</li>
+</ul>
+<h3 id="如何停止-uvicorn">4. 如何停止 Uvicorn？</h3>
+<p>当我们不再需要运行后端服务时，可以在运行 Uvicorn 的 PowerShell
+窗口按下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + C</span><br></pre></td></tr></table></figure>
+<p>如果正常停止，终端会出现类似：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Shutting down</span><br><span class="line">Application shutdown complete.</span><br><span class="line">Finished server process</span><br></pre></td></tr></table></figure>
+<p>这表示服务器已经停止运行。</p>
+<p>停止 Uvicorn 不会删除代码，也不会影响已经保存的项目文件。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://julian-yulijin.github.io/2026/10/31/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%90%8E%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%9D%E6%AD%A5%E9%80%9A%E4%BF%A1/" data-id="cuidGUFfFncEmd1EAd0m0kath" data-title="第一阶段：后端环境搭建与前后端初步通信" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2026/10/31/%E8%8D%89%E7%A8%BF/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">草稿</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git%E4%B8%8EGitHub/">Git与GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo%E7%AC%94%E8%AE%B0/">Hexo笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/">个人项目</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/">其他笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/10/">October 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/10/31/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%90%8E%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%9D%E6%AD%A5%E9%80%9A%E4%BF%A1/">第一阶段：后端环境搭建与前后端初步通信</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/31/%E8%8D%89%E7%A8%BF/">草稿</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E4%B8%89%E7%AB%A0/">线代第三章</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E5%9B%9B%E7%AB%A0/">线代第四章</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/26/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%94%E8%AE%B0/">微积分第二章笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
