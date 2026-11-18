@@ -14,7 +14,7 @@
 <meta property="og:description" content="微积分第一章：极限与连续 一、易考辨析类知识点 1. 极限的本质与基础定义  极限前提： 极限存在的前提必为极限为常数（适用于所有定理，推广至拆分时的需求）。 独立性： 函数极限 lim&#8289;x→x0f(x)\lim_{x\to x_0} f(x) 的值与 f(x0)f(x_0) 无关，且 f(x)f(x) 可在 x&#x3D;x0x&#x3D;x_0 上无定义（x≠x0x\neq">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-10-21T14:58:19.000Z">
-<meta property="article:modified_time" content="2026-10-25T04:21:38.104Z">
+<meta property="article:modified_time" content="2026-11-10T04:02:54.173Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -410,7 +410,7 @@ style="color: red;">幂指代换</span>。</li>
 <li>多项求和不能合并则夹逼法则。</li>
 </ul>
 <h3 id="二计算方案">（二）计算方案</h3>
-<h4 id="等价无穷小替换">等价无穷小替换：</h4>
+<h4 id="等价无穷小替换">等价无穷小替换</h4>
 <ul>
 <li><strong>对数函数：</strong>
 一定要加一减一，构造等价无穷小替换。</li>
@@ -540,8 +540,10 @@ style="color: red;">较小的部分</span>；（2）.直接分子分母同除最
 <p>最终结果：</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>1</mn><mi>/</mi><mn>6</mn></mrow></msup><annotation encoding="application/x-tex">e^{-1/6}</annotation></semantics></math></p>
 <h4 id="两指数相减">6. 两指数相减</h4>
-<p>遇到两指数相减的情况，提取后一项进行化简。 -
-<strong>等价无穷小选择：</strong> 对于</p>
+<p>遇到两指数相减的情况，提取后一项进行化简。</p>
+<ul>
+<li><strong>等价无穷小选择：</strong> 对于</li>
+</ul>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mi>x</mi></msup><mo>−</mo><mn>1</mn><mo>∼</mo><mi>x</mi><mrow><mi mathvariant="normal">ln</mi><mo>&#8289;</mo></mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a^x-1\sim x\ln a</annotation></semantics></math></p>
 <p>与</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>α</mi></msup><mo>−</mo><mn>1</mn><mo>∼</mo><mi>α</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">(1+x)^\alpha-1\sim\alpha x</annotation></semantics></math></p>
@@ -562,12 +564,13 @@ style="color: red;">较小的部分</span>；（2）.直接分子分母同除最
 </ul>
 <h4 id="有界">8. 有界</h4>
 <ul>
-<li><p>碰到
+<li>碰到
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>r</mi><mi>c</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">arctanx</annotation></semantics></math>
-时，要思考利用其有界性或者直接求导。</p></li>
-<li><p>有界量×无穷小量 = 无穷小量，即极限为 0。
-<strong>经典例题：</strong>
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><msup><mi>x</mi><mn>2</mn></msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><annotation encoding="application/x-tex">\lim_{x\to0}x^2\sin\frac1x</annotation></semantics></math>
+时，要思考利用其有界性或者直接求导。</li>
+<li>有界量×无穷小量 = 无穷小量，即极限为 0。
+<strong>经典例题：</strong></li>
+</ul>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><msup><mi>x</mi><mn>2</mn></msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><annotation encoding="application/x-tex">\lim_{x\to0}x^2\sin\frac1x</annotation></semantics></math>
 <strong>解析：</strong> 因为：
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mi mathvariant="normal">sin</mi><mfrac><mn>1</mn><mi>x</mi></mfrac><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\left|\sin\frac1x\right|\le1</annotation></semantics></math>
 所以
@@ -575,8 +578,9 @@ style="color: red;">较小的部分</span>；（2）.直接分子分母同除最
 为有界量，而
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x^2\to0</annotation></semantics></math>
 为无穷小量，因此：
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><msup><mi>x</mi><mn>2</mn></msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lim_{x\to0}x^2\sin\frac1x=0</annotation></semantics></math></p></li>
-<li><p>判断函数在某区间内的是否有界：求函数在区间边界上的极限是否存在。</p></li>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><msup><mi>x</mi><mn>2</mn></msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lim_{x\to0}x^2\sin\frac1x=0</annotation></semantics></math></p>
+<ul>
+<li>判断函数在某区间内的是否有界：求函数在区间边界上的极限是否存在。</li>
 </ul>
 <h4 id="夹逼法则-1">9. 夹逼法则</h4>
 <ul>
@@ -609,7 +613,7 @@ style="color: red;">较小的部分</span>；（2）.直接分子分母同除最
 \frac{n\cdot n}{n^2+1}</annotation></semantics></math></p>
 <p>两端极限均为 1，故：</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>→</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">S_n\to1</annotation></semantics></math></p>
-<h4 id="证明数列收敛并求极限">10.证明数列收敛并求极限：</h4>
+<h4 id="证明数列收敛并求极限">10.证明数列收敛并求极限</h4>
 <ul>
 <li><p>证明收敛时，同时证明单调且同侧有界（常用数学归纳法）。</p></li>
 <li><p>计算极限时，将
@@ -687,7 +691,7 @@ style="color: red;">较小的部分</span>；（2）.直接分子分母同除最
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://julian-yulijin.github.io/2026/10/21/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/" data-id="cuidmGaynX5YDjMNKDvbHh8Bb" data-title="微积分第一章笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://julian-yulijin.github.io/2026/10/21/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/" data-id="cuidYJ7Lps03CTRk2f6Fe9sq9" data-title="微积分第一章笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -726,7 +730,7 @@ style="color: red;">较小的部分</span>；（2）.直接分子分母同除最
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git%E4%B8%8EGitHub/">Git与GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo%E7%AC%94%E8%AE%B0/">Hexo笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/">个人项目</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/">其他笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git%E4%B8%8EGitHub/">Git与GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo%E7%AC%94%E8%AE%B0/">Hexo笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/">个人项目</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/">其他笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%AD%A6%E4%B9%A0/">软件学习</a></li></ul>
     </div>
   </div>
 
@@ -754,6 +758,10 @@ style="color: red;">较小的部分</span>；（2）.直接分子分母同除最
       <ul>
         
           <li>
+            <a href="/2026/11/17/SLT26%E5%B9%B4%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/">SLT26年论文总结</a>
+          </li>
+        
+          <li>
             <a href="/2026/11/02/%E5%9F%BA%E4%BA%8E3-2-1%E7%89%88%E6%9C%AC%E7%9A%84%E6%AF%8F%E6%AC%A1%E4%BD%BF%E7%94%A8%E7%AD%96%E7%95%A5/">基于3.2.1版本的每次使用策略</a>
           </li>
         
@@ -767,10 +775,6 @@ style="color: red;">较小的部分</span>；（2）.直接分子分母同除最
         
           <li>
             <a href="/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E4%B8%89%E7%AB%A0/">线代第三章</a>
-          </li>
-        
-          <li>
-            <a href="/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E5%9B%9B%E7%AB%A0/">线代第四章</a>
           </li>
         
       </ul>

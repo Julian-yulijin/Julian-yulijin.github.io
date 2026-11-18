@@ -14,7 +14,7 @@
 <meta property="og:description" content="洛蒂亚项目：电脑重新开机后的启动流程 第一步：启动 FastAPI 后端  打开 VS Code。 打开洛蒂亚项目文件夹 history-map。 打开 VS Code 终端（PowerShell）。 进入 backend 文件夹：  1cd C:\Users\yulij\OneDrive\Desktop\history-map\backend  设置 JWT 密钥：  1">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-11-01T17:27:42.000Z">
-<meta property="article:modified_time" content="2026-11-01T17:31:36.003Z">
+<meta property="article:modified_time" content="2026-11-10T04:02:08.776Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -109,11 +109,11 @@ id="洛蒂亚项目电脑重新开机后的启动流程">洛蒂亚项目：电�
 <li>进入 backend 文件夹：</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Users\yulij\OneDrive\Desktop\history-map\backend</span><br></pre></td></tr></table></figure>
-<ol start="5" type="1">
+<ol type="1">
 <li>设置 JWT 密钥：</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$env:LOTIA_SECRET_KEY = py -c &quot;import secrets; print(secrets.token_urlsafe(32))&quot;</span><br></pre></td></tr></table></figure>
-<ol start="6" type="1">
+<ol type="1">
 <li>启动 FastAPI：</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py -m uvicorn main:app --reload</span><br></pre></td></tr></table></figure>
@@ -124,7 +124,7 @@ Tunnel</h2>
 <li>进入下载目录：</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd $HOME\Downloads</span><br></pre></td></tr></table></figure>
-<ol start="3" type="1">
+<ol type="1">
 <li>启动隧道：</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\cloudflared-windows-amd64.exe tunnel --url http://127.0.0.1:8000</span><br></pre></td></tr></table></figure>
@@ -153,7 +153,7 @@ Tunnel，每次启动可能生成不同的公网地址。</p>
 <p>例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://新生成的地址.trycloudflare.com/login</span><br></pre></td></tr></table></figure>
 <p>其余三个接口同理。</p>
-<ol start="4" type="1">
+<ol type="1">
 <li>保存 <code>index.html</code>。</li>
 <li>提交并 Push 到 GitHub。</li>
 </ol>
@@ -167,7 +167,7 @@ href="https://julian-yulijin.github.io/Lotia/?utm_source=chatgpt.com">https://ju
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://julian-yulijin.github.io/2026/11/02/%E5%9F%BA%E4%BA%8E3-2-1%E7%89%88%E6%9C%AC%E7%9A%84%E6%AF%8F%E6%AC%A1%E4%BD%BF%E7%94%A8%E7%AD%96%E7%95%A5/" data-id="cuidoL3wWI-UH6EY-qtaIWkEg" data-title="基于3.2.1版本的每次使用策略" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://julian-yulijin.github.io/2026/11/02/%E5%9F%BA%E4%BA%8E3-2-1%E7%89%88%E6%9C%AC%E7%9A%84%E6%AF%8F%E6%AC%A1%E4%BD%BF%E7%94%A8%E7%AD%96%E7%95%A5/" data-id="cuidQ_Mum9C2ScoPrfQz9YatA" data-title="基于3.2.1版本的每次使用策略" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -176,6 +176,15 @@ href="https://julian-yulijin.github.io/Lotia/?utm_source=chatgpt.com">https://ju
   
     
 <nav id="article-nav">
+  
+    <a href="/2026/11/17/SLT26%E5%B9%B4%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          SLT26年论文总结
+        
+      </div>
+    </a>
   
   
     <a href="/2026/10/31/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%90%8E%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%9D%E6%AD%A5%E9%80%9A%E4%BF%A1/" id="article-nav-older" class="article-nav-link-wrap">
@@ -197,7 +206,7 @@ href="https://julian-yulijin.github.io/Lotia/?utm_source=chatgpt.com">https://ju
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git%E4%B8%8EGitHub/">Git与GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo%E7%AC%94%E8%AE%B0/">Hexo笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/">个人项目</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/">其他笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git%E4%B8%8EGitHub/">Git与GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo%E7%AC%94%E8%AE%B0/">Hexo笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/">个人项目</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/">其他笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%AD%A6%E4%B9%A0/">软件学习</a></li></ul>
     </div>
   </div>
 
@@ -225,6 +234,10 @@ href="https://julian-yulijin.github.io/Lotia/?utm_source=chatgpt.com">https://ju
       <ul>
         
           <li>
+            <a href="/2026/11/17/SLT26%E5%B9%B4%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/">SLT26年论文总结</a>
+          </li>
+        
+          <li>
             <a href="/2026/11/02/%E5%9F%BA%E4%BA%8E3-2-1%E7%89%88%E6%9C%AC%E7%9A%84%E6%AF%8F%E6%AC%A1%E4%BD%BF%E7%94%A8%E7%AD%96%E7%95%A5/">基于3.2.1版本的每次使用策略</a>
           </li>
         
@@ -238,10 +251,6 @@ href="https://julian-yulijin.github.io/Lotia/?utm_source=chatgpt.com">https://ju
         
           <li>
             <a href="/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E4%B8%89%E7%AB%A0/">线代第三章</a>
-          </li>
-        
-          <li>
-            <a href="/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E5%9B%9B%E7%AB%A0/">线代第四章</a>
           </li>
         
       </ul>

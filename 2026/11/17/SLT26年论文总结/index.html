@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>SLT26年论文总结 | Julian的个人空间</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="SLT26年论文总结 引言：SLT 基础认识 1. 研究对象：自动手语翻译（SLT） 自动手语翻译（Sign Language Translation，SLT）是将连续的手语视频转换为自然语言文本。 它并不是简单地把每个手势对应成一个单词。手语同时利用手部动作、身体姿态、面部表情和头部动作表达含义，而且具有独立的语法结构。因此，系统需要理解连续动作之间的关系，再按照目标语言的语法组织句子">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SLT26年论文总结">
+<meta property="og:url" content="https://julian-yulijin.github.io/2026/11/17/SLT26%E5%B9%B4%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="Julian的个人空间">
+<meta property="og:description" content="SLT26年论文总结 引言：SLT 基础认识 1. 研究对象：自动手语翻译（SLT） 自动手语翻译（Sign Language Translation，SLT）是将连续的手语视频转换为自然语言文本。 它并不是简单地把每个手势对应成一个单词。手语同时利用手部动作、身体姿态、面部表情和头部动作表达含义，而且具有独立的语法结构。因此，系统需要理解连续动作之间的关系，再按照目标语言的语法组织句子">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-11-17T15:22:36.000Z">
+<meta property="article:modified_time" content="2026-11-18T03:26:36.821Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Julian的个人空间" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Julian的个人空间</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://julian-yulijin.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-SLT26年论文总结" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/11/17/SLT26%E5%B9%B4%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/" class="article-date">
+  <time class="dt-published" datetime="2026-11-17T15:22:36.000Z" itemprop="datePublished">2026-11-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%AD%A6%E4%B9%A0/">软件学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      SLT26年论文总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="slt26年论文总结">SLT26年论文总结</h1>
+<h2 id="引言slt-基础认识">引言：SLT 基础认识</h2>
+<h3 id="研究对象自动手语翻译slt">1. 研究对象：自动手语翻译（SLT）</h3>
+<p>自动手语翻译（Sign Language
+Translation，SLT）是将连续的手语视频转换为自然语言文本。</p>
+<p>它并不是简单地把每个手势对应成一个单词。手语同时利用手部动作、身体姿态、面部表情和头部动作表达含义，而且具有独立的语法结构。因此，系统需要理解连续动作之间的关系，再按照目标语言的语法组织句子。</p>
+<h3 id="核心技术路线">2. 核心技术路线</h3>
+<p>目前的 SLT 主要有三种实现思路：</p>
+<h4
+id="gloss-based基于手语标注的翻译">（1）Gloss-based：基于手语标注的翻译</h4>
+<p>流程：</p>
+<p><strong>手语视频 → Gloss 序列 → 自然语言文本</strong></p>
+<p>Gloss
+是对手语词汇或动作的文字标注，可以理解为手语翻译过程中的中间表示。</p>
+<p>这种方法先识别视频中的手语内容，再将识别结果转换为目标语言。它的优势是过程比较清晰，但需要大量人工
+Gloss 标注，而且 Gloss 不一定能完整表达面部表情等信息。</p>
+<h4 id="gloss-free无-gloss-翻译">（2）Gloss-free：无 Gloss 翻译</h4>
+<p>流程：</p>
+<p><strong>手语视频 → 自然语言文本</strong></p>
+<p>模型直接学习视频与文本之间的对应关系，不需要人工制作 Gloss 标注。</p>
+<p>这种方法减少了对人工标注的依赖，但模型需要自行从连续视频中学习动作与语言含义之间的联系，训练难度更高。</p>
+<h4 id="hybrid-pseudo-gloss混合式翻译">（3）Hybrid /
+Pseudo-Gloss：混合式翻译</h4>
+<p>这类方法尝试结合前两种路线的优势：</p>
+<ul>
+<li>Hybrid：同时训练手语识别和文本翻译任务，让 Gloss
+等中间信息辅助模型学习。</li>
+<li>Pseudo-Gloss：利用模型自动生成伪
+Gloss，代替人工标注，再辅助视频与文本之间的学习。</li>
+</ul>
+<p>核心思路是：<strong>不完全依赖人工
+Gloss，但也不放弃中间表示带来的结构信息。</strong></p>
+<h3 id="模型技术的发展">3. 模型技术的发展</h3>
+<ul>
+<li><strong>CNN + LSTM：</strong> CNN 提取视频画面中的视觉特征，LSTM
+负责理解动作随时间发生的变化。这是早期常见的技术组合，但对较长动作序列的理解能力有限。</li>
+<li><strong>Transformer：</strong>
+利用注意力机制分析不同时间位置之间的联系，更适合处理连续手语中的长距离关系，也是后来许多
+SLT 系统的重要基础。</li>
+<li><strong>LLM：</strong>
+大语言模型主要负责语言理解与文本生成。结合视觉编码器后，可以让系统从手语视频特征生成更自然的目标语言文本。</li>
+</ul>
+<p>需要注意：LLM
+本身并不等于手语识别模型。它通常需要视觉编码器先提取视频信息，再通过适配模块将视觉特征传递给语言模型。</p>
+<h3 id="关键技术问题">4. 关键技术问题</h3>
+<ol type="1">
+<li><strong>连续动作理解：</strong>
+手语视频没有明显的词语边界，模型必须判断动作从哪里开始、在哪里结束，以及不同动作之间如何关联。</li>
+<li><strong>非手部信息识别：</strong>
+面部表情、嘴部动作、头部姿态等也可能承载语言含义，只识别手部动作是不够的。</li>
+<li><strong>数据不足：</strong>
+不同手语之间差异很大，许多手语缺乏足够的公开视频和标注数据，限制了模型训练与跨语言应用。</li>
+<li><strong>实时翻译：</strong>
+模型不仅要翻译准确，还要尽可能降低处理延迟，并适应普通设备的计算能力。</li>
+</ol>
+<h3 id="需要掌握的评价方式">5. 需要掌握的评价方式</h3>
+<ul>
+<li><strong>BLEU：</strong>
+衡量生成文本与参考翻译在词语、短语上的匹配程度。</li>
+<li><strong>ROUGE：</strong> 衡量生成文本与参考文本的内容重合情况。</li>
+<li><strong>BLEURT：</strong>
+利用预训练语言模型评估文本的语义质量。</li>
+</ul>
+<p>这些指标不能完全代表翻译质量，尤其无法单独判断是否准确保留了手语中的语气、表情和完整含义，因此还需要人工评价。</p>
+<h3 id="观点提炼">观点提炼</h3>
+<ol type="1">
+<li>手语本身不止涉及手部动作同时也包含身体的其它部分参与表意，又介于手语本身有独立的语法，所以手语的翻译必须能够关注到身体部位之间的联系。</li>
+<li>对于 SLT 的技术路线，可以利用人工 Gloss
+来辅助学习，同时令模型本身对动作之间的联系产生联系由此提高效率。</li>
+<li>模型技术现在一般以 Transformer 技术（提取特征部分视频）结合使用
+LLM（更好的理解上下文）来生成更自然的文本。</li>
+<li>SLT
+目前面临的主要瓶颈可以分为：由于手语本身特性而导致的对于连续动作的划分能力不足而导致识别失败，和对于非手部动作的捕捉不足；对于识别训练本身的数据不足；翻译实现的实时性不足。</li>
+<li>手语的评价必须结合人工评价，不能对评价方式产生依赖。</li>
+</ol>
+<hr />
+<h2 id="一分类59-篇">一、分类（59 篇）</h2>
+<h3 id="综述与领域全景2-篇">1. 综述与领域全景（2 篇）</h3>
+<p><strong>代表性论文：Advances in Automatic Sign Language Translation:
+A Survey of Techniques and Systems</strong> <a
+target="_blank" rel="noopener" href="https://dblp.org/rec/conf/ccwc/CravensR26.html"
+class="uri">https://dblp.org/rec/conf/ccwc/CravensR26.html</a></p>
+<p><strong>其他论文（1 篇）</strong></p>
+<ul>
+<li>Leveraging large and vision language models for gloss-free sign
+language translation in deaf communication: a survey</li>
+</ul>
+<h3 id="数据资源与语料构建4-篇">2. 数据资源与语料构建（4 篇）</h3>
+<p><strong>代表性论文：SignDATA: Data Pipeline for Sign Language
+Translation</strong> <a
+target="_blank" rel="noopener" href="https://dblp.org/rec/journals/corr/abs-2604-20357.html"
+class="uri">https://dblp.org/rec/journals/corr/abs-2604-20357.html</a></p>
+<h4 id="研究重点">1. 研究重点</h4>
+<p>本文关注手语翻译研究中的数据预处理问题。</p>
+<p>不同手语数据集在标注格式、视频片段时间、人物画面位置等方面存在差异。研究人员往往需要为每个数据集单独编写处理程序，增加了数据准备成本，也影响了实验的可复现性。</p>
+<h4 id="核心方法">2. 核心方法</h4>
+<p>作者提出
+SignDATA，一套模块化、可配置的手语数据预处理工具，主要提供两种处理路线：</p>
+<ul>
+<li><strong>Pose Pipeline（姿态数据处理）：</strong>
+从视频中提取人体、手部和面部关键点，将动作转换为结构化的姿态数据，再进行归一化和打包，供模型训练使用。</li>
+<li><strong>Video Pipeline（视频数据处理）：</strong>
+对原始视频进行人物定位、片段截取和画面裁剪，生成经过统一处理的视频数据。</li>
+</ul>
+<p>整个流程包括数据获取、格式整理、人物定位、视频切分、特征提取、数据标准化和最终导出。</p>
+<p>此外，系统支持 MediaPipe 和 MMPose
+等不同姿态提取工具，研究人员可以根据需要更换处理后端。</p>
+<h4 id="主要特点">3. 主要特点</h4>
+<ul>
+<li><strong>统一数据格式：</strong>
+将不同来源的数据集转换为统一的清单和输出格式。</li>
+<li><strong>模块化处理：</strong>
+将数据获取、视频处理、姿态提取等步骤拆分，方便调整和复用。</li>
+<li><strong>可配置与可复现：</strong>
+通过配置文件管理处理流程，方便重复实验和比较不同处理方案。</li>
+<li><strong>隐私保护：</strong>
+支持对视频进行模糊化处理，同时考虑姿态数据中面部特征可能带来的隐私风险。</li>
+</ul>
+<p><strong>观点提炼：</strong>
+本文针对于SLT的训练环节中的训练素材处理环节，提出了SignDATA技术（有GitHub项目仓库）。该技术对于人的姿态与视频中有效部分的定位均可进行处理。该技术可以提高效率并降低成本，最终有效地提高整个训练的质量。</p>
+<p><strong>其他论文（3 篇）</strong></p>
+<ul>
+<li>SyriSign: A Parallel Corpus for Arabic Text to Syrian Arabic Sign
+Language Translation</li>
+<li>Introducing a Bangla Sentence-Gloss Pair Dataset for Bangla Sign
+Language Translation and Research</li>
+<li>Event Stream-Based Sign Language Translation: A High-Definition
+Benchmark Dataset and A Novel Baseline</li>
+</ul>
+<h3 id="数据增强与合成4-篇">3. 数据增强与合成（4 篇）</h3>
+<p><strong>代表性论文：Corpus Augmentation for Sign Language Translation
+via LLM-Guided Video Stitching</strong> <a
+target="_blank" rel="noopener" href="https://dblp.org/rec/journals/corr/abs-2606-11925.html"
+class="uri">https://dblp.org/rec/journals/corr/abs-2606-11925.html</a></p>
+<h4 id="研究重点-1">1. 研究重点</h4>
+<p>本文关注手语翻译中的数据增强（Data Augmentation）问题。</p>
+<p>目前高质量的手语视频—文本配对数据比较稀缺，尤其是能够用于模型微调的数据。这限制了模型对少见词汇和未见过的表达结构的学习能力。</p>
+<p>作者提出利用大语言模型生成新的手语词汇序列与文本配对，再从已有视频中提取对应动作片段，拼接成新的合成训练视频，以扩大训练语料。</p>
+<h4 id="核心方法-1">2. 核心方法</h4>
+<p>整个方法分为三个步骤：</p>
+<ol type="1">
+<li><p><strong>提取手语视频片段：</strong> 利用 CTC
+强制对齐技术，根据已有视频的 Gloss
+标注，自动确定每个手语词汇在视频中对应的时间范围，从而提取单个词汇的动作片段。</p></li>
+<li><p><strong>生成新的 Gloss—文本配对：</strong>
+使用大语言模型生成新的手语词汇序列及对应文本。为了避免生成内容偏离原数据集，作者向模型提供完整的
+Gloss 词汇表、500
+条原始语料作为参考，以及已有样本作为生成依据。</p></li>
+<li><p><strong>拼接合成视频：</strong> 根据新生成的 Gloss
+序列，从原始视频中随机选取对应动作片段，并按照词汇顺序拼接，形成新的手语视频，再与生成的文本配对，作为训练数据。</p></li>
+</ol>
+<p>因此，作者并没有直接让 AI 生成新的视频，而是通过 <strong>LLM
+生成新内容 + 从真实视频中提取动作片段 + 视频拼接</strong>
+的方式构建合成数据。</p>
+<h4 id="实验结果与发现">3. 实验结果与发现</h4>
+<p>实验使用德国手语天气预报数据集 Phoenix-2014T。</p>
+<ul>
+<li>原始训练数据：7,096 组。</li>
+<li>新增合成数据：7,000 组。</li>
+<li>BLEU-4：从 21.38 提升至 24.30，增加 2.92。</li>
+</ul>
+<p>作者还发现：</p>
+<ul>
+<li>仅仅重新组合已有 Gloss
+和视频片段，而不生成新的语言内容，无法有效提升效果。真正带来收益的是新的
+Gloss—文本组合。</li>
+<li>合成数据适合用于后续翻译微调，但直接用于视觉语言预训练反而会明显降低性能。</li>
+<li>视频片段之间的画面过渡越平滑，并不意味着翻译效果越好。实验中通过 L2
+距离优化过渡平滑度，反而降低了 BLEU-4。</li>
+</ul>
+<p><strong>观点提炼：</strong>
+在缺乏高质量的是训练数据的时候，可以借用大语言模型来生成训练素材。具体步骤为：先搜集已有的词汇片段并提取相应的视频片段，然后依赖原始语料库利用大语言模型生成新的Gloss训练词序（重点在于扩展语言内容），最后将已有的片段按照新生成的词序拼接成新的视频，由此，获得了新的训练素材。</p>
+<p><strong>其他论文（3 篇）</strong></p>
+<ul>
+<li>Leveraging Text-side Augmentation For Sign Language Translation</li>
+<li>BoostSLT: Boosting Sign Language Translation via a Plug-and-Play
+Diffusion-Based Semantic Enhancer</li>
+<li>Target-Side Paraphrase Augmentation for Sign Language Translation
+with Large Language Models</li>
+</ul>
+<h3 id="模型架构与表征学习15-篇">4. 模型架构与表征学习（15 篇）</h3>
+<p><strong>代表性论文：VTaMo: Video-Text Alignment Model for Sign
+Language Translation</strong> <a
+target="_blank" rel="noopener" href="https://dblp.org/rec/conf/eccv/HuHHYF26.html"
+class="uri">https://dblp.org/rec/conf/eccv/HuHHYF26.html</a></p>
+<h4 id="研究重点-2">1. 研究重点</h4>
+<p>本文关注 Gloss-free
+手语翻译中的一个关键问题：<strong>手语视频中的动作顺序与目标语言中的词语顺序并不总是一致，模型很难准确判断视频中的动作究竟对应文本中的哪些词语。</strong></p>
+<p>传统 Gloss-free
+模型主要依靠翻译训练过程中的注意力机制，自行学习视频与文本之间的联系。这种联系属于隐式对齐，可能出现视觉片段与文本词语对应不准确的情况。</p>
+<p>作者提出
+VTaMo，希望通过专门的对齐机制，让模型明确学习视频动作与文本词语之间的关系。</p>
+<h4 id="核心方法-2">2. 核心方法</h4>
+<p>VTaMo 的主要设计是三个层次的跨模态对齐：</p>
+<ul>
+<li><strong>局部对齐（Optimal Transport）：</strong>
+建立视频片段与文本词语之间的对应关系。模型利用最优传输算法寻找两者的匹配，并加入一个可学习的空白标记（Null
+Token），让没有明确词语对应的过渡动作不必强行匹配某个词语。</li>
+<li><strong>全局对齐（Orthogonal Transformation）：</strong>
+从整段视频和完整句子的层面调整视觉与文本特征之间的关系，使两种不同模态的特征在语义空间中更加接近，同时尽量保留原有特征结构。</li>
+<li><strong>位置对齐对比学习（Position-aligned Contrastive
+Learning）：</strong>
+强化视频片段与正确文本词语之间的联系，使对应的特征更加接近，不对应的特征保持区分。</li>
+</ul>
+<p>此外，作者引入了 <strong>Pseudo-Gloss（伪
+Gloss）</strong>：从目标句子中筛选名词、动词等主要内容词，去掉通常没有直接手语对应形式的冠词、介词等词语，作为训练时的辅助表示。</p>
+<p>在实际翻译时，模型先根据视频动作生成内容词序列，再通过一个只使用文本数据训练的恢复模型，重新组织自然语言语序，并补回省略的功能词。</p>
+<h4 id="实验结果与发现-1">3. 实验结果与发现</h4>
+<p>论文在四个数据集上进行了实验，涵盖德国手语、中国手语和美国手语。</p>
+<ul>
+<li>Phoenix-2014T：BLEU-4 达到 28.86。</li>
+<li>CSL-Daily：BLEU-4 达到 27.16。</li>
+<li>How2Sign：BLEU-4 达到 18.47。</li>
+<li>OpenASL：BLEU-4 达到 25.94。</li>
+</ul>
+<p>实验结果显示，VTaMo
+在四个数据集上均取得了较强的表现。消融实验进一步表明，三个对齐机制都能带来独立贡献，其中位置对齐对比学习的影响最大。</p>
+<p>作者还发现，即使固定使用相同的语言模型，VTaMo
+仍然优于对比方法，说明性能提升主要来自对齐机制，而不只是更换或扩大语言模型。</p>
+<p><strong>观点提炼：</strong>
+本文针对于Gloss-free中手语语序与目标语言语序之间不一致而引出的文本对齐需要提出了新的技术-VTaMo（有GitHub项目仓库），使视频片段与词语和整段视频与完整语句之间的对齐效果得到强化，由之前的隐式对齐变成了显示对齐。</p>
+<p><strong>其他论文（14 篇）</strong></p>
+<ul>
+<li>ODE-Based Transformer Decoders for Iterative Sign Language
+Translation</li>
+<li>Sign language translation via cross-modal alignment and graph
+convolution</li>
+<li>TriFuseNet: Open-Vocabulary Sign Language Translation via
+Hierarchical Image-Text-Keypoint Fusion</li>
+<li>Investigating Temporal Motion Features for Pose-to-Text Indian Sign
+Language Translation</li>
+<li>Progressive multi-level learning for gloss-free sign language
+translation</li>
+<li>Diverse Sign Language Translation</li>
+<li>Variational Sign Language Translation</li>
+<li>Dual-Modality Latent Gloss Alignment for Gloss-Free Sign Language
+Translation</li>
+<li>Selective Contrastive Learning For Gloss Free Sign Language
+Translation</li>
+<li>SSL-SSAW: Self-supervised Learning with Sigmoid Self-attention
+Weighting for question-based Sign Language Translation</li>
+<li>Learning Effective Sign Features without Text for Gloss-free Sign
+Language Translation</li>
+<li>HandsCribe: A gloss-free framework for sign language translation and
+gloss sequence generation</li>
+<li>SAME: Signer-Aware Mixture-of-Experts for Test-Time Adaptation in
+Sign Language Translation</li>
+<li>EASLT: Emotion-Aware Sign Language Translation</li>
+</ul>
+<h3 id="llmvlmmllm-范式9-篇">5. LLM/VLM/MLLM 范式（9 篇）</h3>
+<p><strong>代表性论文：SignBind-LLM: Multi-stage Modality Fusion for
+Sign Language Translation</strong> <a
+target="_blank" rel="noopener" href="https://dblp.org/rec/conf/eccv/ThomasFB26.html"
+class="uri">https://dblp.org/rec/conf/eccv/ThomasFB26.html</a></p>
+<h4 id="研究重点-3">1. 研究重点</h4>
+<p>本文关注如何利用大语言模型（LLM）和多模态融合技术提升手语翻译效果。</p>
+<p>作者认为，连续手势、手指拼写（Fingerspelling）和唇部动作（Lipreading）具有不同的识别特点。如果全部交给同一个模型处理，容易出现专业名称、技术词汇识别不准确，以及面部信息利用不足的问题。</p>
+<p>因此，作者提出
+SignBind-LLM，将不同类型的信息交给专门的识别模块处理，再融合结果完成翻译。</p>
+<h4 id="核心方法-3">2. 核心方法</h4>
+<p>模型主要分为三个阶段：</p>
+<ul>
+<li><strong>多专家识别：</strong>
+设置三个独立模块，分别处理连续手语动作、手指拼写和唇部动作。每个模块单独进行预训练，专门学习对应的信息。</li>
+<li><strong>多模态融合：</strong>
+使用动态路由机制判断视频片段应该交给哪个手部识别模块，再通过 Transformer
+和交叉注意力机制融合手部信息与唇部信息。由于嘴部动作和手部动作不一定同时发生，模型还会学习两者之间的时间对应关系。</li>
+<li><strong>LLM 翻译：</strong> 将融合后的伪 Gloss
+序列输入预训练语言模型 Flan-T5，生成自然流畅的英语文本。</li>
+</ul>
+<p>为了减少人工 Gloss 标注，作者还利用 GPT-4o 从字幕中自动生成约 200
+万条伪 Gloss 序列，作为各个识别模块的训练依据。</p>
+<p>与部分端到端架构不同，SignBind-LLM
+将视觉识别、信息融合和语言生成分阶段训练，语言模型也可以独立训练和替换。</p>
+<h4 id="实验结果与发现-2">3. 实验结果与发现</h4>
+<p>论文在三个数据集上进行了验证：</p>
+<ul>
+<li><strong>How2Sign：</strong> BLEU-4 达到 23.1。</li>
+<li><strong>BOBSL：</strong> BLEU-4 达到 7.0。</li>
+<li><strong>ChicagoFSWild+：</strong> 手指拼写识别准确率达到
+73.6%。</li>
+</ul>
+<p>实验还发现：</p>
+<ul>
+<li>在语言模型参数量相同的情况下，SignBind-LLM
+仍然优于此前的对比方法，说明提升并不只是来自更大的语言模型。</li>
+<li>去掉多模态融合模块后，How2Sign 的 BLEU-4 从 23.1 降至
+9.6，说明不同信息之间的融合非常重要。</li>
+<li>去掉唇读模块后，BLEU-4 降至
+14.6，表明唇部信息能够为手语翻译提供重要补充。</li>
+<li>作者报告总训练成本约为 259 GPU
+小时，低于部分此前需要大量计算资源的训练方案。</li>
+</ul>
+<p><strong>观点提炼：</strong>
+本文主要针对与通过大语言模型处理手语翻译的领域，提出了对于不同的身体部分可以交由不同的大语言模型进行识别。先设置不同的模块来负责识别不同的领域，然后依赖于判断机制来判断不同地方交给什么模块来实现，然后再利用Transformer来进行拼回，最后用LLM将伪Gloss序列转化为文本。</p>
+<h4 id="最终结论">4. 最终结论</h4>
+<p>本文提出了一种多阶段、多专家的手语翻译架构，将连续手语识别、手指拼写识别和唇读分别处理，再通过学习不同模态之间的时间关系进行融合，最后交由大语言模型生成自然语言文本。</p>
+<p>实验表明，这种模块化架构能够充分利用不同类型的视觉信息，在多个数据集上取得较好的翻译和识别表现，同时减少对大型端到端联合训练的依赖。</p>
+<p><strong>核心认识：</strong> LLM
+在手语翻译中不一定需要直接负责所有视觉信息的识别。更有效的一种思路是让专业视觉模块分别提取不同信息，再通过多模态融合建立联系，最后由语言模型负责组织和生成自然语言。</p>
+<p><strong>其他论文（8 篇）</strong></p>
+<ul>
+<li>Can Small Vision-Language Models Perform Sign Language
+Translation?</li>
+<li>Attention-Steered Vision-Language Models for Sign Language
+Translation</li>
+<li>ViPo-MLLM: Visual-Pose Multimodal LLM for Gloss-Free Sign Language
+Translation</li>
+<li>SignLlama: Enhancing Gloss-free Sign Language Translation by
+Prioritizing Visual Features for LLMs</li>
+<li>DualAnchor: Preserving Language Priors and Improving Lexical
+Fidelity in Gloss-Free Sign Language Translation</li>
+<li>Think in Latent Thoughts: A New Paradigm for Gloss-Free Sign
+Language Translation</li>
+<li>Retrieval-Augmented Sign Language Translation</li>
+<li>SignDPO: Multi-level Direct Preference Optimisation for
+Skeleton-based Gloss-free Sign Language Translation</li>
+</ul>
+<h3 id="跨语言与低资源迁移4-篇">6. 跨语言与低资源迁移（4 篇）</h3>
+<p><strong>代表性论文：SIGNET: Motion-Level Knowledge Transfer for
+Cross-Language Sign Language Translation</strong> <a
+target="_blank" rel="noopener" href="https://dblp.org/rec/conf/eccv/AsasiSB26.html"
+class="uri">https://dblp.org/rec/conf/eccv/AsasiSB26.html</a></p>
+<h4 id="研究重点-4">1. 研究重点</h4>
+<p>本文关注跨语言手语翻译中的知识迁移问题。</p>
+<p>目前很多手语翻译模型针对特定语言或数据集单独训练。当面对一种训练数据较少、模型从未接触过的新手语时，往往需要重新训练或大量微调。</p>
+<p>作者提出一个思路：虽然不同手语的词汇和语法存在差异，但手部形状变化、运动轨迹等底层视觉特征具有一定共性，因此可以复用不同手语模型已经学到的动作知识。</p>
+<h4 id="核心方法-4">2. 核心方法</h4>
+<p>SIGNET
+的主要设计是将多个不同语言的预训练模型作为专家，通过动态融合实现跨语言知识迁移。</p>
+<ul>
+<li><strong>多专家模型：</strong>
+分别利用中国手语（CSL）、美国手语（ASL）和英国手语（BSL）的数据预训练视觉模型，让它们学习不同语言中的动作特征。这些模型作为独立的视觉专家，不需要在迁移时全部重新训练。</li>
+<li><strong>手部先验引导（Hand-Prior）：</strong>
+作者认为手部是手语表达的重要载体，因此提取各个专家学到的左右手运动特征，作为判断不同专家适用程度的依据。</li>
+<li><strong>动态专家融合（Gated Fusion）：</strong>
+根据输入视频的手部动作特征，自动判断应该更多利用哪些专家的知识，再将它们的输出融合起来。不同视频可以选择不同的专家组合，而不是始终采用固定权重。</li>
+<li><strong>轻量化迁移：</strong>
+冻结原有专家模型的主要参数，只训练少量适配参数和融合模块，减少迁移到新数据集时的训练成本。</li>
+</ul>
+<p>此外，模型使用 2D
+人体骨架关键点作为主要视觉输入，将身体、左右手和面部划分为不同区域，分别提取运动特征，最终直接生成自然语言文本，不依赖中间
+Gloss 标注。</p>
+<h4 id="实验结果与发现-3">3. 实验结果与发现</h4>
+<p>论文在四个手语翻译数据集上进行实验：</p>
+<ul>
+<li><strong>Phoenix-2014T（德国手语）：</strong> BLEU-4 达到
+27.82。</li>
+<li><strong>CSL-Daily（中国手语）：</strong> BLEU-4 达到 28.51。</li>
+<li><strong>How2Sign（美国手语）：</strong> BLEU-4 达到
+15.4，与此前高性能方法的 15.5 基本相当。</li>
+<li><strong>MeineDGS（德国手语）：</strong>
+在德国手语未参与预训练的情况下，BLEU-4 达到
+2.75，优于论文对比的已有方法。</li>
+</ul>
+<p>实验还表明，动态选择专家明显优于简单地平均多个模型的输出；而手部特征作为专家选择依据，也比单纯使用全身或面部特征更有效。</p>
+<p>值得注意的是，模型的视频编码器仅有约 150
+万个可训练参数，说明它不需要在迁移时重新训练整个大型视觉模型。</p>
+<p><strong>观点提炼：</strong>
+本文聚焦于基于一个模型使之适配多种手语的模型训练方法，提出了SIGNET。这种方法基于对不同语言先进行独立训练，再将彼此之间的知识进行迁移融合，由此在对于新一种手语进行识别训练降低了训练成本。</p>
+<p><strong>其他论文（3 篇）</strong></p>
+<ul>
+<li>STT-CL: A Unified Spatio-Temporal-Task Framework for Continual
+Learning in Gloss-Free Multilingual Sign Language Translation</li>
+<li>Q-BridgeNet: A Quantization Network for Cross-Lingual Sign Language
+Translation</li>
+<li>Enhancing Myanmar Sign Language Translation Through Transfer
+Learning, Self-training, and Error Correction</li>
+</ul>
+<h3 id="评测基准与可靠性分析10-篇">7. 评测、基准与可靠性分析（10
+篇）</h3>
+<p><strong>代表性论文：Beyond BLEU: A Case for Redefining Sign Language
+Translation Benchmarks</strong> <a
+target="_blank" rel="noopener" href="https://dblp.org/rec/journals/corr/abs-2609-03734.html"
+class="uri">https://dblp.org/rec/journals/corr/abs-2609-03734.html</a></p>
+<h4 id="研究重点-5">1. 研究重点</h4>
+<p>本文关注手语翻译的评测与可靠性问题。</p>
+<p>目前 SLT 领域普遍使用 BLEU-4
+评价翻译质量。它主要计算模型生成的文本与人工参考译文在词语、短语上的重合程度。</p>
+<p>但作者指出，<strong>文本相似度并不等于手语理解能力</strong>。模型可能没有真正识别视频中的手语动作，却利用语言模型学到的语言规律，生成与参考译文相似的句子，从而获得较高的
+BLEU-4 分数。</p>
+<p>因此，作者希望建立一种更能衡量模型是否真正保留手语内容的评价方法。</p>
+<h4 id="核心发现bleu-4-的局限">2. 核心发现：BLEU-4 的局限</h4>
+<p>作者对六种手语翻译模型进行了测试，发现了几个问题：</p>
+<ul>
+<li><strong>对视觉信息依赖不足：</strong>
+遮挡视频中的手部动作后，部分模型仍能保留原有 BLEU-4 分数的约
+80%；完全破坏视觉输入后，模型仍可能获得一定分数。</li>
+<li><strong>容易受到语言先验影响：</strong>
+模型可以利用目标语言中常见的冠词、介词等功能词提高文本匹配程度，而这些词在手语中往往没有直接对应形式。</li>
+<li><strong>容易受到训练数据重合影响：</strong>
+测试句子越接近训练数据中的句子，BLEU-4
+就越容易提高，即使这种提升不一定来自更好的手语理解。</li>
+</ul>
+<p>这说明 BLEU-4
+可能把语言生成能力、训练数据记忆和真正的手语理解混在一起评价。</p>
+<h4 id="核心方法基于-llm-的内容保留评价">3. 核心方法：基于 LLM
+的内容保留评价</h4>
+<p>作者提出一种基于大语言模型问答（QA）的新评价方案，重点不再是检查生成文本用了哪些词，而是检查它是否保留了原文表达的关键信息。</p>
+<p>具体流程：</p>
+<ol type="1">
+<li><strong>提取关键信息：</strong>
+使用大语言模型从人工参考译文中提取人物、动作、属性、数量、时间、地点、关系、否定和极性等九类内容。</li>
+<li><strong>生成问题：</strong>
+围绕这些信息生成选择题，并设置具有迷惑性的错误选项。</li>
+<li><strong>质量检查：</strong>
+检查问题能否从参考译文中回答，排除仅凭常识就能回答的问题，以及存在歧义的问题。</li>
+<li><strong>评价模型输出：</strong>
+将模型生成的译文作为回答依据，交给另一个大语言模型回答这些问题，统计答对的比例。</li>
+</ol>
+<p>例如，参考译文表达了“一个男人走进房间”，模型却只翻译成“一个人进入房间”，那么关于人物性别的信息就没有得到保留，相应问题也可能回答错误。</p>
+<p>这种方法关注的是<strong>译文有没有保留原始信息，而不是有没有复现参考译文的具体措辞</strong>。</p>
+<h4 id="实验结果与发现-4">4. 实验结果与发现</h4>
+<p>作者在 Phoenix-2014T 和 CSL-Daily
+两个手语翻译数据集上测试了六种模型，并在多个文本翻译基准上验证新评价方法。</p>
+<p>主要发现：</p>
+<ul>
+<li>新的 QA 评价方法对不同措辞的容忍度比 BLEU-4 高约 6～7
+倍，更适合评价表达方式不同但含义相同的译文。</li>
+<li>在 Phoenix-2014T 上，五种 Gloss-free 模型的 QA
+得分差异很小，基本处于统计波动范围内；而使用 Gloss 监督的模型高出它们约
+9.3 个百分点。这种差距在 BLEU-4 排名中没有明显体现。</li>
+<li>新方法对训练数据重合更加稳健，不容易因为测试句子与训练句子相似就给出过高评价。</li>
+</ul>
+<p>这些结果表明，使用不同评价指标，可能会得到对模型能力完全不同的判断。</p>
+<p><strong>观点提炼：</strong>
+本文主要聚焦于对于手语识别效果准确性的评价体系的评价。作者认为原有的BLEU评价体系实际上不能保证识别效果，因而作者提出了可以使用大语言模型问答的方式来进行识别效果准确性的评价，核心环节是信息保有量检查、提问以及能否作为初始文本让其它大语言模型基于此回答问题。</p>
+<p><strong>其他论文（9 篇）</strong></p>
+<ul>
+<li>Beyond BLEU: Linguistic Invisibility and Interactional Repair
+Sequence in End-to-End Sign Language Translation</li>
+<li>Gloss-Free Sign Language Translation: An Unbiased Evaluation of
+Progress in the Field</li>
+<li>A Critical Study of Automatic Evaluation in Sign Language
+Translation</li>
+<li>Beyond a Single Reference: Training and Evaluation with Paraphrases
+in Sign Language Translation</li>
+<li>SLU-2K: A Question-Based Benchmark for Semantic Evaluation of Sign
+Language Translation</li>
+<li>Rethinking Sign Language Translation: The Impact of Signer
+Dependence on Model Evaluation</li>
+<li>Evaluation of Pose Estimation Systems for Sign Language
+Translation</li>
+<li>Understanding Pose-Based Sign Language Translation: Ablation
+Studies</li>
+<li>Grounding or Guessing? Visual Signals for Detecting Hallucinations
+in Sign Language Translation</li>
+</ul>
+<h3 id="翻译与生成统一建模3-篇">8. 翻译与生成统一建模（3 篇）</h3>
+<p><strong>代表性论文：SignFLIP: A Unified Model for Sign Language
+Translation and Generation via Stage-wise Alignment at Scale</strong> <a
+target="_blank" rel="noopener" href="https://dblp.org/rec/journals/corr/abs-2609-35225.html"
+class="uri">https://dblp.org/rec/journals/corr/abs-2609-35225.html</a></p>
+<h4 id="研究重点-6">1. 研究重点</h4>
+<p>本文关注手语翻译（Sign Language Translation，SLT）与手语生成（Sign
+Language Generation，SLG）的统一建模问题。</p>
+<ul>
+<li>SLT：将手语视频转换为自然语言文本。</li>
+<li>SLG：根据自然语言文本生成对应的手语动作。</li>
+</ul>
+<p>过去这两个任务通常独立研究，分别设计模型，难以共享彼此学到的知识。</p>
+<p>作者提出
+SignFLIP，希望利用大语言模型建立统一的手语—文本表示，使同一个模型既能理解手语并生成文本，也能理解文本并生成手语。</p>
+<h4 id="核心方法-5">2. 核心方法</h4>
+<p>SignFLIP
+采用三个阶段逐步训练，让模型逐渐掌握手语与文本之间的双向联系。</p>
+<ul>
+<li><p><strong>第一阶段：跨模态预训练。</strong>
+使用大量手语视频提取人体姿态关键点，包括双手、身体和面部信息。模型一方面遮挡部分连续动作帧，再尝试恢复缺失动作，学习手语的运动规律；另一方面通过对比学习，让对应的手语和文本特征在表示空间中更加接近，建立两种模态之间的初步联系。</p></li>
+<li><p><strong>第二阶段：手语翻译训练。</strong>
+将第一阶段学到的姿态特征输入 mT5
+大语言模型，训练模型根据手语动作生成自然语言文本。经过这一阶段，模型进一步学习手语动作与文本语义之间的对应关系。</p></li>
+<li><p><strong>第三阶段：手语生成训练。</strong>
+反过来输入自然语言文本，让模型生成对应的手语姿态序列。作者采用非自回归生成方式，即一次性预测整段动作，而不是逐个动作生成，使模型能够从整体上安排动作顺序。同时加入手部动作专项约束，减少手指和手部细节的生成误差。</p></li>
+</ul>
+<p>这里的 mT5
+是一种预训练的文本编码器—解码器模型，负责处理语言信息并参与跨模态生成。</p>
+<h4 id="实验结果与发现-5">3. 实验结果与发现</h4>
+<p>作者使用中国手语 CSL-News 和美国手语 YouTube-ASL
+的大规模数据进行预训练，总计约 60万～70万组手语—文本配对样本。</p>
+<p>主要实验结果：</p>
+<ul>
+<li><strong>手语翻译：</strong> 在 How2Sign 上取得 BLEU-4 15.1，在
+CSL-Daily 上取得 26.10，在 OpenASL 上取得 19.77。How2Sign
+上超过了此前对比的姿态输入方法。</li>
+<li><strong>手语生成：</strong> 在 How2Sign 和 CSL-Daily
+上，生成姿态的运动误差和语义评价均优于论文对比的生成方法。</li>
+<li><strong>知识迁移：</strong>
+将预训练模型用于手语识别任务，即使冻结原有编码器，也取得了较好的识别表现，说明学到的手语表示可以用于其他任务。</li>
+</ul>
+<p>不过，人工评价也暴露出明显问题：两名专业手语使用者对生成动作的评分只有
+How2Sign 1.69/5、CSL-Daily 1.94/5，而真实动作分别为 3.48 和
+3.44。尤其是手指细节和动作表达的准确性，仍然不够理想。</p>
+<p><strong>观点提炼：</strong>
+本文聚焦于将模型的手语到文本和文本到手语的功能相结合，提出了SignFLIP技术。该技术在训练中就建立手语与文本之间的联系，再去训练翻译与识别的能力，但是在生成动作方面有所不足。</p>
+<p><strong>其他论文（2 篇）</strong></p>
+<ul>
+<li>Bridging the Gap Between Semantics and Reconstruction: Unifying Sign
+Language Translation and Production</li>
+<li>Large Sign Language Models: Toward 3D American Sign Language
+Translation</li>
+</ul>
+<h3 id="效率实时与轻量化3-篇">9. 效率、实时与轻量化（3 篇）</h3>
+<p><strong>代表性论文：Toward Real-Time Sentence-Level Sign Language
+Translation</strong> <a
+target="_blank" rel="noopener" href="https://dblp.org/rec/journals/corr/abs-2607-09611.html"
+class="uri">https://dblp.org/rec/journals/corr/abs-2607-09611.html</a></p>
+<h4 id="研究重点-7">1. 研究重点</h4>
+<p>本文关注句子级手语翻译的实时部署问题。</p>
+<p>许多手语识别系统只能识别单个孤立手势，难以理解连续动作组成的完整句子。而句子级翻译虽然能够结合上下文理解完整表达，却需要处理更长的视频序列，计算开销和响应延迟也更高。</p>
+<p>作者的目标不是提出新的翻译模型架构，而是围绕已有模型构建一套低延迟、能够实际运行的流式翻译系统。</p>
+<h4 id="核心方法-6">2. 核心方法</h4>
+<p>作者采用 SHuBERT-ByT5 作为基础翻译模型，并通过 QLoRA
+进行高效微调，同时冻结 SHuBERT
+的视觉编码器，减少训练所需的计算资源。</p>
+<p>系统设计主要包括：</p>
+<ul>
+<li><strong>分块式视频输入（Chunked Ingestion）：</strong>
+将连续视频分成小块输入系统，而不是等待整段视频录制完成后再处理。</li>
+<li><strong>并行化处理：</strong>
+将视频感知等计算任务并行执行，并通过时间重排序保证处理结果仍符合原始动作顺序。</li>
+<li><strong>有界队列（Bounded Queues）：</strong>
+限制等待处理的视频数据量，避免输入速度超过处理速度后造成任务积压。</li>
+<li><strong>句子边界检测：</strong>
+利用状态机判断一段手语表达是否结束，确认完整句子后再输出翻译，避免过早翻译导致上下文不完整。</li>
+</ul>
+<p>在硬件部署方面，作者采用树莓派 Raspberry Pi 4B
+作为参考客户端，负责摄像头采集、文本显示和语音输出；计算量较大的视觉识别与翻译则交给后端
+CPU/GPU 服务器处理。</p>
+<p>因此，它并不是让树莓派独立运行完整翻译模型，而是采用轻量客户端与计算后端协作的部署方式。</p>
+<h4 id="实验结果与发现-6">3. 实验结果与发现</h4>
+<p>实验使用 How2Sign 数据集中的 9,872 组样本进行训练和评估。</p>
+<ul>
+<li>验证集 BLEU：16.7。</li>
+<li>测试集 BLEU：15.9。</li>
+<li>测试集 BLEURT：44.7。</li>
+</ul>
+<p>在系统效率方面，优化后的流式处理流程取得了以下结果：</p>
+<ul>
+<li>平均响应延迟：从 1.873 秒降低至 1.354 秒，下降约 27.71%。</li>
+<li>P95 响应延迟：从 2.919 秒降低至 2.130 秒，下降约 27.03%。</li>
+</ul>
+<p>其中，P95 延迟表示 95%
+的测试响应时间不超过该数值，可以用来观察系统在较慢情况下的响应表现。</p>
+<p>需要注意，这里测量的是句子结束确认之后的响应延迟，并不代表从用户开始打手语到系统输出翻译的全部耗时。</p>
+<p><strong>观点提炼：</strong>
+这篇论文聚焦于如何搭建低延迟并能够实际运行的系统。1、将原有视频进行切分，分段输入；2、将计算任务并行进行，执行后再依据时间进行重排；3、限制待检测的视频量，避免积压；4、及时判断语句是否已经结束，保证语句的完整性。</p>
+<p><strong>其他论文（2 篇）</strong></p>
+<ul>
+<li>Towards Compact Sign Language Translation: Frame Rate and Model Size
+Trade-offs</li>
+<li>A Real-Time Adaptive Sign Language Translation System Using Computer
+Vision and Intelligent Agent Modeling</li>
+</ul>
+<h3 id="具身与硬件感知2-篇">10. 具身与硬件感知（2 篇）</h3>
+<p><strong>代表性论文：RoboSTAR: Next-Scale Autoregressive Sign Language
+Translation for Humanoid Robots</strong> <a
+target="_blank" rel="noopener" href="https://dblp.org/rec/journals/corr/abs-2609-32250.html"
+class="uri">https://dblp.org/rec/journals/corr/abs-2609-32250.html</a></p>
+<h4 id="研究重点-8">1. 研究重点</h4>
+<p>本文关注如何让人形机器人执行连续、自然的手语表达。</p>
+<p>传统手语生成模型通常将动作序列转换为一长串离散
+Token，再逐个预测。这种方式需要同时处理整段动作的整体结构和手指、手臂等局部细节，容易产生动作不连贯、手部细节不准确等问题。</p>
+<p>作者提出
+RoboSTAR，希望通过分层动作生成，先确定整体动作结构，再逐步补充细节，最后将生成的人体动作转换为机器人能够执行的运动指令。</p>
+<h4 id="核心方法-7">2. 核心方法</h4>
+<ul>
+<li><strong>分部位动作编码（Part-wise FSQ）：</strong>
+将人体动作拆分为身体、左手和右手三个部分，分别进行编码。FSQ（有限标量量化）将连续动作特征转换为离散
+Token，方便语言模型预测。与传统依赖学习型码本的 VQ 方法不同，FSQ
+使用固定的数值网格进行量化。</li>
+<li><strong>由粗到细的自回归生成（Next-Scale Autoregression）：</strong>
+不再一次性预测完整分辨率的动作序列，而是先生成较粗略的动作表示，确定整体运动趋势，再逐步生成更精细的动作信息。每个生成阶段都会同时预测身体、左手和右手的动作
+Token，以保持动作之间的协调。</li>
+<li><strong>跨尺度误差控制：</strong>
+引入自条件训练（Self-conditioning）和上下文扰动（Generic Context
+Corruption），让模型在训练时接触不够准确的前序预测结果，减少前面动作预测错误对后续细节的影响。</li>
+<li><strong>机器人动作迁移（Motion Retargeting）：</strong>
+模型先生成以人体为基础的动作，而不是直接生成机器人关节指令。之后再根据机器人的身体结构、关节活动范围和运动限制，将人体动作转换为机器人能够执行的动作。</li>
+</ul>
+<p>此外，系统支持文本和语音两种输入。语音先经过语音识别转换为文本，再进入手语生成模型。</p>
+<h4 id="实验结果与发现-7">3. 实验结果与发现</h4>
+<p>作者使用 How2Sign 美国手语数据集进行实验，数据集包含约 3.5
+万组视频—文本配对样本。</p>
+<ul>
+<li><strong>动作生成质量：</strong> 在统一测试集上，RoboSTAR
+的身体和手部动作几何误差均优于论文比较的其他方法。</li>
+<li><strong>分层生成的作用：</strong>
+与传统单尺度自回归模型相比，Next-Scale
+方法使身体和手部的动作误差分别降低约 14.9% 和
+40.4%，说明由粗到细的生成方式对精细手部动作尤其有帮助。</li>
+<li><strong>动作自然程度：</strong> 作者专门设计 Dynamic
+Degree、Magnitude Ratio 和 Freeze-tail
+三项指标，分别衡量动作活跃程度、动作幅度以及动作末尾是否出现长时间静止，避免模型虽然位置误差较低，却实际上生成了几乎不动的动作。</li>
+<li><strong>真实机器人执行：</strong> 作者将生成的动作迁移到 Unitree G1
+人形机器人，并使用双手灵巧手进行实际动作执行，验证了从人体动作生成到机器人运动控制的可行性。</li>
+</ul>
+<p><strong>其他论文（1 篇）</strong></p>
+<ul>
+<li>An Integrated E-Textile Glove for American Sign Language Translation
+Using Machine Learning and Flexible Strain Sensors</li>
+</ul>
+<h3 id="应用系统人因与伦理3-篇">11. 应用系统、人因与伦理（3 篇）</h3>
+<p><strong>代表性论文：Normativity and Productivism: Ableist
+Intelligence? A Degrowth Analysis of AI Sign Language Translation Tools
+for Deaf People</strong> <a
+target="_blank" rel="noopener" href="https://dblp.org/rec/journals/corr/abs-2604-28125.html"
+class="uri">https://dblp.org/rec/journals/corr/abs-2604-28125.html</a></p>
+<h4 id="研究重点-9">1. 研究重点</h4>
+<p>论文从<strong>技术伦理与聋人社会文化权益</strong>的角度，重新审视 AI
+手语翻译工具的实际价值。</p>
+<p>作者认为，现有工具往往以提高翻译效率、降低沟通成本为目标，却容易忽略手语本身的文化背景、地域差异、日常表达习惯，以及聋人群体的真实需求。</p>
+<p>论文重点追问：<strong>当 AI
+被当作解决聋人沟通障碍的主要手段时，它究竟是在帮助聋人融入社会，还是让聋人被迫适应听人社会和机器的标准？</strong></p>
+<h4 id="核心分析">2. 核心分析</h4>
+<ul>
+<li><p><strong>技术标准化与语言简化：</strong> AI
+需要将手语转化为可以识别和计算的数据，因此倾向于使用标准化的数据和表达方式。但真实手语具有地域差异、个人习惯和丰富的文化语境，机器可能将这些差异视为错误或噪声，导致原本自然的表达被简化。</p></li>
+<li><p><strong>聋人文化与自主性的削弱：</strong>
+手语不仅是传递信息的工具，也是聋人表达情感、建立关系和传承文化的重要方式。如果沟通过度依赖机器，人与人之间相互理解、调整表达的过程可能被技术取代，聋人的语言自主性也可能受到限制。</p></li>
+<li><p><strong>技术替代社会责任：</strong>
+如果学校、公共机构和听人社会认为有了 AI
+翻译就不再需要学习手语、提供专业人工翻译或改善无障碍环境，那么技术就可能成为逃避社会责任的借口。沟通障碍没有真正消失，只是被转移给了聋人和技术系统。</p></li>
+<li><p><strong>数据代表性问题：</strong>
+作者以英国手语（BSL）为例，对比了记录日常自然交流的 BSL Corpus
+与主要来自电视节目中正式手语表达的 BOBSL
+数据集，指出训练数据的来源和表达风格会影响模型所理解的手语。数据更容易获取，并不意味着它就能代表聋人真实的语言生活。</p></li>
+</ul>
+<h4 id="实验结果与发现-8">3. 实验结果与发现</h4>
+<p>这是一篇<strong>理论与批判性分析论文，并非提出新模型的实验研究</strong>，没有通过模型指标或用户实验验证其观点。</p>
+<p>论文主要借助三位思想家的理论展开分析：</p>
+<ul>
+<li><strong>Jacques Ellul（雅克·埃吕尔）：</strong>
+技术不再只是人使用的工具，还可能逐渐成为组织社会生活的环境，并反过来塑造人的行为和需求。</li>
+<li><strong>Ivan Illich（伊凡·伊里奇）：</strong>
+技术可能产生“反生产性”（Counter-productivity），即原本为了改善生活而发展的工具，最终反而制造新的问题。例如，技术本来为了缩短沟通距离，却可能削弱人与人之间的真实联系。</li>
+<li><strong>André Gorz（安德烈·高兹）：</strong>
+对效率和计算的过度追求，可能压缩人的情感、经验和自主性。</li>
+</ul>
+<p>作者据此提出“能力歧视性智能”（Ableist Intelligence）的批判性概念：当
+AI
+以听人社会的规范和效率标准为中心，要求聋人适应技术，而不是尊重聋人的语言与文化差异时，所谓的智能便可能延续原有的能力歧视。</p>
+<p><strong>其他论文（2 篇）</strong></p>
+<ul>
+<li>Breaking Communication Barriers: Key Requirements for User
+Interaction with Oral-Sign Language Translation Systems</li>
+<li>Advanced Sign Language Translation: A Holistic Network for Hand
+Gesture Recognition Using Deep Learning</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://julian-yulijin.github.io/2026/11/17/SLT26%E5%B9%B4%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/" data-id="cuidy4HEh_UdAapX0DzO2uDGA" data-title="SLT26年论文总结" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2026/11/02/%E5%9F%BA%E4%BA%8E3-2-1%E7%89%88%E6%9C%AC%E7%9A%84%E6%AF%8F%E6%AC%A1%E4%BD%BF%E7%94%A8%E7%AD%96%E7%95%A5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">基于3.2.1版本的每次使用策略</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git%E4%B8%8EGitHub/">Git与GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo%E7%AC%94%E8%AE%B0/">Hexo笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/">个人项目</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/">其他笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%AD%A6%E4%B9%A0/">软件学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/11/">November 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/10/">October 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/11/17/SLT26%E5%B9%B4%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/">SLT26年论文总结</a>
+          </li>
+        
+          <li>
+            <a href="/2026/11/02/%E5%9F%BA%E4%BA%8E3-2-1%E7%89%88%E6%9C%AC%E7%9A%84%E6%AF%8F%E6%AC%A1%E4%BD%BF%E7%94%A8%E7%AD%96%E7%95%A5/">基于3.2.1版本的每次使用策略</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/31/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%90%8E%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%9D%E6%AD%A5%E9%80%9A%E4%BF%A1/">第一阶段：后端环境搭建与前后端初步通信</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/31/%E8%8D%89%E7%A8%BF/">草稿</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E4%B8%89%E7%AB%A0/">线代第三章</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

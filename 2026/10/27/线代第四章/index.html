@@ -14,7 +14,7 @@
 <meta property="og:description" content="📘 线代笔记：4.1向量与空间直角坐标系 一、基础知识 1.向量的线性运算性质   a→+b→&#x3D;b→+a→\vec{a} + \vec{b} &#x3D; \vec{b} + \vec{a}  (2) (a→+b→)+c→&#x3D;a→+(b→+c→)(\vec{a} + \vec{b}) + \vec{c} &#x3D; \vec{a} + (\vec{b} + \vec{c}) (3) a→+0→">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-10-27T03:14:52.000Z">
-<meta property="article:modified_time" content="2026-11-03T10:15:24.567Z">
+<meta property="article:modified_time" content="2026-11-10T04:03:45.560Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -309,10 +309,10 @@
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>−</mi><mover><mi>b</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>a</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a} \times \vec{b} = -\vec{b} \times \vec{a}</annotation></semantics></math>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>+</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mover><mi>c</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>c</mi><mo accent="true">→</mo></mover><mo>+</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>c</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">(\vec{a} + \vec{b}) \times \vec{c} = \vec{a} \times \vec{c} + \vec{b} \times \vec{c}</annotation></semantics></math></p>
 <p><strong>6. 向量积的行列式计算</strong>
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo>=</mo><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mover><mi>i</mi><mo accent="true">→</mo></mover></mtd><mtd columnalign="center" style="text-align: center"><mover><mi>j</mi><mo accent="true">→</mo></mover></mtd><mtd columnalign="center" style="text-align: center"><mover><mi>k</mi><mo accent="true">→</mo></mover></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>z</mi></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>z</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{a} \times \vec{b} = \begin{vmatrix} 
-\vec{i} &amp; \vec{j} &amp; \vec{k} \\ 
-a_x &amp; a_y &amp; a_z \\ 
-b_x &amp; b_y &amp; b_z 
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo>=</mo><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mover><mi>i</mi><mo accent="true">→</mo></mover></mtd><mtd columnalign="center" style="text-align: center"><mover><mi>j</mi><mo accent="true">→</mo></mover></mtd><mtd columnalign="center" style="text-align: center"><mover><mi>k</mi><mo accent="true">→</mo></mover></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>z</mi></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>z</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{a} \times \vec{b} = \begin{vmatrix}
+\vec{i} &amp; \vec{j} &amp; \vec{k} \\
+a_x &amp; a_y &amp; a_z \\
+b_x &amp; b_y &amp; b_z
 \end{vmatrix}</annotation></semantics></math></p>
 <blockquote>
 <p><strong>⚠️ 易错提醒</strong>：计算时直接按第一行展开，<mark>别忘
@@ -340,16 +340,16 @@ b_x &amp; b_y &amp; b_z
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">&lt; 0</annotation></semantics></math>。</li>
 </ul>
 <p><strong>9. 混合积的行列式计算与性质</strong>
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>c</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>z</mi></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>z</mi></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>c</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>c</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>c</mi><mi>z</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>c</mi><mi>x</mi></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>c</mi><mi>y</mi></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>z</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>z</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>c</mi><mi>z</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">(\vec{a}, \vec{b}, \vec{c}) = \begin{vmatrix} 
-a_x &amp; a_y &amp; a_z \\ 
-b_x &amp; b_y &amp; b_z \\ 
-c_x &amp; c_y &amp; c_z 
-\end{vmatrix} 
-= \begin{vmatrix} 
-a_x &amp; b_x &amp; c_x \\ 
-a_y &amp; b_y &amp; c_y \\ 
-a_z &amp; b_z &amp; c_z 
-\end{vmatrix} 
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>c</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>z</mi></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>z</mi></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>c</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>c</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>c</mi><mi>z</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>c</mi><mi>x</mi></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>c</mi><mi>y</mi></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>z</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>z</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>c</mi><mi>z</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">(\vec{a}, \vec{b}, \vec{c}) = \begin{vmatrix}
+a_x &amp; a_y &amp; a_z \\
+b_x &amp; b_y &amp; b_z \\
+c_x &amp; c_y &amp; c_z
+\end{vmatrix}
+= \begin{vmatrix}
+a_x &amp; b_x &amp; c_x \\
+a_y &amp; b_y &amp; c_y \\
+a_z &amp; b_z &amp; c_z
+\end{vmatrix}
 = |a, b, c|</annotation></semantics></math>
 性质等同于行列式性质：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>c</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>c</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>c</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\vec{a}, \vec{b}, \vec{c}) = (\vec{b}, \vec{c}, \vec{a}) = (\vec{c}, \vec{a}, \vec{b})</annotation></semantics></math>
 （连续 2 次轮换，符号不变）。</p>
@@ -420,11 +420,11 @@ id="题型二三向量共面法混合积为0">题型二：三向量共面法（�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>b</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math>。</li>
 <li><strong>方程公式</strong>：设动点
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(x, y, z)</annotation></semantics></math>，三向量共面即混合积为0：
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mover><mrow><msub><mi>P</mi><mn>0</mn></msub><mi>P</mi></mrow><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mo>⟹</mo><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><mi>y</mi><mo>−</mo><msub><mi>y</mi><mn>0</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><mi>z</mi><mo>−</mo><msub><mi>z</mi><mn>0</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>z</mi></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>z</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">(\vec{P_0P}, \vec{a}, \vec{b}) = 0 \implies 
-\begin{vmatrix} 
-x - x_0 &amp; y - y_0 &amp; z - z_0 \\ 
-a_x &amp; a_y &amp; a_z \\ 
-b_x &amp; b_y &amp; b_z 
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mover><mrow><msub><mi>P</mi><mn>0</mn></msub><mi>P</mi></mrow><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>b</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mo>⟹</mo><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><mi>y</mi><mo>−</mo><msub><mi>y</mi><mn>0</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><mi>z</mi><mo>−</mo><msub><mi>z</mi><mn>0</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>a</mi><mi>z</mi></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>x</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>y</mi></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mi>z</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">(\vec{P_0P}, \vec{a}, \vec{b}) = 0 \implies
+\begin{vmatrix}
+x - x_0 &amp; y - y_0 &amp; z - z_0 \\
+a_x &amp; a_y &amp; a_z \\
+b_x &amp; b_y &amp; b_z
 \end{vmatrix} = 0</annotation></semantics></math></li>
 <li><mark><strong>适用类型</strong>：已知平面过某点，且已知与该平面平行的两个向量时。</mark></li>
 </ul>
@@ -435,17 +435,17 @@ b_x &amp; b_y &amp; b_z
 <li><p><strong>方程公式（理论行列式）</strong>：设动点
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(x, y, z)</annotation></semantics></math>，由三向量共面得：</p>
 <p><strong>① 三向量共面形式（三阶行列式，混合积）</strong>：</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><mi>y</mi><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><mi>z</mi><mo>−</mo><msub><mi>z</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>z</mi><mn>2</mn></msub><mo>−</mo><msub><mi>z</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>x</mi><mn>3</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>y</mi><mn>3</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>z</mi><mn>3</mn></msub><mo>−</mo><msub><mi>z</mi><mn>1</mn></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\begin{vmatrix} 
-x - x_1 &amp; y - y_1 &amp; z - z_1 \\ 
-x_2 - x_1 &amp; y_2 - y_1 &amp; z_2 - z_1 \\ 
-x_3 - x_1 &amp; y_3 - y_1 &amp; z_3 - z_1 
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><mi>y</mi><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><mi>z</mi><mo>−</mo><msub><mi>z</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>y</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>z</mi><mn>2</mn></msub><mo>−</mo><msub><mi>z</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>x</mi><mn>3</mn></msub><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>y</mi><mn>3</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>z</mi><mn>3</mn></msub><mo>−</mo><msub><mi>z</mi><mn>1</mn></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\begin{vmatrix}
+x - x_1 &amp; y - y_1 &amp; z - z_1 \\
+x_2 - x_1 &amp; y_2 - y_1 &amp; z_2 - z_1 \\
+x_3 - x_1 &amp; y_3 - y_1 &amp; z_3 - z_1
 \end{vmatrix} = 0</annotation></semantics></math></p>
 <p><strong>② 四点共面形式（四阶行列式）</strong>：</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>x</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>y</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>z</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>y</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>z</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>x</mi><mn>2</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>y</mi><mn>2</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>z</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>x</mi><mn>3</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>y</mi><mn>3</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>z</mi><mn>3</mn></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\begin{vmatrix} 
-1 &amp; x &amp; y &amp; z \\ 
-1 &amp; x_1 &amp; y_1 &amp; z_1 \\ 
-1 &amp; x_2 &amp; y_2 &amp; z_2 \\ 
-1 &amp; x_3 &amp; y_3 &amp; z_3 
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">∣</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>x</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>y</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>z</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>y</mi><mn>1</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>z</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>x</mi><mn>2</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>y</mi><mn>2</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>z</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>x</mi><mn>3</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>y</mi><mn>3</mn></msub></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>z</mi><mn>3</mn></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">∣</mo></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\begin{vmatrix}
+1 &amp; x &amp; y &amp; z \\
+1 &amp; x_1 &amp; y_1 &amp; z_1 \\
+1 &amp; x_2 &amp; y_2 &amp; z_2 \\
+1 &amp; x_3 &amp; y_3 &amp; z_3
 \end{vmatrix} = 0</annotation></semantics></math></p></li>
 <li><p><mark><strong>适用类型</strong>：直接给出三点时。</p></li>
 </ul>
@@ -666,7 +666,7 @@ id="题型四求满足特定几何关系的直线">题型四：求满足特定�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://julian-yulijin.github.io/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E5%9B%9B%E7%AB%A0/" data-id="cuidKpVphj0EkkuYPRdhBlCJt" data-title="线代第四章" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://julian-yulijin.github.io/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E5%9B%9B%E7%AB%A0/" data-id="cuidoXFL90u2ZJ1-g_R0otO35" data-title="线代第四章" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -705,7 +705,7 @@ id="题型四求满足特定几何关系的直线">题型四：求满足特定�
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git%E4%B8%8EGitHub/">Git与GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo%E7%AC%94%E8%AE%B0/">Hexo笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/">个人项目</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/">其他笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git%E4%B8%8EGitHub/">Git与GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo%E7%AC%94%E8%AE%B0/">Hexo笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/">个人项目</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0/">其他笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%AD%A6%E4%B9%A0/">软件学习</a></li></ul>
     </div>
   </div>
 
@@ -733,6 +733,10 @@ id="题型四求满足特定几何关系的直线">题型四：求满足特定�
       <ul>
         
           <li>
+            <a href="/2026/11/17/SLT26%E5%B9%B4%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/">SLT26年论文总结</a>
+          </li>
+        
+          <li>
             <a href="/2026/11/02/%E5%9F%BA%E4%BA%8E3-2-1%E7%89%88%E6%9C%AC%E7%9A%84%E6%AF%8F%E6%AC%A1%E4%BD%BF%E7%94%A8%E7%AD%96%E7%95%A5/">基于3.2.1版本的每次使用策略</a>
           </li>
         
@@ -746,10 +750,6 @@ id="题型四求满足特定几何关系的直线">题型四：求满足特定�
         
           <li>
             <a href="/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E4%B8%89%E7%AB%A0/">线代第三章</a>
-          </li>
-        
-          <li>
-            <a href="/2026/10/27/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E5%9B%9B%E7%AB%A0/">线代第四章</a>
           </li>
         
       </ul>
