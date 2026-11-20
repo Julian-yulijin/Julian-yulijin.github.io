@@ -1347,6 +1347,33 @@ pre .javascript .function {
 body {
   background: #fbfaf7;
 }
+/* 修复 #wrap 固定视口高度导致页面下半部分背景断层 */
+#wrap {
+  background: #fbfaf7;
+}
+#footer {
+  background: #fbfaf7;
+  border-top: 1px solid #e3e0d8;
+  color: #8a8f98;
+}
+#footer a {
+  color: #5b6472;
+}
+#sidebar .widget {
+  background: #fff;
+  border: 1px solid #eceae4;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #5b6472;
+  text-shadow: none;
+}
+#sidebar .widget a {
+  color: #4b5563;
+}
+#sidebar .widget a:hover {
+  color: #8a2b2b;
+  text-decoration: none;
+}
 body.home-page #main {
   width: 100%;
   float: none;
@@ -1462,8 +1489,17 @@ body.home-page #main {
   -webkit-align-items: baseline;
   align-items: baseline;
   gap: 16px;
-  padding: 14px 2px;
+  margin: 0 -10px;
+  padding: 14px 10px;
   border-bottom: 1px solid #eceae4;
+  border-radius: 2px;
+  -webkit-transition: background 0.15s ease;
+  -moz-transition: background 0.15s ease;
+  -ms-transition: background 0.15s ease;
+  transition: background 0.15s ease;
+}
+.academic-home .ah-post-item:hover {
+  background: #f4f2ec;
 }
 .academic-home .ah-post-date {
   -webkit-box-flex: 1;
@@ -1521,6 +1557,10 @@ body.home-page #main {
   padding: 18px 2px;
   border-bottom: 1px solid #eceae4;
   text-decoration: none;
+  -webkit-transition: border-color 0.15s ease;
+  -moz-transition: border-color 0.15s ease;
+  -ms-transition: border-color 0.15s ease;
+  transition: border-color 0.15s ease;
 }
 .academic-home .ah-topic-name {
   color: #1f2933;
